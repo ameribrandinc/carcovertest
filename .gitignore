@@ -13,3 +13,6 @@ app/client/libs/
 cli/update_cfcc/updates/
 
 tests/reports
+
+logs/
+newrelic_agent.log
