@@ -14,6 +14,6 @@ cli/update_cfcc/updates/
 
 tests/reports
 
-logs/*
+logs/
 newrelic_agent.log
-logfile
+logfile.log
