@@ -1,0 +1,40 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Car Cover Fabrics</h1>
+		<h2>Dustop&trade;</h2>
+
+		<p class="justify">Made in the U.S., by Kimberly-Clark, this flannel-like fabric is a 4-layer non-woven
+		composite, ultrasonically laminated to provide a high degree of dust protection during inside storage,
+		while remaining breathable and soft against any fine paint finish. Dustop provides maximum dust protection
+		compared to traditional woven fabrics and it is lighter and easier to handle. See the
+		<a href="/covers/cover_care/care-dustop.pdf">Dustop Care Instructions</a>
+		to learn more about maintaining a new Dustop car cover.</p>
+
+		<div style="width:550px;margin:20px auto">
+			<img src="/pics/dustop-fabric_layers.gif" width="150" height="90" alt="Dustop Multi-Layer Material" style="float:left" />
+			<img src="/pics/dustop-logo.gif" width="181" height="60" alt="Dustop - Soft As Flannel, Logo" style="margin:10px 0 0 0" />
+			<img src="/pics/dustop-fibers.jpg" width="135" height="97" alt="Dustop Fibers" style="float:right" />
+		</div>
+		<br>
+
+		<ul class="justify listspace">
+			<li><strong>Soft But Strong Outer Layers</strong> - The two top layers are constructed of a polypropylene / polyethylene composite spunbond. These layers take advantage of the best features of both polymers: the superior softness of polyethylene, with the strength and stability of polypropylene.</li>
+			<li><strong>Dust Barrier</strong> - A melt-blown polypropylene layer serves as a barrier to most dust, dirt and pollution. Dustop's multi-layer construction provides substantially better dust protection when compared to traditional woven, single layer fabrics.</li>
+			<li><strong>Softest, Paint Protecting Inner Layer</strong> - The high-loft polypropylene / polyethylene inner layer pampers and protects the vehicle's finish. <b>(These are the same materials designed by Kimberly-Clark for some of their softest baby diaper applications, and if it's soft enough for a baby's skin you <u>know</u> it's soft against the vehicle finish)</b></li>
+		</ul>
+
+		<a href="/catalog/cfcc.php?intrst=dust" style="display:block;margin:20px auto;width:320px" class="btn-b">Prices for Dustop Car Covers</a>
+
+		<div class="automargins" style="width:500px">
+			<img src="/pics/dustop-36ChevyS.jpg" width="300" height="172" alt="Dustop Car Cover - 1936 Chevy" style="float:left;margin-right:30px" />
+			<br />
+			<p><b>Material Color - Taupe</b></p>
+			<img src="/pics/dustop-fabric.jpg" width="100" height="100" alt="Dustop Fabric Swatch"/>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+
+{/content}

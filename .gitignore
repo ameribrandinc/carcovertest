@@ -1,0 +1,15 @@
+*.DS_Store
+.sass-cache/
+.vscode
+node_modules/
+bower_components/
+*.LOG
+.idea
+grunt-cli/
+public/
+app/client/libs/
+*._*
+
+cli/update_cfcc/updates/
+
+tests/reports

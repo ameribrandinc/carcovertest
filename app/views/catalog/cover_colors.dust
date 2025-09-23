@@ -1,0 +1,85 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<infoStrip}
+	{!>"partials/infoStrip" /!}
+{/infoStrip}
+
+{<content}
+
+	<!-- Color Selection Header -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="page-header text-center">
+					<h1 class="color-selection-title">
+						Select A <span class="fabric-name">{fabric.name}</span> Color
+						<small class="block-xs">Choose from our premium color options</small>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<!-- Color Options Grid -->
+		<div class="row color-selection-container">
+			{#fabrics year=fabric.year autoId=fabric.autoId}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="color-option-card" id="row-{abrv}-{colorSlug}">
+						<!-- Color Swatch -->
+						<div class="color-swatch-container">
+							<a href="{nextAction}" class="color-swatch-link">
+								<div class="color-image-wrapper">
+									<img src="/catalog/pics/carcovers/{image}" 
+										 alt="{name} Car Cover - {color}" 
+										 class="color-swatch-image img-responsive" />
+									<div class="swatch-overlay">
+										<span class="preview-text">Preview</span>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- Color Information -->
+						<div class="color-info">
+							<h4 class="color-name">{color}</h4>
+							<div class="price-container">
+								<span class="price-label">Price:</span>
+								<span class="price-value">${jobber}</span>
+							</div>
+						</div>
+
+						<!-- Action Button -->
+						<div class="color-action">
+							<a href="{nextAction}" 
+							   class="js-next-action btn btn-success btn-block color-select-btn">
+								<span class="btn-text">Select This Color</span>
+								<span class="btn-icon">&#10095;</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			{/fabrics}
+		</div>
+
+		<!-- Additional Information (if needed) -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="selection-help text-center">
+					<p class="help-text">
+						<small>
+							<strong>Need help choosing?</strong> 
+							Each color is designed for optimal protection and style.
+						</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{/content}
+
+{<scripts}
+	<script src="{rootUrl}/scripts/color-selection.js"></script>
+{/scripts}

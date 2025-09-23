@@ -1,0 +1,35 @@
+{>layout/}
+
+{<content}
+<div class="col-xs-12">
+
+	<h1>Cover and Fabric Warranties</h1>
+
+	<p class="justify">T.J. Cars  proudly offers only the best Covercraft car covers. We will not sell a cover with less than a 4 year limited warranty, even though there are other Covercraft fabrics available with 3 year, 2 year, or 90 day limited warranties. See the chart below for limited warranty of each of our offered fabrics.</p>
+
+	<p class="justify">Covercraft guarantees their covers for workmanship, materials, and fabric defect during a stated period of normal use*. If you have a warrant claim, the cover must be returned to the factory for inspection. After review, Covercraft will issue a new cover or repair the existing cover at their expert discretion. If you have already purchased a cover and feel you are incurring warranty related issues, contact Covercraft Industries directly at <b>1-800-4COVERS</b>.</p>
+
+	<table border="0" width="325" align="center" class="left">
+		<tr>
+			<td width="268"><b class="blue md">Fabric:</b></td>
+			<td width="91"><b class="blue md">Warranty:</b></td>
+		</tr>
+		<tr>
+			<td>Weathershield&reg; HD</td>
+			<td>5 years</td>
+		</tr>
+		<tr>
+			<td>Weathershield&reg; HP</td>
+			<td>4 years</td>
+		</tr>
+		<tr>
+			<td>Sunbrella&reg;</td>
+			<td>5 years</td>
+		</tr>
+	</table>
+
+	<p class="justify red">*<b>Please Note</b>: No car cover fabric is 100% waterproof and covers are not warranted against the weather resistance of the fabric. Warranty also does not cover fading since this is inherent in all outdoor products exposed to the sun.</p>
+
+</div>
+
+{/content}

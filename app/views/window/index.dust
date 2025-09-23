@@ -1,0 +1,301 @@
+{>layout/}
+<link rel="stylesheet" href="/css/window/index.css" type="text/css" />
+
+{<content} <div class="col-xs-12">
+  <div class="wrapper">
+    <center>
+      <h1 class="green bold">**TJCARS EXCLUSIVE!**</h1>
+
+      <h1 id="option1" class="lowermargin0 tops">
+        Free 
+        <a href="https://viraport.com" target="_blank">
+          <img src="https://viraport.com/images/V-port-main-logo.jpg" width="150px">
+        </a> 
+        Car Cover Viewing Window
+      </h1>
+      <h2 class="subheadtxt red">1st one FREE with purchase of a Car Cover</h2>
+      <h3 class="subhead_grey">($49.95 per additional window)</h3>
+
+      <h2>NOW available in 2 convenient sizes:</h2>
+      <ul class="size-options-list">
+        <li class="size-option-item">
+          <span class="size-option-label">Standard License Plate Size</span>
+          <span class="size-option-size">(12" x 6")</span>
+          <a href="/catalog/pics/standard-viewing-window.jpg" target="_blank">
+            <img src="/catalog/pics/standard-viewing-window-256.jpg" alt="Standard License Plate Viewing Window">
+          </a>
+        </li>
+        <li class="size-option-item">
+          <span class="size-option-label">Parking Permit Size</span>
+          <span class="size-option-size">(6" x 5")</span>
+          <a href="/catalog/pics/small-viewing-window.jpg" target="_blank">
+            <img src="/catalog/pics/small-viewing-window-256.jpg" alt="Parking Permit Viewing Window">
+          </a>
+        </li>
+      </ul>
+
+      <!-- <h2>Add to Your Order and Save!</h2> -->
+
+      <div id="popupOverlay">
+        <div id="popupBox">
+          <div class="icon">&#9888;&#65039;</div>
+
+          <h2>Please Note</h2>
+
+          <p>The FREE ViraPort&reg; Viewing Window offer is valid<br>
+          <strong>ONLY</strong> with the purchase of a New Car Cover.</p>
+
+          <button id="popupOk">OK, Continue</button>
+        </div>
+      </div>
+
+      <table class="window-prices automargins md round">
+        <tr>
+          <td class="green bold">
+            Order With a <a href="/catalog/cfcc.php">New Cover</a> &amp; Save 
+            More!
+          </td>
+          <td class="lg bold">$FREE</td>
+          <td>
+            <form id="freeWindowForm" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+              <input name="itemname" type="hidden" value="Cover-Win" />
+              <input name="desc" type="hidden" value="Cover-Win" />
+              <input name="itemnr" type="hidden" value="Car Cover Window (FREE with purchase of Cover)" />
+              <input name="qty" type="hidden" value="1" />
+              <input name="price" type="hidden" value="0" />
+              <input name="itemshipsfree" type="hidden" value="1" />
+              <input name="gobackto" value="https://carcovers.org" type="hidden" />
+              <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td class="bold">Order Separately at Retail Price.</td>
+          <td class="lg bold">+$49.95</td>
+          <td>
+            <form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST" >
+              <input name="itemname" type="hidden" value="Cover-Win" />
+              <input name="desc" type="hidden" value="Cover-Win" />
+              <input name="itemnr" type="hidden" value="Licence Plate Cover Window (separate)" />
+              <input name="qty" type="hidden" value="1" />
+              <input name="price" type="hidden" value="49.95" />
+              <input name="itemshipsfree" type="hidden" value="1" />
+              <input name="gobackto" value="https://carcovers.org" type="hidden" />
+              <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <script>
+      const form = document.getElementById('freeWindowForm');
+      const popup = document.getElementById('popupOverlay');
+      const okBtn = document.getElementById('popupOk');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        popup.style.display = 'flex';
+      });
+      okBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+        form.submit();
+      });
+    </script>
+
+    <h2 class="tops">
+      <a href="https://www.viraport.com/install.php" target="_blank">Car Cover Window Installation</a>
+    </h2>
+
+    <img src="pics/window-rear-sm.jpg" alt="car cover window" />
+    <p class="paragraph justify">
+      <b class="green">BRAND NEW!</b> The car cover window from T.J. Cars is
+      <em class="red"> THE SOLUTION </em> for an age-old problem. Since the 
+      creation of <a href="/covers/">car covers</a>, people have struggled with 
+      a way to display license plates or parking stickers. This problem has only 
+      grown in a modern climate of increasing security standards. For security, 
+      many parking garages, schools & universities, military bases, and other 
+      government agencies now require parking stickers (and sometimes license 
+      plates) to be displayed while parking on their property. After numerous 
+      customer inquires and years of unsuccessful searches for an existing 
+      product, T.J. Cars teamed up with Ameri-Brand Products Inc. to create a
+      <b> uniquely-designed, flexible, vinyl window</b> (patent pending) that 
+      can be used in covers of all shapes and sizes. No other product exists 
+      that allows you to quickly and accurately insert a viewing window into a 
+      cover.
+    </p>
+
+    <h2 class="tops">How Can I Use My Viewing Window / Port?</h2>
+    <!-- <img class="background_img" src="pics/window-rear-sm.jpg"> -->
+    <div class="wrapper2 center" style="margin: auto">
+      <div class="inner1" style="display: inline-block; vertical-align: middle">
+        <div class="inner1-a">
+          <h3 class="lowermargin1 red">I'd like to display my...</h3>
+        </div>
+        <div class="wrap3">
+          <div class="float_left number_container1">
+            <div class="circle"></div>
+          </div>
+          <div class="float_left text_container1">
+            <p class="paragraph"><b>License Plate(s)</b></p>
+          </div>
+          <div class="clear_floats"></div>
+        </div>
+
+        <div class="wrap3">
+          <div class="float_left number_container1">
+            <div class="circle"></div>
+          </div>
+          <div class="float_left text_container1">
+            <p class="paragraph"><b>Parking Stickers or Tags</b></p>
+          </div>
+          <div class="clear_floats"></div>
+        </div>
+        <div class="wrap3">
+          <div class="float_left number_container1">
+            <div class="circle"></div>
+          </div>
+          <div class="float_left text_container1">
+            <p class="paragraph"><b>Handicap Tags or Decals</b></p>
+          </div>
+          <div class="clear_floats"></div>
+        </div>
+        <div class="wrap3">
+          <div class="float_left number_container1">
+            <div class="circle"></div>
+          </div>
+          <div class="float_left text_container1">
+            <p class="paragraph"><b>Other Items</b></p>
+          </div>
+          <div class="clear_floats"></div>
+        </div>
+      </div>
+
+      <img src="pics/window_rear2.png" />
+      <!-- <div class="clear_floats"></div> -->
+    </div>
+
+    <div class="center">
+      <p class="paragraph please_note">
+        There is a growing list of reasons that many entities are requiring that 
+        a covered vehicle must display some sort of "proof" that the vehicle is 
+        approved to be parked at a specific location. The many reasons and 
+        facilities include:
+      </p>
+      <ul style="display: inline-block">
+        <li class="olandlistitems">Security Issues (various)</li>
+
+        <li class="olandlistitems">Airports</li>
+
+        <li class="olandlistitems">Reserved Parking Areas</li>
+
+        <li class="olandlistitems">Educational Facilities</li>
+
+        <li class="olandlistitems">Limitations by Regulations or Ordinances</li>
+
+        <li class="olandlistitems">Military Bases or Installations</li>
+
+        <li class="olandlistitems">Law Enforcement Agencies</li>
+
+        <li class="olandlistitems">Government Agencies</li>
+
+        <li class="olandlistitems">Special Events</li>
+
+        <li class="olandlistitems">Hotels</li>
+
+        <li class="olandlistitems">Campgrounds</li>
+
+        <li class="olandlistitems" class="red top8">
+          The list is continuing to grow...
+        </li>
+      </ul>
+      <center>
+        <h2>Your Solution</h2>
+      </center>
+      <p class="paragraph please_note">
+        We make it EASY! We offer an EASY TO INSTALL Viewing window with the 
+        purchase of your new car cover. Your 1st window is totally <b>FREE</b>. 
+        If needed, additional viewing windows are only $49.95 each.
+      </p>
+    </div>
+
+    <div>
+      <!-- style="display:inline-block; margin:auto; width:75%" -->
+      <div>
+        <div class="please_note">
+          <center>
+            <h2>Q &amp; A</h2>
+
+            <!-- Lightbox -->
+
+            <a href="#myModal" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor links">
+              <p class="paragraph">1) Where am I allowed to put my window?</p>
+            </a>
+
+            <a href="#myModal" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor links">
+              <p class="paragraph">2) Are there any limits on size?</p>
+            </a>
+
+            <div id="myModal" class="modal" onclick="closeModal()">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+                <div class="mySlides">
+                  <p class="paragraph">
+                    You are allowed to place your new license plate window, 
+                    placard window, parking permit viewing window, anywhere you 
+                    select. Most permits or tags are usually placed inside the 
+                    front or back window, on the bumper of the car, or hung on 
+                    the rear view mirror. Please check with permit issuing 
+                    authorities prior to location selection.
+                  </p>
+                </div>
+
+                <div class="mySlides">
+                  <p class="paragraph">
+                    The size limits of your new viewing window depend on the 
+                    type of window you select. The maximum width and length for 
+                    a permit or special item is 6" x 6". License plates are a 
+                    standard size of 12" x 6" and are trimmed with black.
+                  </p>
+                </div>
+
+                <div class="mySlides">
+                  <img src="pics/ups_transit_times.png" />
+                </div>
+
+                <div style="clear: both"></div>
+                <div class="caption-container">
+                  <p class="paragraph" id="caption"></p>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+      <!-- end lightbox -->
+
+      <div>
+        <center>
+          <h3 class="lowermargin0">More questions?</h3>
+          <p class="paragraph" class="call_us lowermargin1">
+            Feel free to give us a call
+          </p>
+          <p class="paragraph" class="phone_number">800-982-6966</p>
+        </center>
+      </div>
+    </div>
+
+    <div class="please_note tops bottom">
+      <p class="paragraph">
+        We provide quality boat and car covers for the areas &amp; communities 
+        of New York, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San 
+        Diego, San Antonio, Dallas, San Jose, Detroit, Indianapolis, 
+        Jacksonville, San Francisco, Columbus, Austin, Memphis, Baltimore, Fort 
+        Worth, Charlotte, El Paso, Milwaukee, Seattle, Boston, Denver, 
+        Louisville, Washington DC, Nashville, Las Vegas, Portland, Oklahoma 
+        City, Tucson, Albuquerque, Long Beach, New Orleans, Cleveland, Fresno, 
+        Sacramento, Kansas City, Virginia Beach, Mesa, Atlanta, Omaha, Oakland, 
+        Tulsa, Miami, Honolulu, Minneapolis, Colorado Springs and Arlington. 
+      </p>
+    </div>
+  </div>
+  {/content}

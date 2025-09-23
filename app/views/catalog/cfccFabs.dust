@@ -1,0 +1,91 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<style}
+<style>
+	#columns div {
+		width: 175px;
+		float: left;
+		text-align:center;
+	}
+
+	#columns div ul {
+		margin-top:0
+	}
+
+	.fabheader {
+		color: #FFFFFF;
+	}
+
+	.cover-image {
+		width: 150px;
+	}
+</style>
+{/style}
+
+{<content}
+
+	<h1>Custom Covercraft Car Covers</h1>
+	<h2>Available Products:</h2>
+
+	{!
+	<p>
+		Sort By:
+		<a href="/catalog/cfccFabs.php?year={model.year}&autoID={model.autoId}">Name</a> |
+		<a href="/catalog/cfccFabs.php?year={model.year}&autoID={model.autoId}&filter=price">Price</a> |
+	<a href="/catalog/cfccFabs.php?year={model.year}&autoID={model.autoId}&filter=indoor">Indoor Covers</a> |
+	<a href="/catalog/cfccFabs.php?year={model.year}&autoID={model.autoId}&filter=outdoor">Outdoor Covers</a>
+	</p>
+	!}
+
+
+	{#fabrics}
+
+	<div style="width:525px; margin:25px auto 25px auto; border:solid 1px #000000" id="row-{abrv}">
+	<div style="background:#666666; border-bottom:solid 1px #000000; padding:7px; color:#FFFFFF; margin-bottom:10px"><h3 style="padding:0;margin:0;" class="fabheader">{name} Car Covers</h3></div>
+		<table>
+			<tr>
+				<td class="cover-image">
+					<img src='/catalog/pics/logo-{abrv}-sm.jpg' /><br />
+					<img src='/catalog/pics/thumb-{abrv}-sm.jpg' />
+				</td>
+				<td>
+					<table align="center" style="padding:0 7px 0 7px">
+						<tr>
+							<td colspan='2' class='justify'>{description}</td>
+						</tr>
+						<tr>
+							<td align="left" style='font-size:14px' width="291">
+								{?lowestPrice}
+									Priced from <strong class='green'>${lowestPrice}</strong>
+								{:else}
+									Priced at <strong class="green">${jobber}</span>
+								{/lowestPrice}
+								{~s}w/ <a href='/covers/sales.php' target='_blank'>FREE SHIPPING</a>
+							<td width="59">
+								<a href="{nextAction}?autoID={autoId}&year={year}&abrv={abrv}&part={part}&size={size}" class="js-next-action">
+									<img src="/catalog/pics/select.gif" alt="select button" style="padding:5px 0" />
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='2'>
+								Available Colors:{~s}
+								{#colors}
+									{.}{@sep}, {/sep}
+								{/colors}
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	{/fabrics}
+{/content}

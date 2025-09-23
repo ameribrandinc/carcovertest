@@ -1,0 +1,35 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Meet The Updated Cover Crew</h1>
+
+		<p class="left">T.J. Cars began in 1998 as a family run car cover retailer, owned and operated by two older brothers and their little sister. Over the years, our company has grown to meet the increased demands of internet commerce. {yearsInBusiness} later, we have successfully served tens of thousands of customers and gained an integral knowledge of business, marketing, and web design. As our car cover business has grown, we have hired additional help to insure the highest level of customer service and aid in order processing, inquiry, and shipment tracking.</p>
+	</div>
+
+	<div class="col-md-4">
+		<div class="center">
+			<img src="/pics/tim.jpg" width="144" height="160" alt="Tim Merino" />
+			<p class="lg bold">&quot;T&quot;</p></td>
+		</div>
+		<p class="left">As the oldest, <strong>Tim</strong> acts as controlling partner and aids in managerial decisions. He also shares site programming responsibilities with his brother Jason. Tim just graduated with Bachelor of Science Degree in Biology from <a target="_blank" href="http://www.pointloma.edu/">Point Loma Nazarene University</a> in San Diego. He is currently working as a web programmer and applying to medical schools. After becoming a doctor, Tim plans to enter the medical field as a missionary M.D. or work for a non-profit organization, such as the Red Cross or Doctors without Borders. When he isn't working for T.J. Cars or studying, he enjoys reading, philosophy, chess, rock climbing, kayaking, playing X-Box 360, and spending time with his wife.</p>
+	</div>
+
+	<div class="col-md-4">
+		<div class="center">
+			<img src="/images/company/headshot-jason.png" width="144" height="160" alt="Jason Merino" />
+			<p class="lg bold">&quot;J&quot;</p></td>
+		</div>
+		<p class="left"><strong>Jason</strong> works with both his brother Tim and sister Carlene to help maintain and improve the car cover site. He shares much of the programming responsibilities, along with spearheading the web design component and sharing management responsibilities in the partnership.</p>
+		<p class="left">He currently works full time as a software engineer for Build.com, a web based company in Northern California. During free time, Jason enjoys playing in the garden, reading, doing freelance work through his <a target="_blank" href="http://jasonmerino.github.io/">other company</a>, and of course hanging out with his family &amp; friends.</p>
+	</div>
+
+	<div class="col-md-4">
+		<div class="center">
+			<img src="/images/company/headshot-carlene.png" width="144" height="160" alt="Carlene Merino" />
+			<p class="lg bold">&quot;Cars&quot;</p></td>
+		</div>
+		<p class="left"><strong>Carlene</strong>, the youngest is currently working as a property manager in Portland Oregon, where she recently moved to in February 2015. She has finished school and has a degree in graphic design and her licenses in hair and esthetics. She will be using her graphic design skills to help update the web site. She has been married for over 3 years and enjoys quiet evenings with her husband, two cats and their basset hound. In her free time she enjoys exploring Portland, doing hair, modeling for local photographers and designing graphics for whatever the need is. All her current portfolio pieces can be found at her personal web site <a href="http://tayloredimage.org/" target="_blank">Taylored Image</a>.</p>
+	</div>
+
+{/content}

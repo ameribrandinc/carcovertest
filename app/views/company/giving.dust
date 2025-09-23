@@ -1,0 +1,21 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>A Company for Giving</h1>
+		<h2>Because People Matter</h2>
+	</div>
+	<div class="col-xs-12">
+		<br>
+		<a href="http://donate.worldvision.org/ways-to-give/by-category/micro-loans">
+			<img src="/images/world_vision.png" alt="World Vision">
+			<img src="/images/world_vision_micro.png" alt="World Vision Micro">
+		</a>
+		<br>
+		<br>
+	</div>
+	<div class="col-xs-12">
+		<p class="left">As a company we believe that people matter. As young entrepreneurs we also know how rewarding starting and maintaining your own business can be. This is why when you purchase a cover from us 10% of profits are donated to <a href="http://donate.worldvision.org/ways-to-give/by-category/micro-loans">World Vision's Micro Loans</a>.</p>
+	</div>
+
+{/content}

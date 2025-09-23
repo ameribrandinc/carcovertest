@@ -1,0 +1,103 @@
+{
+  "name": "carcovers",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/tjcars/carcovers"
+  },
+  "license": "UNLICENSED",
+  "bin": {
+    "tjc": "./tjc-cli.js"
+  },
+  "scripts": {
+    "setup": "npm link ; tjc setup ; ./node_modules/.bin/bower install",
+    "start": "./node_modules/.bin/grunt serve",
+    "test": "./node_modules/.bin/grunt test",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "underscore": "./app/client/libs/underscore.js",
+    "jquery": "./app/client/libs/jquery.js",
+    "backbone": "./app/client/libs/backbone.js"
+  },
+  "browserify-shim": {
+    "underscore": {
+      "exports": "_"
+    },
+    "jquery": {
+      "exports": "$"
+    },
+    "backbone": {
+      "exports": "Backbone",
+      "depends": [
+        "underscore",
+        "jquery"
+      ]
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "bunyan": "^1.2.3",
+    "cheerio": "~0.13.1",
+    "compression": "^1.5.2",
+    "compulsive": "~0.3.1",
+    "consolidate": "~0.10.0",
+    "cookie-parser": "^1.4.0",
+    "dustjs-helpers": "1.1.1",
+    "dustjs-linkedin": "2.2.2",
+    "express": "^4.13.3",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-mocha-test": "~0.9.0",
+    "grunt-shell": "~0.6.1",
+    "js-cookie": "~2.0.2",
+    "lodash": "~3.5.0",
+    "moment": "~2.5.0",
+    "mysql": "^2.0.0",
+    "newrelic": "^1.22.1",
+    "request": "~2.31.0",
+    "requirejs": "~2.1.9",
+    "soap": "~0.4.2",
+    "underscore": "~1.5.2",
+    "@bower_components/jquery": "jquery/jquery-dist#>= 1.9.0",
+    "@bower_components/twbs-bootstrap-sass": "twbs/bootstrap-sass#~3.2.0"
+  },
+  "devDependencies": {
+    "async": "~0.2.10",
+    "autoprefixer-core": "^5.2.1",
+    "bower": "^1.7.9",
+    "browserify": "~4.1.5",
+    "browserify-shim": "~3.5.0",
+    "chalk": "^1.1.0",
+    "commander": "~2.2.0",
+    "csv": "^0.4.5",
+    "grunt": "~0.4.2",
+    "grunt-browserify": "~2.1.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-concurrent": "~0.4.2",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-dustjs": "~1.2.1",
+    "grunt-execute": "~0.1.5",
+    "grunt-jsbeautifier": "~0.2.6",
+    "grunt-nodemon": "~0.1.2",
+    "grunt-postcss": "^0.5.4",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "~0.2.0",
+    "nightwatch": "^0.5.36",
+    "nodemon": "~0.7.10",
+    "shelljs": "^0.7.0",
+    "supertest": "~0.9.0"
+  },
+  "engines": {
+    "node": ">= 4.2.1",
+    "yarn": ">= 1.0.0"
+  }
+}

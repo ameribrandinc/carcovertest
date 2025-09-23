@@ -1,0 +1,147 @@
+{>layout/}
+
+<style>
+  .cfccWindow td {
+    padding: 15px;
+  }
+
+  #popupOverlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    font-family: "Segoe UI", sans-serif;
+  }
+  #popupBox {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  #popupBox h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  #popupBox p {
+    font-size: 18px;
+    color: #444;
+    margin: 15px 0 25px;
+  }
+  #popupBox .icon {
+    font-size: 40px;
+    color: #ff9900;
+    margin-bottom: 10px;
+  }
+  #popupBox button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  #popupBox button:hover {
+    background-color: #0056b3;
+  }
+  @keyframes fadeIn {
+    from { 
+      transform: translateY(-20px); 
+      opacity: 0; 
+    }
+    to { 
+      transform: translateY(0); 
+      opacity: 1; 
+    }
+  }
+</style>
+
+{<content}
+
+  <div id="popupOverlay">
+    <div id="popupBox">
+      <div class="icon">&#9888;&#65039;</div>
+
+      <h2>Please Note</h2>
+
+      <p>The FREE ViraPort&reg; Viewing Window offer is valid<br>
+      <strong>ONLY</strong> with the purchase of a New Car Cover.</p>
+
+      <button id="popupOk">OK, Continue</button>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="row justify-content-center">
+    <table class="cfccWindow" style="padding:0px; margin: 0 auto;">
+      <tr>
+        <td class="bold">No thank you, I don't need a license plate viewing window with my purchase.</td>
+        <td></td>
+        <td>
+          <form action="https://a4032.americommerce.com/store/shopcart.aspx" method="GET">
+            <input name="gobackto" value="https://carcovers.org" type="hidden">
+            <input name="itemshipsfree" value="1" type="hidden" />
+            <input type="submit" value="Continue To Cart" class="btn btn-success">
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td class="green bold">Order With a <a href="/catalog/cfcc.php">New Cover</a> &amp; Save More!</td>
+        <td class="lg bold">$FREE</td>
+        <td>
+          <form id="freeWindowForm" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+            <input name="itemname" type="hidden" value="Cover-Win" />
+            <input name="desc" type="hidden" value="Cover-Win" />
+            <input name="itemnr" type="hidden" value="Car Cover Window (FREE with purchase of Cover)" />
+            <input name="qty" type="hidden" value="1" />
+            <input name="price" type="hidden" value="0" />
+            <input name="itemshipsfree" type="hidden" value="1" />
+            <input name="gobackto" value="https://carcovers.org" type="hidden" />
+            <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td class="bold">Order Separately at Retail Price.</td>
+        <td class="lg bold">+$49.95</td>
+        <td>
+          <form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+            <input name="itemname" type="hidden" value="Cover-Win" />
+            <input name="desc" type="hidden" value="Cover-Win" />
+            <input name="itemnr" type="hidden" value="Licence Plate Cover Window (separate)" />
+            <input name="qty" type="hidden" value="1" />
+            <input name="price" type="hidden" value="49.95" />
+            <input name="itemshipsfree" type="hidden" value="1" />
+            <input name="gobackto" value="https://carcovers.org" type="hidden" />
+            <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('freeWindowForm');
+    const popup = document.getElementById('popupOverlay');
+    const okBtn = document.getElementById('popupOk');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      popup.style.display = 'flex';
+    });
+    okBtn.addEventListener('click', function() {
+      popup.style.display = 'none';
+      form.submit();
+    });
+  </script>
+
+{/content}

@@ -1,0 +1,15 @@
+<div id="productMenu">
+	<div id="productMenuSign" style="height:276px;">
+		<div>
+			<a href="/covers/">CUSTOM-FIT<br />CAR COVERS</a>
+		</div>
+		<div>
+			<a href="/seatcovers/">CUSTOM SEAT<br />PROTECTION</a>
+		</div>
+		<div>
+			<a href="/masks/">CUSTOM FRONT<br />MASKS &amp; BRAS</a>
+		</div>
+	</div>
+
+	<p><img src="/pics/covcraft1965.png" alt="Car Covers since 1965, Covercraft Industries" height="68" width="112" style="margin:5px auto 0 auto" /></p>
+</div>

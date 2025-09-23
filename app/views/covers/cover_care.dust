@@ -1,0 +1,56 @@
+{>layout/}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Car Cover Care</h1>
+		<h2>Taking care of your new investment.</h2>
+
+		<p class="justify">Maintaining and caring for your car cover is quite important. Proper use and care can increase the longevity of your cover, as well as prevent it from harming your car. Understanding the ins and outs of proper cover maintenance is a must for anyone who takes their car seriously. Care instructions are provided with every new car cover. The generic cleaning instructions noted below are intended for use with all Covercraft covers but you should refer to the instruction sheet enclosed with the car cover for any fabric specific care instructions (or see specific car instructions below).</p>
+
+		<h2>Specific Cover Care Instructions</h2>
+
+		<div style="width: 95%;" class="center automargins">
+			<ul style="display: inline-block;" class="md bold left automargins">
+				<li><a href="/covers/cover_care/care-noah.pdf">Noah Cover Care</a></li>
+				<li><a href="/covers/cover_care/care-weathershield.pdf">Weathershield HP Cover Care</a></li>
+				<li><a href="/covers/cover_care/care-weathershieldHD.pdf">Weathershield HD Cover Care</a></li>
+				<li><a href="/covers/cover_care/care-sunbrella.pdf">Sunbrella Cover Care</a></li>
+				<li><a href="/covers/cover_care/care-dustop.pdf">Dustop Cover Care</a></li>
+			</ul>
+		</div>
+
+		<h2>Generic Cover Cleaning Instructions</h2>
+
+		<p class="justify">Car cover fabric performance can be severely affected by dirt that builds up on and within the material. It can cause the windshield and paint to become dirty and &ldquo;fogged&rdquo; as well as create &ldquo;wicking&rdquo; where it actually helps pull water through the fabric, nullifying any water resistant properties the fabric may have had. Cleaning your cover will help to keep your vehicle clean and to increase the service life of the cover.</p>
+
+		<div style="width:95%;" class="center automargins">
+			<p style="display:inline-block;" class="justify"><strong>NEVER</strong>...Clean a car cover in a washer with a center agitator (except WeatherShield&reg; fabric covers).
+			<br /><strong>NEVER</strong>...Use fabric softener.
+			<br /><strong>NEVER</strong>...Dry a non-woven or specialty type cover in a dryer.
+			<br />
+			(<a href="/covers/fabric/weathershield.php">WeatherShield</a>&reg; (HP &amp; HD) fabrics can be dried in a dryer with regular heat.)</p>
+		</div>
+
+		<h3>Machine Wash Directions</h3>
+		<div style="width: 95%;" class="center automargins">
+			<ol style="display:inline-block; padding-left:15px" class="justify">
+				<li> Using a large commercial washer without agitator, wash the cover using 1/4 cup of Simple Green All-Purpose Cleaner (some WeatherShield covers are compact enough to be washed in a normal size washer). Put the cover in the washer and pour the cleaner in the tub after it&rsquo;s filled with warm water or pour it directly in the machine (some wall mounted commercial units), then put in the cover and start the machine.</li>
+				<li>Rinse the cover twice (2X) to remove all the cleaner.</li>
+				<li> Air dry (unless it&rsquo;s one of the covers noted above that can be dried in a dryer with regular or low heat).</li>
+			</ol>
+		</div>
+
+		<h3>Handwash on Car Directions</h3>
+		<div style="width: 95%;" class="center automargins">
+			<ol style="display:inline-block; padding-left:15px" class="justify">
+				<li>Turn cover inside-out on the vehicle.</li>
+				<li>Mix one ounce Simple Green All-Purpose Cleaner per quart of warm water.</li>
+				<li>Spray or sponge onto cover.</li>
+				<li>Rinse with plain water (until no suds) and allow to air dry.</li>
+			</ol>
+		</div>
+	</div>
+
+{/content}
+

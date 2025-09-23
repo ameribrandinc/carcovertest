@@ -1,0 +1,120 @@
+{>layout/}
+
+{<style}
+<style>
+.colblue{
+background-color:#c7e1ff}
+
+.rowcolor{
+background-color:#CCCCCC}
+</style>
+{/style}
+
+{<content}
+
+<div class="col-xs-12">
+	<h1>Indoor Cover Fabric Guide</h1>
+	<img src="/covers/pics/indoor_fabric2.jpg" alt="Indoor Cover Fabrics" />
+	<img src="/covers/pics/indoor_fabric1.jpg" alt="Indoor Cover Fabrics" />
+	<p class="justify">Fabrics shown below are primarily designed for indoor storage protection.  Some can be used on a limited basis outdoors at car shows, etc., but they do not offer the level of protection found in outdoor fabrics. Any of the outdoor fabrics can be used indoors.</p>
+	<table align="center" cellpadding="5">
+		<tr class="bold" style="color:#ffffff; background-color:#A90402; padding:5px">
+			<td style="background-color:#2D729D">Performance</td>
+			<td>Dustop&trade; <br>
+			Block-It&reg;</td>
+		</tr>
+		<tr>
+			<td class="colblue">Outdoor Use</td>
+			<td>Poor</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue">Indoor Use</td>
+			<td><strong>Best</strong></td>
+		</tr>
+		<tr>
+			<td class="colblue">All-Weather Protection</td>
+			<td>Poor</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#rain">Resists Rain</a></td>
+			<td>Fair</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#snow">Resists Snow</a></td>
+			<td>Poor</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#acidrain">Resists Acid Rain</a></td>
+			<td>No</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#dirt-dust">Resists Dirt / Dust</a></td>
+			<td><strong>Best</strong></td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#uv">Resists UV Sun Damage</a></td>
+			<td>Good</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#bird-droppings">Resists Bird Droppings</a></td>
+			<td>Good</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#sap">Resists Tree Sap</a></td>
+			<td>Good</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#breathability">Breathability</a></td>
+			<td><strong>Best</strong></td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#insulation">Heat Insulation</a></td>
+			<td>Good</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#touch">&quot;Soft&quot; Touch</a></td>
+			<td><strong>Best</strong></td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#dings">Ding Protection</a></td>
+			<td><strong>Best</strong></td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#wind">Ease of Handling in Wind</a></td>
+			<td>Good</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/main/definitions.php#storage">Storage Space Required</a></td>
+			<td>Large</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/main/definitions.php#mildew">Mildew / Rot Resistant</a></td>
+			<td>Yes</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/covers/cover_care">Wash Directions</a></td>
+			<td>Commercial</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/covers/cover_care">Dry Directions</a></td>
+			<td>Air</td>
+		</tr>
+		<tr class="rowcolor">
+			<td class="colblue"><a href="/catalog/cfcc.php">Cost</a></td>
+			<td>$$$$</td>
+		</tr>
+		<tr>
+			<td class="colblue"><a href="/covers/warranty.php">Limited Warrany**</a></td>
+			<td>4 Years</td>
+		</tr>
+	</table>
+	<p>Also See The <a href="/covers/outdoor_fabrics.php">Outdoor Cover Fabric Guide</a></p>
+
+	<p align="left">*Smaller covers can be washed at home but commercial washers provide the best cleaning &amp; rinse.<br>
+	**Warranty is for defects in material and workmanship &amp; against the fabric becoming unserviceable. We will repair or replace any defective panels after factory inspection.</p>
+	<p><a href="/covers/fabric_guide_ID.pdf">Indoor Fabric Guide PDF Version</a></p>
+
+</div>
+
+{/content}
+

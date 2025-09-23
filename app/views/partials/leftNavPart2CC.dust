@@ -1,0 +1,35 @@
+<div id="productMenu">
+	<div id="productMenuSign" style="height:92px;">
+		<div>
+			{?model.isLimoSection}
+				<a href="/limo/">CUSTOM-FIT<br />LIMO COVERS</a>
+			{:else}
+				<a href="/covers/">CUSTOM-FIT<br />CAR COVERS</a>
+			{/model.isLimoSection}
+		</div>
+	</div>
+	&nbsp;
+	<div class='zero' style='border:0; height:21px; overflow:hidden'>
+	<img src='/pics/headers/covfabs.gif' alt='Car cover fabrics for all cars, trucks, and SUVs' height='21' width='130'>
+	</div>
+	<ul>
+		<li><a href='/covers/fabric/weathershield.php'>Weathershield&reg; HP</a></li>
+		<li><a href='/covers/fabric/weathershieldHD.php'>Weathershield&reg; HD</a></li>
+		<li><a href='/covers/fabric/sunbrella.php'>Sunbrella&reg;</a></li>
+		<li><a href='/covers/fabric/noah.php'>Noah&reg;</a></li>
+		<li><a href='/covers/fabric/evolution.php'>Evolution&reg; Block-It&reg;</a></li>
+		<li><a href='/covers/fabric/reflectect.php'>Reflectect&trade;</a></li>
+		<li><a href='/covers/fabric/ultratect.php'>Ultratect&trade;</a></li>
+		<li><a href='/covers/fabric/dustop.php'>Dustop&trade; Block-It&reg;</a></li>
+		<li style='border-bottom:none'><a href='/covers/fabric/ourfabrics.php'>Why These Fabrics?</a></li>
+	</ul>
+	<img src='/pics/headers/covfabs-lower.gif' alt='Car cover fabrics for all cars, trucks, and SUVs' height='12' width='130'>
+
+	{?model.showP1}
+		{! Do not show P1 in limo section !}
+			<p><a href="/covers/p1-covers.php" style="color:#FFFFFF; text-decoration:none">
+			<img src="/pics/headers/P1-rbg.png" height="100" width="100" alt="Priority One - Rush Car Cover Manufacture Service" />
+			<br /><b>Rush Manufacture</b></a></p>
+	{/model.showP1}
+
+</div>

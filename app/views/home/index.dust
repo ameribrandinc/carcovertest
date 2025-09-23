@@ -1,0 +1,86 @@
+{>layout/}
+
+{<style}
+	<style>
+		.home-feature {
+			text-align: left;
+		}
+		.tag-line {
+			margin: 13px 0 0;
+		}
+		.splash-container {
+			height: 310px;
+		}
+		.selector {
+			text-align: center;
+			border: 1px solid #ddd;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			padding: 0 10px;
+			background: #eee;
+			margin-top: 20px;
+		}
+		@media (max-width: 990px) {
+			.description {
+				width: 100%;
+			}
+		}
+		@media (max-width: 767px) {
+			.splash-container {
+				background-image: url(/images/free-shipping-splash-3-xs.png);
+				height: 220px;
+				padding-top: 220px;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		@media (min-width: 768px) {
+			.splash-container {
+				background-image: url(/images/free-shipping-splash-4-sm.png);
+				background-repeat: no-repeat;
+			}
+		}
+		@media (min-width: 992px) {
+			.splash-container {
+				background-image: url(/images/free-shipping-splash-3-md.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+		@media (min-width: 1200px) {
+			.splash-container {
+				background-image: url(/images/free-shipping-splash-3-lg.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+	</style>
+{/style}
+
+{<content}
+	<div class="home-feature clearfix">
+		<div class="class-xs-12 splash-container">
+			<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-push-8">
+				<div id="vehicle-selector" class="selector">
+					{> "partials/vehicle_selector" /}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+		<h1 style="clear:right">Custom-Fit Car Covers</h1>
+
+		<p class="justify">At T.J. Cars, we specialize in custom <a href="/covers/">car covers</a> by <a href="/company/history.php#covercraft">Covercraft</a>. Since 1998 we have accumulated a wealth of knowledge and experience in the business of protecting cars, trucks, vans, and SUVs with <strong>Covercraft auto accessories</strong>. Why do we sell <strong>custom-fit</strong> auto accessories? The answer is simple, custom covers are the one of the best forms of car care. A custom-fit cover offers the <b>best protection, a great fit, stylish look, and premium quality</b>. When ordering a Covercraft car cover from T.J. Cars, you can rest easy knowing  you will soon have a custom cover specifically engineered for your <strong>car, truck, SUV, van, or crossover vehicle</strong>.</p>
+
+		<h2>Custom Car Covers</h2>
+
+		<p class="justify">Who wants ready-fit when you can have a perfect fit custom car cover? With over <em><strong>45,000 custom patterns</strong></em>, we have custom fit car covers, truck covers, SUV covers, van covers and crossover covers to fit just about any vehicle. Here at T.J. Cars, we offer only the best. If we wouldn't use it to cover our car, we won't sell it to you. We specialize in <strong>custom car covers</strong> by Covercraft, the world's largest car cover manufacturer. Each cover we sell is made to fit and cover a specific vehicle. T.J. Cars covers, by Covercraft, are only offered in the highest quality fabrics, such as <a href="/covers/fabric/sunbrella.php"><b>Sunbrella</b></a>&reg;, or <a href="/covers/fabric/weathershield.php"><b>WeatherShield</b></a>&reg;. Learn more about choosing a fabric with our <a href="/fabric/guide">Covercraft fabric guide</a> and why we only sell car covers in these <a href="/covers/fabric/ourfabrics.php">high quality fabrics</a>. Protective covering products available for popular car brands like Ford, GM, Chrysler, Toyota,  Honda, Mitsubishi, Volkswagen, BMW, and Mercedes Benz. As well as more exotic and rare vehicle makes like Porsche, Ferrari, Lotus, and Lamborghini... And everything in between. We also offer a <a href="/covers/p1-covers.php"><strong>rush service</strong></a> for people who need <strong>vehicle covers</strong> without delay.</p>
+	</div>
+
+{/content}
+
+{<scripts}
+	<script src="{rootUrl}/scripts/views/pages/home.js"></script>
+{/scripts}

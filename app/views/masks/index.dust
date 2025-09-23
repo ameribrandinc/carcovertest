@@ -1,0 +1,18 @@
+{>layout/}
+
+{<scripts}
+	<script src="/catalog/scripts/search-ajax.php"></script>
+{/scripts}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>T.J. Cars Online Catalog</h1>
+		<h2>Covercraft Mask &amp; Bra Search</h2>
+
+		<noscript>
+		<p align="justify">This online search requires javascript to be &quot;Enabled&quot; or turned on in order to function properly. This setting can be found under &quot;Internet Options&quot; for Internet Explorer or under "Preferences" for Firefox or Safari browsers. If you are using an older browser, you may need to upgrade your browser in order to use this and many other current sites on the internet. If these options don't work, we also offer a non-javascript version of the Mask &amp; Bra Search. Sorry about the inconvenience. Good Luck and Happy Hunting.</p>
+		</noscript>
+	</div>
+
+{/content}

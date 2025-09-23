@@ -1,0 +1,59 @@
+{>layout/}
+
+{<style}
+<style>
+	#columns div ul {
+		-moz-column-count:3;
+		-webkit-column-count:3;
+		column-count:3;
+	}
+	.swatch {
+		display: inline-block;
+		text-align: center;
+		padding: 2px;
+		border: 1px solid #ccc;
+		margin: 7px;
+	}
+	.swatch:hover {
+		border-color: #777;
+	}
+	.swatch-image {
+		width: 70px;
+		height: 70px;
+		margin: 0 auto;
+		color: #777;
+		line-height: 18px;
+		padding-top: 20px;
+	}
+	.swatch-text {
+		color: #777;
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.swatch a {
+		text-decoration: none;
+	}
+	.swatch-price {
+		font-weight: 700;
+	}
+</style>
+
+{/style}
+
+{<extraStrip}
+{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<infoStrip}
+{!>"partials/infoStrip" /!}
+{/infoStrip}
+
+{<content}
+<h1>Select Your Your Model</h1>
+<div class="clearfix" id='options-wrap' itemscope itemtype="http://schema.org/Product">
+	{#models}
+		<p class='text-center model-options'><a href='/{.slug}/p{.id}?fabric=RS'>{.year} {.make} {.model} {.submodel}</a></p>
+	{/models}
+</div>
+</div>
+{/content}

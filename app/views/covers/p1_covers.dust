@@ -1,0 +1,78 @@
+{>layout/}
+
+{<content}
+
+<div class="col-xs-12">
+	<table border="0" cellpadding="7" align="center">
+		<tr>
+			<td><img border="0" src="/covers/pics/P1-wbg-sm.jpg" align="right" width="80" height="80" alt="Priority 1 Rush Manufacture Logo"></td>
+			<td><h1>Priority One Rush Manufacture</h1></td>
+			<td><img border="0" src="/pics/ups.gif" width="115" height="64" align="left" alt="UPS Logo"></td>
+		</tr>
+	</table>
+
+{!
+$results = mysql_query("SELECT value,description FROM console WHERE name = 'p1_status'");
+$row = mysql_fetch_array($results);
+$isP1Active = stripslashes($row["value"]);
+$p1Desc = stripslashes($row["description"]);
+ !}
+
+	{?isP1Active}
+
+	<p class="justify"><b>Need that car cover faster?</b> Standard production time for custom-fit car covers can be anywhere between 5 to 10 business days. Luckily, there is a quicker alternative. With Priority One Rush Manufacture service (P1), your cover is sent straight to the front of the production line and completed within <b class="green">2-3 business days GUARANTEED*</b> (not including Friday). <b>P1 is a must for anyone on a deadline or requiring rapid results.</b></p>
+
+	<h2 style="margin-bottom:2px">Production and Shipping Options</h2>
+	<span class="red">(P1 Service &amp; shipping options are selected during checkout)</span>
+
+	<table cellpadding="5" cellspacing="0" style="border-collapse:collapse; margin-top:30px" border="1" align="center">
+		<tr style="background:#CCCCCC" class="blue">
+			<td width="170"><strong class="md">Production</strong></td>
+			<td width="250"><strong class="md">Shipping</strong></td>
+			<td width="100"><strong class="md">Totals</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;<br><b class="blue md">Standard</b><br>&nbsp;<br>(5-10 Bus. Days)<sup>&#450;</sup></td>
+			<td>&nbsp;<br><b>UPS Ground (<a href="/covers/sales.php">FREE!</a>)**</b><br>&nbsp;<br>(<a id="single_image" href="/pics/ups-ship-time.gif">Estimated 1-5 Days</a>)<sup>&#450;</sup></td>
+		  <td>&nbsp;<br><b>$0</b><br>&nbsp;<br>(6-15 Days)<sup>&#450;</sup></td>
+		</tr>
+		<tr>
+			<td><img src="/pics/check.png" width="50" height="50" alt="Check" style="vertical-align: middle" /> <b>P1* (${price})</b><br>(2-3 Days)<sup>&#450;</sup></td>
+			<td>&nbsp;<br><b>UPS Ground (<a href='/covers/sales.php'>FREE!</a>)**</b><br>&nbsp;<br>(<a id="single_image2" href="/pics/ups-ship-time.gif">Estimated 1-5 Days</a>)<sup>&#450;</sup></td>
+		  <td>&nbsp;<br><b>${price}</b><br>&nbsp;<br>(3-8 Days)<sup>&#450;</sup></td>
+		</tr>
+		<tr>
+			<td><img src="/pics/check.png" width="50" height="50" alt="Check" style="vertical-align: middle" /> <b>P1* (${price})</b><br>(2-3 Days)<sup>&#450;</sup></td>
+			<td>&nbsp;<br><b>FedEx 2-Day Sel. ($25.00)**</b><br>&nbsp;<br>(2 Days)<sup>&#450;</sup></td>
+			<td>&nbsp;<br><b>${@math key=price method="add" operand="25"/}</b><br>&nbsp;<br>(4-5 Days)<sup>&#450;</sup></td>
+		</tr>
+		<tr>
+			<td><img src="/pics/check.png" width="50" height="50" alt="Check" style="vertical-align: middle" /> <b>P1* (${price})</b><br>(2-3 Days)<sup>&#450;</sup></td>
+			<td>&nbsp;<br><b>FedEx Overnight ($35.00)**</b><br>&nbsp;<br>(1 Day)<sup>&#450;</sup></td>
+			<td>&nbsp;<br><b>${@math key=price method="add" operand="35"/}</b><br>&nbsp;<br>(3-4 Days)<sup>&#450;</sup></td>
+		</tr>
+		<caption align="bottom" class="red">(P1 Service &amp; shipping options are selected during checkout)</caption>
+	</table>
+
+	<p><sup>&#450;</sup>Production times are business days. P1 production also excludes Fridays. Shipping days exclude Sunday.</p>
+	<p>*Sorry, P1 Rush service is not available for <a href="/covers/fabric/weathershield.php#multicolor_weathershield">Weathershield Multicolor</a> Covers or <a href="/limo/">Limo Covers</a>.</p>
+	<p>**Prices shown are after $12.00 <a href="/covers/sales.php">shipping sale discount</a>. Continental United States only. Rush shipping or <br>shipping to other locations(e.g. Hawaii, Alaska, Canada, etc.) receive $12 towards shipping costs.</p>
+
+	{:else}
+
+	<table border="0" width="550" cellpadding="10" cellspacing="9" align="center">
+	  <tr>
+		<td width="462">
+			<p align="justify" class="md green">{p1Description|s}</p>
+			</td>
+		</tr>
+	</table>
+
+	{/isP1Active}
+
+
+
+</div>
+
+{/content}
+

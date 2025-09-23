@@ -1,0 +1,40 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<infoStrip}
+	{!>"partials/infoStrip" /!}
+{/infoStrip}
+
+{<content}
+
+	<h1>Select A {fabric.name} Color</h1>
+
+    <div style="width: 500px; padding:15px 0 25px 0" class="automargins">
+		{#fabrics year=fabric.year autoId=fabric.autoId}
+				<table width="450px" align="center" id="row-{abrv}-{colorSlug}">
+					<tr>
+						<td width="150">
+							<a href="/catalog/cfccResults.php?year={year}&autoID={autoId}&ext={ext}">
+								<img src="/catalog/pics/carcovers/{image}" alt="{name} Car Cover - {color}" />
+							</a>
+						</td>
+						<td align="center">
+							<b>
+								Color: {color}<br />
+								Price: ${jobber}
+							</b>
+						</td>
+						<td width="59">
+							<a href="/catalog/cfccResults.php?year={year}&autoID={autoId}&ext={ext}" class="js-next-action"><img src="/catalog/pics/select.gif" border="0" /></a>
+						</td>
+					</tr>
+				</table>
+
+			{@sep}<hr />{/sep}
+		{/fabrics}
+    </div>
+
+{/content}

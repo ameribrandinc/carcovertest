@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# basic project setup
+# npm install
+# npm install -g grunt-cli bower jshint
+# bower install
+# grunt
+
+# local mysql setup
+echo "Creating tjcars database..."
+mysql -u root -e "create database tjcars;"
+
+echo "Importing tables..."
+mysql -u root -e "use tjcars;source database/cfcc.sql;source database/cfccprices.sql;source database/console.sql;source database/limo.sql;source database/seatsavers.sql;source database/custom_covers.sql;"
+
+echo "Creating user..."
+mysql -u root -e "grant select on tjcars.* to CarCoversRead@localhost identified by 'password';flush privileges;"
+
+echo "Setup complete."

@@ -1,0 +1,35 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Measuring for a Limo Cover</h1>
+
+		<h2>One Simple Measurement Required</h2>
+
+		<p class="justify"><b>Step 1.</b> Stretch out a long tape along the ground from the front bumper to the rear bumper of the limousine. If your tape is not long enough, we suggest you go out a buy one that is. One of the most common sources of error in measuring comes from people trying to take multiple measurements and then adding them together. One small slip, misplacement of the tape, or arithmetic error and you could end up with the wrong sized cover.</p>
+
+		<img src="/limo/measuring/lincoln_measuring_tape.gif" width="600" height="129" alt="Measuring you limousine for a car cover" />
+
+		<p>&nbsp;</p>
+		<p><b>Step 2.</b> Make sure the front end of the tape is lined up with front bumper. For best results have someone <br /> hold this end in place to prevent the measuring tape from shifting while you are taking readings from the tape.</p>
+
+		<img src="/limo/measuring/lincoln_front_tape.jpg" width="500" height="374" alt="Line up front of measuring tape with front of limo" />
+
+		<p>&nbsp;</p>
+		<p><b>Step 3.</b> Now take the smart end of the take (the part with numbers) and line it up with the back <br /> end of the limousine. Eye-ball across rear of the vehicle and take your reading from the tape.</p>
+
+		<img src="/limo/measuring/lincoln_rear_tape.jpg" width="500" height="391" alt="Taking measurement at rear end of limo">
+
+		<p>&nbsp;</p>
+
+		<p class="justify">That's it. Now you can take this measurement (along with the limo's make, model, and year) and easily get price quotes for a custom fit car cover in each of our high quality fabrics: <a href="/covers/fabric/sunbrella.php">Sunbrella&trade;,</a> <a href="/covers/fabric/weathershieldhd.php">Weathershield&trade; HD</a>, <a href="/covers/fabric/weathershield.php">Weathershield&trade;</a>. If you already know what fabrics you are interested in, you can continue on to find <a href="/limo/make.php">limo cover prices</a>.</p>
+
+	</div>
+
+{/content}
+

@@ -1,0 +1,486 @@
+{>layout/}
+
+{<style}
+
+	<style>
+
+	/* existing styling for window/index.dust */
+
+		.window-prices {
+			background: #F0F0F0;
+			margin-bottom:30px;
+		}
+		.window-prices td {
+			padding: 7px;
+		}
+
+/* begin of page styling for option1 */
+
+	body {font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; /*line-height: 1.5em;*/
+						/*background-image: url("http://localhost/sandbox/pics/window-rear-sm-crop.png"); background-repeat: no-repeat; background-position: 57% 9.3%;*/}
+	.paragraph {
+	    display: block;
+	     margin: 4.8px 0px;
+	    font-size: 16px;
+	}
+	.howdoesitworktext {	    
+		margin: 19.2px 0px;}
+	h1 {
+	    display: block;
+	    -webkit-margin-before: .5em;
+	    -webkit-margin-after: .5em;
+	    -webkit-margin-start: 0px;
+	    -webkit-margin-end: 0px;
+	    font-weight: bold;
+	    line-height: 1.3em;
+	    font-size: 24px;
+	}
+	h2 {
+	    display: block;
+	    -webkit-margin-before: .5em;
+	    -webkit-margin-after: .5em;
+	    -webkit-margin-start: 0px;
+	    -webkit-margin-end: 0px;
+	    font-weight: bold;
+	    /*line-height: 1.3em;*/
+	    font-size: 20px;
+	    color: #4F8EB6;
+	}
+	h3 {
+	    font-size: 18px;
+	}
+	.subheadtxt { font-size: 16px; color: #555; margin: 5px auto;}
+	.wrapper {width: 660px; margin: 0px auto; font-size: 16px;}
+	.number_container1 {width: 28px; margin-left: 0px;}
+	.number_container {width: 60px;}
+	.text_container1 {width: 200px; text-align:justify;}
+	.text_container {width: 590px; text-align:justify;}
+	.float_left {float:left;}
+	.clear_floats {clear:left;}
+		.circle {
+	    font: 0px Arial, sans-serif;
+	    width: 1em;
+	    height: 1em;
+	    box-sizing: initial;
+	    background: #4F8EB6;
+	    border: 0.1em solid #4F8EB6;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 50%;
+	    line-height: 1em;
+	    box-sizing: content-box;
+	    margin: 14px;
+	    padding: 3px;
+    	font-weight: bold;
+		}
+	.numberCircle {
+	    font: 20px Arial, sans-serif;
+	    width: 1em;
+	    height: 1em;
+	    box-sizing: initial;
+	    background: #4F8EB6;
+	    border: 0.1em solid #4F8EB6;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 50%;
+	    line-height: 1em;
+	    box-sizing: content-box;
+	    margin: 14px;
+	    padding: 3px;
+    	font-weight: bold;
+		}
+		.red {color:#CC0000;}
+		.please_note {color: #555; text-align: justify; width:590px; margin-left: 60px; }
+		.phone_number {font-weight: bold; font-size: 22px; color: #4F8EB6;}
+		.lowermargin0 {margin-bottom: 0px;}
+		.lowermargin1 {margin-bottom: 8px;}
+		.uppermargin0 {margin-top: 18px;}
+		.tops {margin-top: 15px;}
+		.bottom {margin-bottom: 100px;}
+		.wrapper2 {width:660px; margin-left: 60px;}
+		.inner1 {float:left; width: 250px;}
+		.inner1-a {float:left; width: 250px;}
+		.inner2 {float:left;}
+		.wrap3 {width: 250px;}
+		.red {color: #CC0000;}
+		.call_us {margin-top: 0px;}
+		.links {color: #0000EE;}
+		.subhead_grey {   
+		 	color: rgb(85,85,85);
+		    font-weight: bold;
+		    line-height: 1.3em;
+		    font-size: 16px;
+		    margin: 5px auto;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+		ol, li {text-align: justify; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-weight: bold; list-style-type:none;}
+		.indent {text-indent: 20px;}
+		.sm_text {font-size: 12px; font-weight: bold;}
+		.pict_margin {margin-left: 20px;}
+		.black {color: black;}
+		.border {border: 1px solid #509c68;; width: 200px; background: #c6ffbd; }
+		.top8 {margin-top: 8px;}
+		.no_text_decoration {text-decoration: none;}
+
+/* end of page styling for option1 */
+
+/*begin of lightbox styling*/
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+/*   add a black background color with a little bit see-through*/
+  background-color: rgba(0, 0, 0, 0.8);
+/*  background-color: black;*/
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 50px auto;
+  padding: 30px 45px;
+  width: 90%;
+  max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+/*  background-color: black;*/
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.sample_sheet_text { text-align: center; font-family: Verdana, Geneva, sans-serif; color: #b62027; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0px auto; cursor:pointer;}
+
+/*end of lightbox styling*/
+
+a{
+	text-decoration: underline;
+}
+
+	</style>
+{/style}
+
+{<content}
+
+	<div class="col-xs-12">
+
+	<div class="wrapper">
+		<center>
+			<h1 class="lowermargin0 tops">Two Options For Free Car Cover Viewing Window:</h1>
+<h2 class="subheadtxt subhead_grey">
+1) <a href="#option1">We can install a free viewing window into your new cover for you.</a><br>
+2) <a href="#option2">We can send you a kit with instructions on how to install it yourself.</a><br>
+</h2><br>
+
+
+		<h1 id="option1" class="lowermargin0 tops">Free Car Cover Viewing Window - Sewn In For You</h1>
+		<h2 class="subheadtxt red">1st one FREE with purchase of a Car Cover</h2>
+			<h3 class="subhead_grey">($20 per additional window)</h3>
+		
+			<h2 class="tops">How Can I Use My Viewing Window?</h2>
+		</center>
+		<!-- <img class="background_img" src="pics/window-rear-sm.jpg"> -->
+		<div class="wrapper2">
+			<div class="inner1">
+				<div class="inner1-a">
+					<h3 class="lowermargin1 red">I'd like to display my...</h3>
+				</div>				
+				<div class="wrap3">
+					<div class="float_left number_container1"><div class="circle"></div></div>
+					<div class="float_left text_container1">
+						<p class="paragraph"><b>License Plate(s)</b></p>
+					</div>
+					<div class="clear_floats"></div>
+				</div>
+			
+				<div class="wrap3">
+					<div class="float_left number_container1"><div class="circle"></div></div>
+					<div class="float_left text_container1">
+						<p class="paragraph"><b>Parking Stickers or Tags</b></p>
+					</div>
+					<div class="clear_floats"></div>
+				</div>
+				<div class="wrap3">
+					<div class="float_left number_container1"><div class="circle"></div></div>
+					<div class="float_left text_container1">
+						<p class="paragraph"><b>Handicap Tags or Decals</b></p>
+					</div>
+					<div class="clear_floats"></div>
+				</div>
+				<div class="wrap3">
+					<div class="float_left number_container1"><div class="circle"></div></div>
+					<div class="float_left text_container1">
+						<p class="paragraph"><b>Other Items</b></p>
+					</div>
+					<div class="clear_floats"></div>
+				</div>
+			</div>
+			
+			<div class="inner2"><img class="uppermargin0 pict_margin" src="pics/window_rear2.png"></div>
+			<div class="clear_floats"></div>
+		</div>				
+		
+		<div class="please_note">
+			<p class="paragraph">There is a growing list of reasons that many entities are requiring that a covered vehicle must display some sort of "proof" that the vehicle is approved to be parked at a specific location.  The many reasons and facilities include:</p>
+			<ul>
+				<li>Security Issues (various)</li>
+
+				<li>Airports</li>
+
+				<li>Reserved Parking Areas</li>
+
+				<li>Educational Facilities</li>
+
+				<li>Limitations by Regulations or Ordinances</li>
+
+				<li>Military Bases or Installations</li> 
+
+				<li>Law Enforcement Agencies</li>
+
+				<li>Government Agencies</li>
+
+				<li>Special Events</li>
+
+				<li>Hotels</li>
+
+				<li>Campgrounds</li>
+
+				<li class="red top8">The list is continuing to grow...</li>
+			</ul>
+			<center><h2>Your Solution</h2></center> 
+			<p class="paragraph">We make it EASY! We offer a professionally installed Viewing window with the purchase of your new cover. Your 1st window is totally <b>FREE</b>. If needed, additional viewing windows are only $20 each.</p>
+			<center><h2 class="lowermargin0 tops">How Does Our Program Work?</h2></center>
+
+
+
+		</div>
+
+		<div class="float_left number_container"><div class="numberCircle">1</div></div>
+		<div class="float_left text_container">
+			<p class="paragraph" class="howdoesitworktext"><b>Purchase your <span class="red">NEW CUSTOM CAR OR TRUCK COVER</span> from TJCars.</b></p>
+		</div>
+		<div class="clear_floats"></div>
+
+		<div class="float_left number_container"><div class="numberCircle">2</div></div>
+		<div class="float_left text_container">
+			<p class="paragraph" class="howdoesitworktext"><b>After you receive your cover, mark clearly on your cover where your license plate, authorization decal, parking permit, rear view mirror, hanger, etc. should show through.</b></p><p class="paragraph">See image below</p>
+			<img src="pics/mark_your_cover.PNG" alt="mark your car cover for clear window">
+		</div>
+		<div class="clear_floats"></div>
+		
+		<div class="float_left number_container"><div class="numberCircle">3</div></div>
+		<div class="float_left text_container">
+			<p class="paragraph" class="howdoesitworktext"><b>Send your new cover back to us <a href="pics/Custom_Sewing_Label_viewing_window.pdf" target="_blank" class="links">HERE</a>.</b> <span class="red">(you pay the shipping to us)</span></p>
+		</div>
+		<div class="clear_floats"></div>
+
+		<div class="float_left number_container"><div class="numberCircle">4</div></div>
+		<div class="float_left text_container">
+			<p class="paragraph" class="howdoesitworktext"><b>We fabricate the perfectly clear window(s) you request from double-polished, crystal-clear 20-Mil soft vinyl &amp; install them in your cover. We then send your cover back to you.</b><span class="red">(we pay the shipping)</span></p>
+		</div>
+		<div class="clear_floats"></div>
+		<div class="please_note">
+			<center><h2>Q &amp; A</h2></center>
+			
+			
+			                                        <!-- Lightbox -->
+
+			    <a href="#myModal" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor links"><p class="paragraph">1) Where am I allowed to put my window?</p></a>
+
+			    <a href="#myModal" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor links"><p class="paragraph">2) Are there any limits on size?</p></a>
+
+				<a href="#myModal" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor links"><p class="paragraph">3) How long will it take? How soon can you get it back to me?</p></a>
+
+				<div class="border top8"><a href="#myModal" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor links indent"><p class="paragraph" class="no_text_decoration top8">View UPS transit times</p></a></div>
+
+			    <div id="myModal" class="modal" onclick="closeModal()">
+			      <span class="close cursor" onclick="closeModal()">&times;</span>
+			      <div class="modal-content">
+			        
+			        <div class="mySlides">
+			          <p class="paragraph">You are allowed to place your new license plate window, placard window, parking permit viewing window, anywhere you select. Most permits or tags are usually placed inside the front or back window, on the bumper of the car, or hung on the rear view mirror. Please check with permit issuing authorities prior to location selection.</p>
+			        </div>
+			        
+					<div class="mySlides">
+			          <p class="paragraph">The size limits of your new viewing window depend on the type of window you select. The maximum width and length for a permit or special item is 6" x 6". License plates are a standard size of 12" x 6" and are trimmed with black, original Sunbrella fabric.</p>
+			        </div>
+
+			        <div class="mySlides">
+			          <p class="paragraph">Typically, production time for permit and license plate viewing windows is 4 to 6 working days. Your new cover with newly installed "window" is then shipped UPS ground directly to your home or office from our plant in Oroville, California. Please Note: After your viewing window has been made, time is required to ship it. View UPS transit times. If there is a special circumstance which may delay your order, we will notify you as soon as possible.</p>
+			        </div>
+
+			        <div class="mySlides">
+			          <img src="pics/ups_transit_times.png" >
+			        </div>			        
+
+			        <div style="clear:both;"></div>
+			        <div class="caption-container">
+			          <p class="paragraph" id="caption"></p>
+			        </div>
+			      </div>
+			    </div>
+
+			                                        <!-- end lightbox -->
+
+		
+		<div>
+		<center>
+			<h3 class="lowermargin0">More questions?</h3>
+			<p class="paragraph" class="call_us lowermargin1">Feel free to give us a call</p>
+			<p class="paragraph" class="phone_number">800-982-6966</p>
+		</center>
+		</div>
+		</div>
+
+		<div class="please_note tops bottom">
+			<p class="paragraph">We provide quality boat and car covers for the areas &amp; communities of New York, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San Diego, San Antonio, Dallas, San Jose, Detroit, Indianapolis, Jacksonville, San Francisco, Columbus, Austin, Memphis, Baltimore, Fort Worth, Charlotte, El Paso, Milwaukee, Seattle, Boston, Denver, Louisville, Washington DC, Nashville, Las Vegas, Portland, Oklahoma City, Tucson, Albuquerque, Long Beach, New Orleans, Cleveland, Fresno, Sacramento, Kansas City, Virginia Beach, Mesa, Atlanta, Omaha, Oakland, Tulsa, Miami, Honolulu, Minneapolis, Colorado Springs and Arlington.</p>
+		</div>
+	</div>
+
+
+
+		<h1 id="option2">Car Cover License Plate Window Kit - Install Yourself</h1>
+
+		<img src="pics/window-rear-sm.jpg" alt="car cover window">
+		<p class="paragraph" class="justify"><b class="green">BRAND NEW!</b> The car cover window from T.J. Cars is <em class="red">THE SOLUTION</em> for an age-old problem. Since the creation of <a href="/covers/">car covers</a>, people have struggled with a way to display license plates or parking stickers. This problem has only grown in a modern climate of increasing security standards. For security, many parking garages, schools & universities, military bases, and other government agencies now require parking stickers (and sometimes license plates) to be displayed while parking on their property. After numerous customer inquires and years of unsuccessful searches for an existing product, T.J. Cars teamed up with Ameri-Brand Products Inc. to create a <b>uniquely-designed, flexible, vinyl window</b> (patent pending) that can be used in covers of all shapes and sizes. No other product exists that allows you to quickly and accurately insert a viewing window into a cover.</p>
+
+		<h2>Add to Your Order and Save!</h2>
+
+		<table class="window-prices automargins md round">
+			<tr>
+				<td class="green bold">Order With a <a href="/catalog/cfcc.php">New Cover</a> &amp; Save!</td>
+				<td class="lg bold">$FREE</td>
+				<td>(At Checkout)</td>
+			</tr>
+			<tr>
+				<td class="bold">Order Separately at Retail Price.</td>
+				<td class="lg bold">$49.95</td>
+				<td>
+					<form action="https://www.cartserver.com/sc/cart.cgi" method="post" style="margin:0; padding:0;">
+						<input type="hidden" name="gobackto" value="https://www.cartserver.com/sc/cart.cgi?item=a-4032">
+						<input type="hidden" name="item_1" value="s-2854^=SS=Cover-Win^Car Cover Window (separate)^49.95^1^0">
+						<input type="submit" name="add" value="Add to cart" class="btn btn-success">
+					</form>
+				</td>
+			</tr>
+		</table>
+
+		<h2>Cover Cover Window Installation</h2>
+		<div style="margin: 25px 0">
+
+			<object width="640" height="385">
+				<p class="paragraph"aram name="movie" value="http://www.youtube.com/v/tq-opyJOO0Q?fs=1&amp;hl=en_US"></param>
+				<p class="paragraph"aram name="allowFullScreen" value="true"></param>
+				<p class="paragraph"aram name="allowscriptaccess" value="always"></param>
+				<embed src="http://www.youtube.com/v/tq-opyJOO0Q?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed>
+			</object>
+
+		</div>
+		<p class="paragraph" class="justify">The installation video above is a supplement to the instructions which come with the window. Installation is easy and takes between an 0.5-1 hour on average. The process can be sped up by using a hand-held hole punch to prepare the template and punch the cover (if it is sharp enough).</p>
+	</div>
+	</div>
+
+
+{/content}

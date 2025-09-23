@@ -1,0 +1,24 @@
+{>layout/}
+
+{<content}
+
+<div class="col-xs-12">
+	<h1>How to Order</h1>
+	<h2>Three Easy Ways to Place Your Order</h2>
+
+	<table border="0" align="center">
+		<tr>
+			<td>
+				<ol class="justify bold md">
+					<li><a href="/catalog/cfcc.php">Search and Order Online (Secure)</a>
+					<li>Order by Phone (Toll Free) 1-800-982-6966</p>
+				</ol>
+			</td>
+		</tr>
+	</table>
+
+	<p align="justify">See our current sale - <a href="/covers/sales.php">Free Shipping and Handling</a> in the lower 48 States. Other destinations may require additional freight. Any order of this type will not be processed until we have calculated any extra shipping and handling expense for you and have notified you of the additional amount. After we receive authority from you for any additional charge,  we will then process your order. <b>Thank you for your Understanding</b></p>
+</div>
+
+{/content}
+

@@ -1,0 +1,20 @@
+{>layout/}
+{<content}
+
+	<h1>Custom fit Car & Limo Covers</h1>
+
+	<h2>Select a Product Below for Prices</h2>
+
+	<table class="lg bold automargins left" cellpadding="10">
+		<tr>
+			<td class="right"><a href="cfcc.php"><img src="/pics/indexpics/evolution-cobra.gif" alt="Custom Fit Car Cover Prices" height="75" /></a></td>
+			<td><a href="cfcc.php"><strong>Custom-Fit Car Covers</strong></a></td>
+		</tr>
+		<tr>
+			<td class="right"><a href="../limo/make.php"><img src="/catalog/pics/prices-limo.jpg" alt="Custom Fit Car Cover Prices" height="80" /></a></td>
+			<td><a href="../limo/make.php"><strong>Custom-Fit Limo Covers</strong></a></td>
+		</tr>
+	</table>
+	<br />
+
+{/content}

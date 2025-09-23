@@ -1,0 +1,813 @@
+@charset "UTF-8";
+
+@import "_vendor.scss";
+
+$light-red: rgb(175, 47, 45);
+$medium-red: darken($light-red, 10%);
+$dark-red: darken($medium-red, 10%);
+
+// ARIA helpers
+[role="button"] {
+	cursor: pointer;
+}
+
+html {
+	padding:0;
+	margin:0;
+	height:100%;
+	scrollbar-base-color: #A90402;
+	scrollbar-arrow-color: #000000;
+}
+
+body {
+	padding:0;
+	margin:0;
+	height:100%;
+	background: #d4d4d4;
+	color:#555;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:14px;
+	line-height:1.8em;
+	transition: transform .5s ease;
+}
+
+h1 {color:#111; font-size:24px; margin: .67em 0;}
+h2 {color:#666666; font-size:20px; margin: .83em 0;}
+h3 {color:#CC0000; font-size:16px; margin: 1em 0;}
+
+.zero {margin:0; padding:0}
+.automargins {margin-left:auto; margin-right:auto;}
+.round {
+	border-radius: 6px;
+}
+.center {text-align:center}
+.left {text-align:left}
+.right {text-align:right}
+.justify {text-align:justify}
+.listspace li {margin-bottom:10px;}
+.clear {clear:both}
+
+.red {color:#CC0000;}
+.blue {color:#0000CC;}
+.green {color:#006600;}
+.yellow {color:#FFCC00;}
+
+.bold {font-weight:bold}
+
+.xs {font-size: 10px}
+.sm {font-size: 12px;}
+.md {font-size: 16px;}
+.lg {font-size: 18px;}
+.xl {font-size: 24px;}
+
+img {
+	border: none;
+	max-width: 100%;
+}
+
+#containerAll {
+	padding:0;
+	position:relative;
+	box-shadow: 0 0 60px #999;
+}
+
+a,
+.link {
+	color: #428bca;
+}
+
+#containerMain {
+	background: white;
+}
+
+#content {
+	text-align:center;
+}
+
+#containerHeader {
+	min-height: 100px;
+	// padding-top: 9px;
+	// padding-bottom: 7px;
+}
+
+#headerTitleSup {
+	font-weight:bold;
+	font-size:24px;
+	padding: 19px 0 5px 0;
+	margin: 0;
+}
+
+#headerTitleSub {
+font-size:13px;
+padding:0;
+margin:0;
+}
+
+#headerLogo {
+	float: left;
+}
+
+#headerRight {
+	margin-top:15px;
+}
+
+#headerRightLower {
+	color: #333;
+	text-decoration: none;
+	font-weight:bold;
+	font-size: 16px;
+}
+
+#sharing {
+position: absolute;
+top: 25px;
+right: 17px;
+padding: 0;
+width: 250px;
+background: #fff;
+}
+
+#sharing div {
+position: relative;
+background: #f2f2f2;
+border: 1px solid #ccc;
+margin: -4px;
+}
+
+#sharing ul {
+list-style: none;
+margin: 1px auto;
+padding: 0;
+width: 125px;
+text-align: left;
+}
+
+#sharing li a {
+height: 16px;
+padding: 2px 2px 2px 22px;
+border: 1px solid #fff;
+display: block;
+}
+
+#sharing li a:hover {
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+}
+
+#bullBM, #bullBM a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px 2px}
+#bullFB, #bullFB a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px -37px}
+#bullTW, #bullTW a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px -17px}
+#bullMS, #bullMS a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px -57px}
+#bullDG, #bullDG a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px -97px}
+#bullDE, #bullDE a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px -118px}
+#bullGO, #bullGO a:hover {background:url(/style/pics/sharing.gif) no-repeat 2px -78px}
+#bullEM, #bullEM a:hover {background:url(/style/pics/sharing.gif) no-repeat 1px -137px}
+
+#navStrip {
+	background: #eee;
+	padding: 3px;
+	position: relative;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	overflow: auto;
+}
+
+#navStripLeft {
+	position:absolute;
+	left:5px;
+	a,
+	span {
+		margin: 0 5px;
+	}
+}
+
+#navStripRight {
+position:absolute;
+right:3px;
+top:6px;
+display:none}
+
+div.plusOne{
+	float:right;
+	width:90px;
+	height:20px;
+	margin: 3px 0 0 10px;
+}
+
+div.fbLike {
+	float:right;
+	margin-top: -2px;
+}
+
+div.tweet{
+float:right;
+margin-right:5px}
+
+#leftNav {
+	background-color: $light-red;
+	background-image: linear-gradient($light-red, $medium-red);
+}
+
+#productMenu {
+	margin:0 10px 0 10px;
+	font-size:13px;
+	text-align:center;
+	overflow:none;
+}
+
+#productMenuSign {
+	background:url(/pics/product-sign.png) repeat-y;
+	width:115;
+	margin:15px 7.5px 0 7.5px;
+	padding:0;
+
+	div {
+		height:72px;
+		margin:0;
+		padding:10px 0 10px 0;
+		font-weight:bold;
+		font-size:11px
+	}
+
+	a {
+		display:block;
+		text-decoration:none;
+		width:115px;
+		height:57px;
+		padding-top:15px;
+		line-height: 17px;
+	}
+
+}
+#productMenu ul {
+	margin:0;
+	list-style:none;
+	padding:0;
+	width:130px;
+}
+
+#productMenu li {
+	border-bottom: 1px solid #2D729D;
+	background:#FFFFFF;
+	padding:2px 0 2px 3px;
+	margin: 0;
+	text-align:left;
+}
+
+#productMenu li a {
+	padding:0px;
+	display: block;
+	text-decoration: none;
+	color:#a90402;
+}
+
+#productMenu li a:hover {
+	background-color:#F7E6E6;
+}
+
+#ddMenu {
+	font-size:12px;
+	text-align:left;
+}
+
+#nav li.thisPage {
+	background: $medium-red;
+	box-shadow: inset 0 0 10px $dark-red;
+}
+
+#nav li li.thisPage {
+	box-shadow: none;
+	background: #ccc;
+}
+
+#nav a.arr:after {
+	content: " ";
+	background: url(/style/pics/arrow-down.gif) center right no-repeat;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	right: 5px;
+	top: 14px;
+}
+
+#nav ul a.arr:after {
+	background: url(/style/pics/arrow.gif) center right no-repeat;
+	right: 5px;
+	top: 11px;
+}
+
+#nav, #nav ul {
+	list-style: none;
+	padding: 0;
+}
+#nav {
+	font-size: 14px;
+	line-height: 1.7em;
+	float : left;
+	margin: 0;
+}
+#nav li {
+	position: relative;
+	float: left;
+	padding: 0;
+	margin: 0;
+	&:hover {
+		color: #fff;
+		background-image: linear-gradient($light-red, $dark-red);
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	#nav {
+		/* a.arr:after {
+			// display: none;
+		} */
+		li {
+			width: 50%;
+			text-align: center;
+			/* ul {
+				display: none;
+			} */
+		}
+	}
+}
+
+#nav li ul {
+	position: absolute;
+	left: -9999em;
+	top: 37px;
+	margin-left: -1px;
+	z-index: 100;
+}
+
+#nav li ul ul {
+	left: -9999em;
+	margin-left: 190px;
+	z-index: 101;
+	top: 0;
+}
+
+#nav a {
+	background: none;
+	color : white;
+	display : block;
+	text-decoration : none;
+	padding : 7px 20px;
+}
+#nav ul a:hover, #nav ul a:focus,	#nav ul .sfhover>a	{
+	color: #000;
+	background: #fff;
+}
+
+ul#nav li#get-prices {
+	background-image:linear-gradient(#7CFC00, #228B22);
+	&:hover, &:active, &:focus {
+		background-image:linear-gradient(darken(#7CFC00, 10%), darken(#228B22, 10%)) !important
+	}
+}
+
+#nav ul	{
+	background: #eee;
+	border: 1px solid #aaa;
+	a {
+		&:hover, &:active, &:focus {
+			color: #fff;
+			background-image: linear-gradient($light-red, $dark-red);
+		}
+	}
+	li:not(:last-child) a {
+		border-bottom: 1px solid #aaa;
+	}
+}
+#nav ul li { 
+	width: 190px;
+	a{
+		color:#444
+	}
+}
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li.sfhover ul ul, #nav li.sfhover ul ul ul { left: -9999em }
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul { left: auto; } /* lists nested under hovered list items */
+
+.btn {
+	padding: 8px 14px;
+	border: none;
+	border-radius: 2px;
+	font-size: 15px;
+	cursor: pointer;
+	white-space: nowrap;
+	text-decoration: none;
+	&:disabled {
+		background: #ccc;
+	}
+}
+
+.btn-b {
+	background-color: #3E81A9;
+	background-image: linear-gradient(#5693B4, #3E81A9);
+	color: #fff;
+	padding: 8px 14px;
+	border: none;
+	border-radius: 2px;
+	font-size: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	&:disabled {
+		background: #ccc;
+	}
+}
+
+.btn-success {
+	background-image: linear-gradient(#5cb85c, darken(#5cb85c, 10%));
+	color: #fff;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+		background-image: linear-gradient(darken(#5cb85c, 10%), darken(#5cb85c, 13%));
+		text-decoration: none;
+	}
+}
+
+.blueButton:hover{
+background:#67a0be url(/pics/car-cover-gradients.png) repeat-x 0 0;}
+
+.blueButton,
+.blueButton:active{
+background:#5995b5 url(/pics/car-cover-gradients.png) repeat-x 0 0;
+color:#fff;
+padding:10px;
+text-decoration:none;
+display:block;
+border:1px solid #08496b;
+text-shadow:0px -1px 0px #032E46}
+
+span.arrows {
+	font-weight:100;
+	font-size:23px;
+	line-height:12px
+}
+
+.vehicle-selector {
+	list-style: none;
+	margin: 0;
+	width: 100%;
+	padding: 0 0 10px;
+	select {
+		width: 100%;
+		font-size: 16px;
+		margin: 6px 1px;
+	}
+}
+
+$banner-notifier-height: 29px;
+
+.banner-notifier {
+	background: #F7F7F7;
+	text-align: center;
+	font-size: 16px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid #CDCDCD;
+	overflow: hidden;
+	z-index: 99;
+	height: $banner-notifier-height;
+	transform: translateY(-$banner-notifier-height);
+	b {
+		color: $light-red;
+	}
+	.message {
+		color: #555;
+		text-decoration: none;
+		@media (max-width: $screen-xs-max) {
+			font-size: 11px;
+		}
+	}
+	span {
+		font-size: 12px;
+	}
+	.close {
+		position: absolute;
+		right: 15px;
+		top: 3px;
+	}
+}
+
+body.banner-notifier-offset {
+	transform: translateY($banner-notifier-height);
+}
+
+/* ===================================
+   COLOR SELECTION PAGE STYLES
+   Bootstrap 3.2 Compatible
+   =================================== */
+
+// Color Selection Page Header
+.color-selection-title {
+	margin-bottom: 30px;
+	color: $dark-red;
+	
+	.fabric-name {
+		color: $medium-red;
+		font-weight: 600;
+	}
+	
+	small {
+		display: block;
+		margin-top: 10px;
+		color: #666;
+		font-size: 16px;
+		font-weight: normal;
+		
+		@media (min-width: 768px) {
+			display: inline-block;
+			margin-top: 0;
+			margin-left: 15px;
+		}
+	}
+}
+
+// Color Options Container
+.color-selection-container {
+	margin-bottom: 40px;
+	
+	// Add consistent spacing between rows
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+		
+		[class*="col-"] {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+// Individual Color Option Card
+.color-option-card {
+	background: #fff;
+	border: 2px solid #e5e5e5;
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 400px;
+	
+	&:hover {
+		border-color: $medium-red;
+		box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+		transform: translateY(-3px);
+	}
+	
+	&:active {
+		transform: translateY(-1px);
+	}
+}
+
+// Color Swatch Styling
+.color-swatch-container {
+	margin-bottom: 20px;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.color-swatch-link {
+	display: block;
+	text-decoration: none;
+	width: 100%;
+}
+
+.color-image-wrapper {
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+	border: 2px solid #ddd;
+	background: #f8f9fa;
+	max-width: 200px;
+	margin: 0 auto;
+	
+	&:hover .swatch-overlay {
+		opacity: 1;
+	}
+	
+	&:hover .color-swatch-image {
+		transform: scale(1.1);
+	}
+}
+
+.color-swatch-image {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+	display: block;
+}
+
+.swatch-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba($dark-red, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.preview-text {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+// Color Information
+.color-info {
+	margin-bottom: 20px;
+	padding: 15px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.color-name {
+	color: $dark-red;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	margin-top: 0;
+	text-transform: capitalize;
+}
+
+.price-container {
+	font-size: 16px;
+	
+	.price-label {
+		color: #666;
+		font-weight: normal;
+		margin-right: 5px;
+	}
+	
+	.price-value {
+		color: $medium-red;
+		font-weight: bold;
+		font-size: 20px;
+	}
+}
+
+// Action Button Styling
+.color-action {
+	margin-top: auto;
+}
+
+.color-select-btn {
+	background-color: $medium-red !important;
+	background-image: linear-gradient($medium-red, $dark-red) !important;
+	border-color: $dark-red !important;
+	color: white !important;
+	font-weight: 600;
+	font-size: 14px;
+	padding: 12px 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+	border-radius: 6px;
+	
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $dark-red !important;
+		background-image: linear-gradient($dark-red, darken($dark-red, 5%)) !important;
+		border-color: darken($dark-red, 5%) !important;
+		color: white !important;
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+		text-decoration: none;
+	}
+	
+	.btn-text {
+		margin-right: 8px;
+	}
+	
+	.btn-icon {
+		font-weight: bold;
+		font-size: 16px;
+	}
+}
+
+// Selection Help Section
+.selection-help {
+	margin-top: 40px;
+	padding: 20px;
+	background-color: #f8f9fa;
+	border-radius: 6px;
+	border-left: 4px solid $medium-red;
+}
+
+.help-text {
+	margin: 0;
+	color: #666;
+	
+	strong {
+		color: $dark-red;
+	}
+}
+
+// Responsive Adjustments
+@media (max-width: 767px) {
+	.block-xs {
+		display: block !important;
+	}
+	
+	.color-selection-container {
+		.row [class*="col-"] {
+			margin-bottom: 30px;
+		}
+	}
+	
+	.color-option-card {
+		min-height: 350px;
+	}
+	
+	.color-selection-title {
+		font-size: 24px;
+		
+		small {
+			font-size: 14px;
+		}
+	}
+	
+	.color-swatch-image {
+		height: 120px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.color-option-card {
+		min-height: 420px;
+	}
+}
+
+@media (min-width: 992px) {
+	.color-option-card {
+		min-height: 450px;
+	}
+	
+	.color-swatch-image {
+		height: 180px;
+	}
+}
+
+// Animation keyframes for enhanced interactions
+@keyframes colorCardEnter {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.color-option-card {
+	animation: colorCardEnter 0.6s ease-out;
+	animation-fill-mode: both;
+	
+	// Stagger animation for multiple cards
+	&:nth-child(1) { animation-delay: 0.1s; }
+	&:nth-child(2) { animation-delay: 0.2s; }
+	&:nth-child(3) { animation-delay: 0.3s; }
+	&:nth-child(4) { animation-delay: 0.4s; }
+	&:nth-child(5) { animation-delay: 0.5s; }
+	&:nth-child(6) { animation-delay: 0.6s; }
+}
+
+// CSS fallback for browsers that don't support flexbox
+.no-flexbox .color-option-card {
+	display: block;
+	height: auto;
+	
+	.color-swatch-container {
+		display: block;
+	}
+}
+
+/* ===================================
+   END COLOR SELECTION STYLES
+   =================================== */

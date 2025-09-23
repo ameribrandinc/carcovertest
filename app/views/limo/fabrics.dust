@@ -1,0 +1,12 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<content}
+
+	fabs page
+{/content}
+
+

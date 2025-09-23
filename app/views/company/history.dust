@@ -1,0 +1,36 @@
+{>layout/}
+{<content}
+
+<div class="col-xs-12">
+	<h1>Company History</h1>
+
+	<table border="0" align="center">
+		<tr>
+			<td width="40"><img border="0" src="/pics/indexpics/logo-mini.gif" width="40" height="40" alt="T.J. Cars mini logo for car covers" /></td>
+			<td height="33" valign="middle"><h2>A Little T.J. Cars History</h2></td>
+			<td width="40"><img border="0" src="/pics/indexpics/logo-mini.gif" width="40" height="40" alt="T.J. Cars mini logo for car covers" /></td>
+		</tr>
+	</table>
+
+	<p align="justify">Following the Covercraft tradition, our family owned business works hard to bring you quality custom-fit car covers in the best fabrics available. When we began our ten-year relationship with Covercraft, we became one of their first online car covers retailers. We were also probably their youngest retailers, beginning our business as siblings and business partners at the ages of fifteen, thirteen, and eight. We have grown a lot in the past decade and learned a great deal about car covers and running a business. We would like to thank all of our customers, past and present for helping to make our car cover company such a large success. Find out more about the <a href="/company/crew.php">The Cover Crew</a> and how this website is helping to put us through college. We would also like to thank our parents, who helped us get started and continue to work closely with us and our car cover business. Covers must run in our blood; our our parents also have a successful online business, <a href="http://www.websweeper.com">Ameri-Brand Products Inc.</a>, which sells <a href="http://www.websweeper.com/php/boat_covers/bc-001.php">boat covers</a>, <a href="http://www.websweeper.com/php/pool_covers/pc-001.php">pool covers</a>, <a href="http://www.websweeper.com/php/tonneau_covers/ton-001.php">tonneau covers</a>, and other <a href="http://www.websweeper.com/pool-covers-spa-cover.php">cover structures</a> like pool domes.</p>
+
+	<div style="vertical-align:middle">
+		<h2>A Brief History of <a name="covercraft"><img border="0" src="/headers/pics/top-covercraft.gif" width="138" height="31" alt="Covercraft, the world's largest car cover manufacturer" /></a></h2>
+	</div>
+
+	<p align="justify">In 1965, Covercraft Industries Inc. was first opened for business by Bob Lichtmann in Southern California's San Fernando Valley. Covercraft began as a just a 2-man operation, manufacturing custom-patterned car covers for street rods, the import sports car market and aftermarket automotive parts suppliers. During the last 40 years, Covercraft has grown to a team of over 400 employees and expanded into three manufacturing locations, with headquarters in historic Paul's Valley, 60 miles south of Oklahoma City.</p>
+
+	<table width="90%" align="center">
+		<tr>
+			<td width="26%" align="right"><img border="0" src="/pics/indexpics/covercraft-beginnings.jpg" width="100" height="88" alt="Bob Lichtmann, founder of Covercraft Industries Inc." /></td>
+			<td width="44%" align="center"><img border="0" src="/pics/indexpics/covercraft-factory1.jpg" width="229" height="88" alt="Manufacturing process for Covercraft car covers" /></td>
+			<td width="30%" align="left"><img border="0" src="/pics/indexpics/covercraft-factory.jpg" width="120" height="88" alt="Home of Covercraft Industries Inc." /></td>
+		</tr>
+	</table>
+
+	<p align="justify">In four decades, the company has amassed a library of over 55,000 car covers patterns and continues to add new applications daily. Covercraft pioneered the market for CUSTOM FIT vehicle covers and over the years has added programs for a wide variety of products for exterior and interior protection - seat protectors, front end masks, tonneau covers, window heat shields and pet travel items. &quot;Covercraftsmanship&quot; has resulted in the company being certified to both TS16949:2002, a worldwide quality system standard, and ISO 14001, an environmental quality program.</p>
+
+	<p align="justify">Still family-owned, Covercraft has always maintained the highest standards, utilized the finest materials and remained on the cutting edge of manufacturing technology... but it’s our people who assure we put &quot;Covercraftsmanship&quot; in all the car covers we build!</p>
+</div>
+
+{/content}

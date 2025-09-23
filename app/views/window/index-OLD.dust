@@ -1,0 +1,60 @@
+{>layout/}
+
+{<style}
+	<style>
+		.window-prices {
+			background: #F0F0F0;
+			margin-bottom:30px;
+		}
+		.window-prices td {
+			padding: 7px;
+		}
+	</style>
+{/style}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Car Cover License Plate Window</h1>
+
+		<img src="pics/window-rear-sm.jpg" alt="car cover window">
+		<p class="justify"><b class="green">BRAND NEW!</b> The car cover window from T.J. Cars is <em class="red">THE SOLUTION</em> for an age-old problem. Since the creation of <a href="/covers/">car covers</a>, people have struggled with a way to display license plates or parking stickers. This problem has only grown in a modern climate of increasing security standards. For security, many parking garages, schools & universities, military bases, and other government agencies now require parking stickers (and sometimes license plates) to be displayed while parking on their property. After numerous customer inquires and years of unsuccessful searches for an existing product, T.J. Cars teamed up with Ameri-Brand Products Inc. to create a <b>uniquely-designed, flexible, vinyl window</b> (patent pending) that can be used in covers of all shapes and sizes. No other product exists that allows you to quickly and accurately insert a viewing window into a cover.</p>
+
+		<h2>Add to Your Order and Save!</h2>
+
+		<table class="window-prices automargins md round">
+			<tr>
+				<td class="green bold">Order With a <a href="/catalog/cfcc.php">New Cover</a> &amp; Save!</td>
+				<td class="lg bold">$FREE</td>
+				<td>(At Checkout)</td>
+			</tr>
+			<tr>
+				<td class="bold">Order Separately at Retail Price.</td>
+				<td class="lg bold">$49.95</td>
+				<td>
+					<form action="https://a4032.americommerce.com/store/shopcart.aspx" method="post" style="margin:0; padding:0;">
+						<input type="hidden" name="gobackto" value="https://carcovers.org">
+						<input type="hidden" name="item_1" value="a-4032^=SS=Cover-Win^Car Cover Window (separate)^49.95^1^0">
+						<input name="itemshipsfree" type="hidden" value="1" />
+						<input type="submit" name="add" value="Add to cart" class="btn btn-success">
+					</form>
+				</td>
+			</tr>
+		</table>
+
+		<h2>Cover Cover Window Installation</h2>
+		<div style="margin: 25px 0">
+
+			<object width="640" height="385">
+				<param name="movie" value="http://www.youtube.com/v/tq-opyJOO0Q?fs=1&amp;hl=en_US"></param>
+				<param name="allowFullScreen" value="true"></param>
+				<param name="allowscriptaccess" value="always"></param>
+				<embed src="http://www.youtube.com/v/tq-opyJOO0Q?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed>
+			</object>
+
+		</div>
+		<p class="justify">The installation video above is a supplement to the instructions which come with the window. Installation is easy and takes between an 0.5-1 hour on average. The process can be sped up by using a hand-held hole punch to prepare the template and punch the cover (if it is sharp enough).</p>
+	</div>
+
+
+{/content}

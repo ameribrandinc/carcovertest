@@ -1,0 +1,54 @@
+{^page.hideNav}
+<div id="ddMenu">
+	<ul id="nav">
+			<li><a href="/">Home</a></li>
+			<li id="get-prices"><a href="/catalog/">Get Prices</a></li>
+			<li><a href="/covers/" class="arr">Car Covers</a>
+				<ul>
+					<li class="navone"><a href="/covers/coversearch.php">Cover Prices</a></li>
+					<li><a href="/covers/fabric/" class="arr">Cover Fabrics</a>
+						<ul>
+							<li class="navone"><a href="/covers/fabric/weathershieldHD.php">WeatherShield&reg; HD</a></li>
+							<li><a href="/covers/fabric/weathershield.php">WeatherShield&reg; HP</a></li>
+							<li><a href="/covers/fabric/sunbrella.php">Sunbrella&reg;</a></li>
+							<li><a href="/covers/fabric/ultratect.php">Ultratect&trade;</a></li>
+							<li><a href="/covers/fabric/reflectect.php">Reflectect&trade;</a></li>
+							<li><a href="/covers/fabric/ourfabrics.php">Why these fabrics?</a></li>
+						</ul>
+					</li>
+					<li><a href="/covers/sales.php">Bonus Package &#10084;</a></li>
+					<li><a href="/covers/p1-covers.php">Rush Manufacture</a></li>
+					<li><a href="/covers/cover_care/">Cover Care &amp; Use</a></li>
+					<li><a href="/covers/carmodifications.php">Modified Vehicle Covers</a></li>
+					<li><a href="/covers/warranty.php">Car Covers Warranties</a></li>
+					<li><a href="/covers/FAQ.php">Car Covers FAQ's</a></li>
+					<li><a href="/covers/specialprojects.php">Special Projects</a></li>
+					<li><a href="/covers/accessories.php" class="arr">Car Cover Accessories</a>
+						<ul>
+							<li><a href="/covers/acc-grommet.php">Antenna Grommet (FREE)</a></li>
+							<li><a href="/covers/acc-bag.php">Storage Bag</a></li>
+							<li><a href="/covers/acc-lockandcable.php">Lock &amp; Cable</a></li>
+							<li><a href="/window/">Cover Window</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="/limo/">Limo Covers</a></li>
+			<li><a href="/company/" class="arr">The Company</a>
+				<ul>
+					<li class="navone"><a href="/company/history.php">History</a></li>
+					<li><a href="/company/crew.php">Cover Crew</a></li>
+					<li><a href="/company/giving.php">Giving</a></li>
+					<li><a href="/company/policy.php">General &amp; Return Policies</a></li>
+					<li><a href="/company/leadtimes.php">Production and Lead Times</a></li>
+					<li><a href="/company/shipping.php">Shipping</a></li>
+					<li><a href="/company/FAQs.php">FAQs</a></li>
+					<li><a href="/company/sitemap.php">Sitemap</a></li>
+				</ul>
+			</li>
+			<li style="border-bottom: 0"><a href="/company/contact/">Contact Us</a></li>
+			<li><a href="https://a4032.americommerce.com/store/shopcart.aspx" rel="nofollow">Cart</a></li>
+		</ul>
+	<br style="clear:both">
+</div>
+{/page.hideNav}

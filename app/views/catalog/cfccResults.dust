@@ -1,0 +1,112 @@
+{>layout/}
+
+{<style}
+	<style>
+		#columns div ul {
+			-moz-column-count:3;
+			-webkit-column-count:3;
+			column-count:3;
+		}
+	</style>
+{/style}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<infoStrip}
+	{!>"partials/infoStrip" /!}
+{/infoStrip}
+
+{<content}
+	<h1>{model.pageTitle}</h1>
+	<div class="clearfix" itemscope itemtype="http://schema.org/Product">
+		<div class="col-xs-12 col-sm-4 col-md-3">
+			<img src="/catalog/pics/logo-{model.abrv}-sm.jpg" />
+			<br />
+			{?model.isMultiColor}
+				<img src="/catalog/pics/carcovers/multicolor-wsHP/CarCover_{model.topColor}_{model.sideColor}.gif" width="150" height="57" style="margin-top:10px" alt="{model.name} {model.productName} - {model.colors} ({model.topColor} / {model.sideColor})" />
+				<div style="background: url(/catalog/pics/carcovers/swatch-wsHP-{model.topColorExt}.jpg); height: 70px; width:150px; margin-top:15px">
+					<div style="background: url(/catalog/pics/carcovers/swatch-wsHP-{model.sideColorExt}.jpg); height: 70px; width:75px; margin-left: 75px">
+					</div>
+				</div>
+			{:else}
+				<img src="/catalog/pics/thumb-{model.abrv}-sm.jpg" />
+				<br />
+				<img src="/catalog/pics/carcovers/swatch-{model.abrv}-{model.extLower}.jpg" alt="{model.name} {productName} - {model.colors}" />
+			{/model.isMultiColor}
+		</div>
+		<div class="col-xs-12 col-sm-8 col-md-6">
+			<ul class="justify">
+				<li><b>Make:</b> {model.make}</li>
+				<li><b>Year:</b> {model.year}</li>
+				<li><b>Model:</b> {model.model}</li>
+				<li><b>Submodel:</b> {model.details}</li>
+				<li><b>Part Number:</b> {model.partNumber}</li>
+				<li><b>Fabric:</b> <a href="/covers/fabric/{model.section}" target="_blank">{model.name}</a></li>
+				<li><b>Fabric Color:</b> {model.colors}
+					{?model.isMultiColor}
+						{~s}({model.topColor} / {model.sideColor})
+					{/model.isMultiColor}
+				</li>
+				<li><b>Description:</b> {model.description|s} (<a href="/covers/fabric/{model.section}" target="_blank">Details</a>)</li>
+			</ul>
+			{! schema.org data !}
+			<meta itemprop="name" content="{model.year} {model.make} {model.model} car cover">
+			<meta itemprop="description" content="{model.name} cover for {model.year} {model.make} {model.model} {model.details}">
+			<meta itemprop="manufacturer" content="Covercraft">
+			<meta itemprop="mpn" content="{model.partNumber}">
+		</div>
+		<div class="col-xs-12 col-md-3">
+				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					<div style="padding:10px;border:1px solid #eee">
+						<div>
+							<p class="green bold" style="font-size:27px;margin:10px 0 0">${model.price}</p>
+							<p style="color: #ccc;margin-top:0;">List Price: <span style="text-decoration:line-through;" itemprop="price">${model.retail}</span></p>
+						</div>
+						{?model.stock.haveStockInformation}
+							<p style="color:#3e81a9;font-weight:700;font-size:15px">
+								{?model.stock.isInStock}
+									<link itemprop="availability" href="http://schema.org/InStock" />Cover In Stock!
+								{:else}
+									<link itemprop="availability" href="http://schema.org/OutOfStock" />
+								{/model.stock.isInStock}
+							</p>
+						{/model.stock.haveStockInformation}
+						<div class="automargins">
+							{?model.multiColorUnselected}
+								<table>
+									<tr>
+										<td><img src="/pics/star.gif" /></td>
+										<td><a href="/catalog/multicolor-wsHP.php?cover={model.cover}">Select Colors to Finish Quote</a></td>
+										<td><img src="/pics/star.gif" /></td>
+									</tr>
+								</table>
+							{:else}
+								<form action="https://www.cartserver.com/sc/cart.cgi" method="post" style="margin:0; padding:0;">
+									<input type="hidden" name="gobackto" value="https://www.cartserver.com/sc/cart.cgi?item=a-4032" />
+									<input type=hidden name=info1clear value=1>
+									<input type=hidden name="gobackto" value="http://www.carcovers.org/headers/cart/grommet.php">
+									<input type="hidden" name="item_1" value="s-2854^=SS={model.partNumber}^{model.colors} {model.name} Custom-fit car cover for {model.year} {model.make} {model.model} {submodel} {model.details}{@if cond="{model.multiColor} == 1"} (Top: {model.topColor} / Sides: {model.sideColor}){/if}^{model.price}^1^0" />
+									<input type="submit" name="nvadd" value="Add to Cart" class="btn btn-success" onclick="_gaq.push(['_trackEvent', 'car cover', 'add to cart',,, false]);" style="width:100%;margin-bottom: 10px;"/>
+								</form>
+							{/model.multiColorUnselected}
+						</div>
+
+						{! Control P1 Rush (ON/OFF) !}
+						{?model.p1Available}
+						<div style="padding-bottom:10px;">
+							<img src="/covers/pics/P1-wbg-sm.jpg" width="35" height="35" style="vertical-align:middle;">{~s}
+							<a href="/covers/p1-covers.php">P1 Rush Available</a>
+						</div>
+						{/model.p1Available}
+						<div>
+							<img src="/style/pics/low-price-guarantee.png" width="35" height="44" style="vertical-align:middle;">{~s}
+							<a href="/covers/sales.php">Low Price Guarantee!</a>
+						</div>
+					</div>
+
+				</div>
+		</div>
+</div>
+{/content}

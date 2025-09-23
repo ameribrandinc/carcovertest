@@ -1,0 +1,18 @@
+{>layout/}
+{<content}
+	<div class="col-xs-12">
+		<h1>Fabric Guide</h1>
+
+		<p class="justify">Each fabric has numerous properties which factor into making a car cover. We have tried to distill these down into 6 main categories.</p>
+
+		<ul class="left">
+			<li><b>Sun Protection</b> Critical for any cover. Repeated exposure to light and UV radiation will fade colors, destroy finishes, and cause accelerate general deterioration of a vehicle's interior and exterior.</li>
+			<li><b>Water Resistence</b> keeps your car relatively dry and protects</li>
+			<li><b>Breathability</b> allows water to evaporate and prevents it from becoming trapped beneath the cover.</li>
+			<li><b>Particle Protection</b> includes dust, dirt, leaves, tree sap, bird droppings, environmental pollutants, and other particulates.</li>
+			<li><b>Relative Softness</b> - All of our fabrics are chosen with the goal of protecting your finish and limiting abrasion. While they are gentle on your car, some are softer than others.</li>
+			<li><b>Size &amp; Thickness</b> - There are trade-offs between thin and thick fabrics. Thicker covers offer better ding protection but take up more space during storage and larger covers can become heavy. Thin covers take up less space and weigh less, but they provide minimal ding protection and can become unwieldly in windy conditions.</li>
+		</ul>
+	</div>
+
+{/content}

@@ -1,0 +1,24 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Limousine Custom Cover Search</h1>
+
+		<a href="/limo/make.php">
+		<img src="/limo/limousine.jpg" width="342" height="174" alt="Covercraft Limo Covers for Cadillac and Lincoln Limousines."></a>
+
+		<p><b class='md'><a href="/limo/make.php">Search for a limousine cover...</a></b></p>
+
+		<p align="justify"><B>Had</B> a problem finding just the right size Custom Fit Stretch Limousine Cover? T.J. Cars offers an entire line of CUSTOM FIT Cadillac and Lincoln Limousine covers. Using only the make, model, year, and <a href="/limo/measuring/">length of your Limousine</a>, we can quickly calculate a price for your new cover.</p>
+
+		<p align="justify">
+		 <B>All</B> of our Custom Fit Limousine covers are available in the highest quality fabrics: <a href="/covers/fabric/sunbrella.php">Sunbrella&reg;</a>, <a href="/covers/fabric/weathershieldhd.php">Weathershield&reg; HD</a>, <a href="/covers/fabric/weathershield.php">Weathershield HP&reg;</a>. All fabrics have at least a four year warranty. In addition, these quality <b>American-Made</b> covers are 100% backed by <B>Covercraft</B> the worlds largest cover manufacturer.</p>
+	</div>
+
+{/content}
+

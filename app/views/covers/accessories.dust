@@ -1,0 +1,31 @@
+{>layout/}
+{<content}
+
+<div class="col-xs-12">
+	<h1>Car Cover Accessories</h1>
+
+	<table align="center" cellpadding="7">
+		<tr>
+			<td width="120"><a href="/covers/acc-grommet.php"><img src="/pics/grommet-1.jpg" border="0" height="100" width="100" alt="Antenna Grommet for Car Covers"></a></td>
+			<td><a href="/covers/acc-bag.php"><img src="/pics/storage-bag.jpg" border="0" height="58" width="95" alt="Car Cover Storage Bag"></a></td>
+			<td><a href="/covers/acc-lockandcable.php"><img src="/pics/lock-cable.jpg" border="0" height="99" width="76" alt="Lock and Cable Set"></a></td>
+			<td><a href="/window/"><img src="/window/pics/window-sm.jpg" height="86" width="150" border="0" alt="Parking Sticker, Parking Permit and License Plate Window"></a></td>
+		</tr>
+		<tr>
+			<td><a href="/covers/acc-grommet.php">Antenna Grommet</a><br><b class="green">(FREE!)</b></td>
+			<td><a href="/covers/acc-bag.php">Storage Bag</a><br>&nbsp;</td>
+			<td><a href="/covers/acc-lockandcable.php">Lock &amp; Cable</a><br>&nbsp;</td>
+			<td><a href="/window/">Car Cover Window</a><br><b class="green">(Now On Sale!)</td>
+		</tr>
+	</table>
+
+	<p align="justify">Protecting your vehicle with a custom car cover is an investment in your vehicle. It is a great idea to protect your new cover with a storage bag and lock &amp; cable. Every cover comes in a cardboard box, but this box will quickly deteriorate if frequently used to store a cover. The storage bag is a quick, easy, and compact way to store your cover in the trunk or garage. It also protects your cover from premature wear during storage. The Lock &amp; Cable is another great way to protect your vehicle and your cover. This vinyl covered cable and padlock system is a great theft deterrent and snuggly secures the cover to your vehicle, preventing it from blowing under harsh weather condition. It easily fits through the pre-set plastic grommets on every cover and wraps underneath the car to hold the cover in place.</p>
+
+
+	<br><b class="red">(Storage Bag and/or Lock &amp; Cable options selected during checkout)</b>
+
+
+</div>
+
+{/content}
+

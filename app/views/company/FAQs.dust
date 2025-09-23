@@ -1,0 +1,12 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>T.J. Cars FAQs</h1>
+
+		<p class="justify">An educated consumer always has a few questions about the product in which he or she is interested. Buy a car cover or seat cover should be no exception. Based on experiences over the years, we have compiled lists of &quot;Frequently Asked Questions&quot; in order to better serve and educate our customers. If you do not see your question on one of the pages below, please <a href="/company/contact/">contact us</a> and we will be more than happy to provide you with answers.</p>
+
+		<p class="md"><a href="/covers/FAQ.php">Car Cover FAQ</a></p>
+	</div>
+
+{/content}

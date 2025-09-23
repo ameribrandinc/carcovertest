@@ -1,0 +1,48 @@
+{>layout/}
+
+{<content}
+
+<div class="col-xs-12">
+	<h1>Ordering and Policies</h1>
+
+	<h2>Buying Online - The most simple and safe purchasing method:</h2>
+
+	<p class="justify">The most convenient way to order is through our secure online purchasing system. We accept all major credit cards, including Visa, MasterCard, American Express, and Discover/Novus (Debit Cards, Paypal, and Pay By Check are also accepted).</p>
+
+	<img src="https://carcovers.org/pics/paymentbar.gif" alt="acceptabe forms of payment" width="176" height="83" />
+
+	<p class="justify">All online orders are passed from our secure shopping cart to an Authorize.Net<sup>&reg;</sup> Payment Gateway, utilizing state-of-the-art 128 bit SSL encryption technology to insure the highest available level of protection.</p>
+
+	<p class="justify"><b>Telephone Orders</b> - You can place an order by phone through one of our knowledgeable representatives (M-F 8-5 PST). Telephone orders require a major debit or credit card, as described above. To place an order by phone, call us at 1-800-982-6966.</p>
+
+	<p class="justify"><b>Check or Money Order Payments</b> - We accept checks and money orders. Once received, please allow 3-5 days for personal checks to clear. Money orders are processed immediately.</p>
+
+	<p class="justify">To place an order by check or money order, proceed through the secure shopping cart until you reach the payment options. Select &quot;Order by Check/Money Order through Postal Mail&quot; and fill out the ensuing form. Once completed and printed, mail this form, along including payment, to the following address: </p>
+
+	<p>
+	<b>T.J. Cars</b><br>
+	4619 Olive Hwy.<br>
+	Oroville, CA 95966 USA</p>
+
+	<h2>Shipping and General Policies:</h2>
+
+	<p class="justify"><b>Shipping Charges</b> - Shipping charges are a standard $12 across the continental USA. Please call for shipping quotes to Hawaii and Alaska (toll free 1-800-982-6966). Sorry, we do not ship internationally. For more shipping information view our <a href="/company/shipping.php">shipping schedule</a>.</p>
+
+	<p class="justify"><b>Delivery and Tracking</b> - Please be patient as you anxiously await your new cover. All of our covers are custom-fit and at built as quickly as possible by Covercraft Industries in Oklahoma and Texas. They try to maintain some inventory, but with 46,000+ patterns in numerous fabrics, it is impossible to stock everything.</p>
+
+	<p class="justify">Example: Imagine trying to stock 46,000 covers in a minimum of 12 different fabrics when each cover has an average volume of 2 sq. feet. You would need a warehouse of over a 1,104,000 sq. feet just to store one of each! </p>
+
+	<p class="justify">As a result, many custom covers are exactly that, custom-made when the order is placed. Due to Covercraft's huge volume of cover productions, covers cannot be tracked until they are shipped. We do not send out tracking numbers automatically. However, tracking numbers are available upon request once a cover has been shipped. If you would like to know if a cover is in-stock before your order, please <a href="mailto:sales@websweeper.com">contact us</a>.</p> <p class="justify"><b>Sales Tax</b> - Only applicable to orders shipped to California (7.25%).</p> <p class="justify" dir="ltr"><b>Privacy Statement</b> - All information provided to us, in correspondence and orders, is held in the strictest confidence. We refuse to jeopardize relationships with our customers by violating this policy. We will not share your information with anyone. </p> <p class="justify"><b>Custom Dimension Sheet Projects</b> - Orders placed using custom dimension sheets and photos are inherently more involved. Production of these highly custom covers take an average of 3-4 weeks to reach fruition. For more information or to obtain a dimension sheet custom dimension sheet, please <a href="mailto:sales@websweeper.com">contact us</a>.</p>
+	<h2>Return Policies:</h2>
+
+	<p class="justify">Covers can be returned, no questions asked, within 30 days of delivery (excluding non-returnable items listed below). All returns are subject to a 20% restocking. Any customer who refuses product delivery is still subject to the 20% restocking fee and all associated shipping costs incurred from returning the product. All returned products are subject to inspection by Covercraft Industries and must be in new, restockable condition, as specified under &quot;Non-Returnable Items.&quot; When returning an item, please be patient. Credit for returned items is typically issued 10-12 business days after inspection by Covercraft. <u><i>This is not an instant process</i></u>. Refunds will be issued in the same manner in which funds were originally received.</p> <p><u><i>All sales are final 30 days after posted UPS or FedEx delivery date.</i></u></p>
+
+	<h2>Non-Returnable Items:</h2>
+	<p class="justify"><b>1. Dirty Covers. </b>Upon return, covers are inspected by Covercraft Industries for dirt and abuse. Covers cannot manifest tire marks, grease, dirt, or any other marring substance.&nbsp; Even legitimate return claims and exchanges are subject to inspection. If Covercraft deems a cover non-restockable, the cover will be returned to the customer at the customer's expense. </p>
+	<p class="justify"><b>2. Custom Dimension Sheet Projects. </b>Due to the highly custom nature of dimension sheet covers, they are not returnable except in the case of warranty issues. Obviously, a cover made to the exact the exact specifications of your vehicle cannot be resold. If you are unsatisfied with the fit of your custom dimension sheet cover, we will work with you to resolve this problem. However, keep in mind that the fit of your cover directly parallels accuracy of your measurements. </p>
+	<p class="justify"><b>3. Covers for vehicles manufactured before 1955.</b> Except for warranty issues, these covers are non-returnable.</p>
+	<p class="justify"><b>4.&nbsp;Covers made in Sunbrella and Weathershield HD.</b> Due to the high cost of these fabrics, covers made in Sunbrella and Weathershield HD are not returnable except for warranty issues.</p>
+</div>
+
+
+{/content}

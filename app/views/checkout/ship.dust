@@ -1,0 +1,82 @@
+{>layout/}
+
+{<content} &nbsp; <div align="center">
+	<center>
+		<table valign="top" border="0" width="85%" cellspacing="0" cellpadding="0"
+			style="font-family: Geneva, Arial, Helvetica, sans-serif; border-collapse: collapse" bordercolor="#111111">
+			<tr>
+				<td width="100%">
+					<p align="center"><strong>
+							<font size="+2"><a target="_blank" href="/covers/sales.php">
+									Shipping:</a></font>
+						</strong>
+						<font face="Geneva, Arial, Helvetica, sans-serif">
+							<br>&nbsp;
+
+				</td>
+			</tr>
+			<tr>
+				<td width="100%">
+
+					<table border="0" align="center"
+						style="font-size: 10pt; font-family: Geneva, Arial, Helvetica, sans-serif; font-weight: bold; border-collapse: collapse"
+						cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="514" align="center">
+
+								<p align="justify">You have selected Priority 1 Rush Manufacture which moves your order
+									to the front of production line. Your new cover will be made within 2-3 working
+									days. <font color="#CC0000"> Now, how fast do you want it to travel from the factory
+										in Oklahoma to its destination?</font>
+								</p>
+
+								<form action="https://a4032.americommerce.com/store/shopcart.aspx" method=POST
+									require='item1'>
+									<input type="hidden" name="info1clear" value="1">
+									<input type="hidden" name="nvadd.x" value="1">
+									<input type="hidden" name='gobackto' value='https://carcovers.org'>
+
+									<p>
+										&nbsp;<br>
+										<input type="radio" value='a-4032^=SF=Shipping^UPS Ground (Free Shipping)^0^1^0'
+											checked name="item1">UPS
+										Ground Shipping <font color="#008000">(Free w/ Current <a target="_blank"
+												href="/covers/sales.php">
+												Sale</a>!)<br>
+											&nbsp;</font><br>
+										<input type="radio"
+											value='a-4032^=SF==TF=Shipping^FedEx 2 Day (w/ Shipping Discount)^25^1^0'
+											name="item1">
+										FedEx 2 Day
+										<font color="#008000">($25.00 after <a target="_blank"
+												href="/covers/sales.php">Sale</a> Shipping Discount!)</font><br>
+										<br>
+										<input type="radio"
+											value='a-4032^=SF==TF=Shipping^FedEx Overnight (w/ Shipping Discount)^35^1^0'
+											name="item1">
+										FedEx Overnight
+										<font color="#008000">($35.00 after <a target="_blank"
+												href="/covers/sales.php">Sale</a> Shipping Discount!)</font>
+										<font color="#008000"><br>
+											&nbsp;</font>
+									</p>
+
+									<p>
+										<input type="submit" value="&gt;&gt; Continue on to Shopping Cart &gt;&gt;">
+									</p>
+								</form>
+								<form>
+									<p>
+										<input type='button' value='&lt;&lt; Visit Previous Page &lt;&lt;'
+											onclick='self.history.back();'>
+									</p>
+								</form>
+								<p>&nbsp;&nbsp;
+
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		{/content}

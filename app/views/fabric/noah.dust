@@ -1,0 +1,34 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Noah Cover Fabric</h1>
+		<h2><img src="/covers/fabric/noah-logo.gif" alt="Noah Cover | Noah Car Cover" width="200" height="75" style="border:none" /></h2>
+
+		<img src="/covers/fabric/noah-aston_martin_vanquish.jpg" alt="Noah Car Cover on Aston Martin Vanquish" width="300" height="155" style="float:right; margin-left:20px; border:none" />
+		<p class="justify">The Noah cover fabric used in Covercraft car covers is produced by the Nonwovens sector of Kimberly Clark. Noah is a barrier fabric which actually stops water, yet it &quot;breathes&quot; to allow any trapped moisture, seam seepage or condensation to easily evaporate. The unique construction process (patent pending) results in a cover with maximum all-weather protection...highly water resistant, dust resistant, UV resistant and breathable to make sure moisture and/or heat don't stay under the cover. Made in the U.S. by Kimberly-Clark, the fabric weighs only 4.45 oz./sq. yd., so it's easy to handle and fold. See the <a href="/covers/cover_care/care-noah.pdf" title="Noah Cover Care">Noah Care Instructions</a> to learn more about maintaining a new Noah car cover.</p>
+
+		<br>
+		<div style="float:left;width:192px"> 	<img src="/covers/fabric/noah-fabric_layers.gif" alt="Composition Layers of Noah Car Cover Fabric" width="141" height="86" style="padding:4px;border:none" /> 	<img src="/covers/fabric/noah-fibers.jpg" width="120" height="82" alt="Fiber View of Noah Car Cover Fabric" style="border:none" />
+		</div>
+
+		<p class="justify"><strong>Protective Outer Layers</strong> - A bi-component spunbond, using sheath-core technology. The inner core is polypropylene for strength, with a polyethylene wrap for softness. A silver/gray color was selected because of its heat-resistant properties. The fabric is also treated with UV inhibitors for extended outdoor use.</p>
+
+		<p class="justify"><strong>Micro-Porous Middle Layer</strong> - The barrier layer is breathable film, a proprietary stretch-film technology developed exclusively for Kimberly-Clark. The film is stretched and subjected to a chemical process that creates microscopic holes smaller than droplets of water or dust, yet large enough to allow moisture vapor to escape.</p>
+
+		<p class="justify"><strong>Soft, Paint-Protecting Inner Layer</strong> - A bi-component fabric made with polyethylene and nylon. This combination results in an exceptionally high strength-to-weight ratio, with the &quot;soft touch&quot; necessary for today's water-based paint finishes.</p>
+
+		<br><br>
+
+
+		<div style="width:480px" class="automargins">
+		<div style="float:left">
+			Color: Silver/Gray<br />
+			<img src="/covers/fabric/noah-fabric.jpg" width="100" height="92" alt="Silver-Gray Noah Car Cover Fabric" style="border:none" />
+		</div>
+		<a href="/catalog/cfcc.php?intrst=nh" style="width:300px;float:right;margin-top:35px" class="btn-b">Prices for Noah Car Covers <span class="arrows">&raquo;</span></a>
+		<div class="clear"></div>
+		</div>
+	</div>
+
+{/content}

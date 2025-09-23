@@ -1,0 +1,83 @@
+{>layout/}
+
+{<style}
+	<style>
+		#columns div ul {
+			-moz-column-count:3;
+			-webkit-column-count:3;
+			column-count:3;
+		}
+	</style>
+{/style}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<infoStrip}
+	{!>"partials/infoStrip" /!}
+{/infoStrip}
+
+{<content}
+
+	<h1>Custom Covercraft Car Covers</h1>
+
+	<table align="center">
+		<tr>
+			<td>
+				{@ne key=model.pageType value="Sub-Model"}
+				<img src="/pics/indexpics/evolution-cobra.gif" style="margin-right: 20px" alt="custom fit car cover" width="153" height="100" />
+				{/ne}
+				</td>
+			<td>
+
+				<h2 style="margin: 0 auto 10px auto">Select Vehicle {model.pageType}</h2>
+				<form action="/catalog/{model.nextPage}" method="get">
+					{#model.values}
+						<input type="hidden" name="{key}" value="{val}" />
+					{/model.values}
+				{@eq key=model.pageType value="Sub-Model"}
+					<select style="width:95%;" name="{model.type}" onchange="val = this.value;">
+						<option selected="selected" value="">Select A {model.pageType}</option>
+						{#model.options}
+							<option value="{url}">{text}</option>
+						{/model.options}
+					</select>
+					<input type="button" value="Continue" onclick="window.location.href = val"/>
+				{:else}
+					<select style="width:95%;" name="{model.type}">
+						<option selected="selected" value="">Select A {model.pageType}</option>
+						{#model.options}
+							<option value="{value}">{text}</option>
+						{/model.options}
+					</select>
+					<input type="submit" value="Continue" />
+					</form>
+				{/eq}
+			</td>
+		</tr>
+	</table>
+
+	<div style="width:95%;margin:25px auto;border:solid 1px #000000" id="row">
+		<div style="background:#666;border-bottom:solid 1px #000;padding:7px; color:#FFF;margin-bottom:10px">
+			<strong>{model.make} Car Covers available for these {model.pageType}s:</strong>
+		</div>
+		<div {@ne key=model.pageType value="Sub-Model"}id="columns"{/ne}>
+			<div>
+				<ul class="left">
+					{#model.options}
+						<li style="padding:5px 10px 5px 0px">
+							<a href="{url}">{text}</a>
+						</li>
+					{/model.options}
+				</ul>
+			</div>
+		</div>
+		<!-- <br style="clear:both" /> -->
+	</div>
+
+	{@eq key=model.pageType value="Make"}
+	<p class="bold md">Looking for <a href="/limo/make.php">Limo Cover Prices</a>? Try Here...</p>
+	{/eq}
+
+{/content}

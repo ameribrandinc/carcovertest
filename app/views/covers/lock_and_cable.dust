@@ -1,0 +1,17 @@
+{>layout/}
+
+{<content}
+
+<div class="col-xs-12">
+	<h1>Car Cover Accessories</h1>
+
+	<h2>Lock and Cable Set</h2>
+
+	<img src="/pics/lock-cable.jpg" border="0" height="99" width="76" alt="Lock and Cable Set" style="padding:0 0 10px 15px;">
+
+	<p align="justify">This vinyl covered cable and padlock system is a great theft deterrent and snuggly secures the cover to your vehicle, preventing it from blowing under harsh weather condition. It easily fits through the pre-set plastic grommets on every cover and wraps underneath the car to hold the cover in place.</p>
+
+</div>
+
+{/content}
+

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Selection Preview</title>
+    <!-- Bootstrap 3.2 CSS -->
+    <link rel="stylesheet" href="bower_components/twbs-bootstrap-sass/assets/stylesheets/bootstrap.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Inline the updated color selection styles for preview */
+        .color-selection-title {
+            margin-bottom: 30px;
+            color: #8A241F;
+        }
+        
+        .color-selection-title .fabric-name {
+            color: #AF2F2D;
+            font-weight: 600;
+        }
+        
+        .color-selection-title small {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        @media (min-width: 768px) {
+            .color-selection-title small {
+                display: inline-block;
+                margin-top: 0;
+                margin-left: 15px;
+            }
+        }
+        
+        .color-selection-container {
+            margin-bottom: 40px;
+        }
+        
+        .color-selection-container .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        
+        .color-selection-container .row [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .color-option-card {
+            background: #fff;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+        
+        .color-option-card:hover {
+            border-color: #AF2F2D;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+        }
+        
+        .color-swatch-container {
+            margin-bottom: 20px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .color-swatch-link {
+            display: block;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        .color-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            background: #f8f9fa;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+        .color-image-wrapper:hover .swatch-overlay {
+            opacity: 1;
+        }
+        
+        .color-image-wrapper:hover .color-swatch-image {
+            transform: scale(1.1);
+        }
+        
+        .color-swatch-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        
+        .swatch-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(138, 36, 31, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .preview-text {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .color-info {
+            margin-bottom: 20px;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .color-name {
+            color: #8A241F;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 0;
+            text-transform: capitalize;
+        }
+        
+        .price-container {
+            font-size: 16px;
+        }
+        
+        .price-label {
+            color: #666;
+            font-weight: normal;
+            margin-right: 5px;
+        }
+        
+        .price-value {
+            color: #AF2F2D;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .color-action {
+            margin-top: auto;
+        }
+        
+        .color-select-btn {
+            background-color: #AF2F2D !important;
+            background-image: linear-gradient(#AF2F2D, #8A241F) !important;
+            border-color: #8A241F !important;
+            color: white !important;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+        
+        .color-select-btn:hover,
+        .color-select-btn:focus,
+        .color-select-btn:active {
+            background-color: #8A241F !important;
+            background-image: linear-gradient(#8A241F, #6C1A17) !important;
+            border-color: #6C1A17 !important;
+            color: white !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+        
+        .btn-text {
+            margin-right: 8px;
+        }
+        
+        .btn-icon {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .selection-help {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #AF2F2D;
+        }
+        
+        .help-text {
+            margin: 0;
+            color: #666;
+        }
+        
+        .help-text strong {
+            color: #8A241F;
+        }
+        
+        @media (max-width: 767px) {
+            .block-xs {
+                display: block !important;
+            }
+            
+            .color-selection-container .row [class*="col-"] {
+                margin-bottom: 30px;
+            }
+            
+            .color-option-card {
+                min-height: 350px;
+            }
+            
+            .color-selection-title {
+                font-size: 24px;
+            }
+            
+            .color-selection-title small {
+                font-size: 14px;
+            }
+            
+            .color-swatch-image {
+                height: 120px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .color-option-card {
+                min-height: 420px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .color-option-card {
+                min-height: 450px;
+            }
+            
+            .color-swatch-image {
+                height: 180px;
+            }
+        }
+        
+        @keyframes colorCardEnter {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .color-option-card {
+            animation: colorCardEnter 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .color-option-card:nth-child(1) { animation-delay: 0.1s; }
+        .color-option-card:nth-child(2) { animation-delay: 0.2s; }
+        .color-option-card:nth-child(3) { animation-delay: 0.3s; }
+        .color-option-card:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-header text-center">
+                    <h1 class="color-selection-title">
+                        Select A <span class="fabric-name">Ultratect</span> Color
+                        <small class="block-xs">Choose from our premium color options</small>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Options Grid -->
+        <div class="row color-selection-container">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="color-option-card">
+                    <!-- Color Swatch -->
+                    <div class="color-swatch-container">
+                        <a href="#" class="color-swatch-link">
+                            <div class="color-image-wrapper">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJsYWNrIFN3YXRjaDwvdGV4dD48L3N2Zz4=" 
+                                     alt="Ultratect Car Cover - Black" 
+                                     class="color-swatch-image img-responsive" />
+                                <div class="swatch-overlay">
+                                    <span class="preview-text">Preview</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Color Information -->
+                    <div class="color-info">
+                        <h4 class="color-name">Black</h4>
+                        <div class="price-container">
+                            <span class="price-label">Price:</span>
+                            <span class="price-value">$385.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="color-action">
+                        <a href="#" class="btn btn-success btn-block color-select-btn">
+                            <span class="btn-text">Select This Color</span>
+                            <span class="btn-icon">❯</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="color-option-card">
+                    <!-- Color Swatch -->
+                    <div class="color-swatch-container">
+                        <a href="#" class="color-swatch-link">
+                            <div class="color-image-wrapper">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNzc3Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkdyYXkgU3dhdGNoPC90ZXh0Pjwvc3ZnPg==" 
+                                     alt="Ultratect Car Cover - Gray" 
+                                     class="color-swatch-image img-responsive" />
+                                <div class="swatch-overlay">
+                                    <span class="preview-text">Preview</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Color Information -->
+                    <div class="color-info">
+                        <h4 class="color-name">Gray</h4>
+                        <div class="price-container">
+                            <span class="price-label">Price:</span>
+                            <span class="price-value">$385.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="color-action">
+                        <a href="#" class="btn btn-success btn-block color-select-btn">
+                            <span class="btn-text">Select This Color</span>
+                            <span class="btn-icon">❯</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="color-option-card">
+                    <!-- Color Swatch -->
+                    <div class="color-swatch-container">
+                        <a href="#" class="color-swatch-link">
+                            <div class="color-image-wrapper">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDA3YmZmIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJsdWUgU3dhdGNoPC90ZXh0Pjwvc3ZnPg==" 
+                                     alt="Ultratect Car Cover - Blue" 
+                                     class="color-swatch-image img-responsive" />
+                                <div class="swatch-overlay">
+                                    <span class="preview-text">Preview</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Color Information -->
+                    <div class="color-info">
+                        <h4 class="color-name">Blue</h4>
+                        <div class="price-container">
+                            <span class="price-label">Price:</span>
+                            <span class="price-value">$385.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="color-action">
+                        <a href="#" class="btn btn-success btn-block color-select-btn">
+                            <span class="btn-text">Select This Color</span>
+                            <span class="btn-icon">❯</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="color-option-card">
+                    <!-- Color Swatch -->
+                    <div class="color-swatch-container">
+                        <a href="#" class="color-swatch-link">
+                            <div class="color-image-wrapper">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGViODg3Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlRhbiBTd2F0Y2g8L3RleHQ+PC9zdmc+" 
+                                     alt="Ultratect Car Cover - Tan" 
+                                     class="color-swatch-image img-responsive" />
+                                <div class="swatch-overlay">
+                                    <span class="preview-text">Preview</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Color Information -->
+                    <div class="color-info">
+                        <h4 class="color-name">Tan</h4>
+                        <div class="price-container">
+                            <span class="price-label">Price:</span>
+                            <span class="price-value">$385.99</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="color-action">
+                        <a href="#" class="btn btn-success btn-block color-select-btn">
+                            <span class="btn-text">Select This Color</span>
+                            <span class="btn-icon">❯</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="selection-help text-center">
+                    <p class="help-text">
+                        <small>
+                            <strong>Need help choosing?</strong> 
+                            Each color is designed for optimal protection and style.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="bower_components/twbs-bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{>layout/}
+{<content}
+
+	<h1>Company Info</h1>
+	<h2>Learn More about T.J. Cars</h2>
+
+	<div class="automargins" style="width:20em; margin-bottom:20px">
+	<ul class="justify">
+		<li><a href="/covers/sales.php">Current Sales</a></li>
+		<li><a href="/company/shipping.php">Shipping Information</a></li>
+		<li><a href="/company/policy.php">Policies - General and Returns</a></li>
+		<li><a href="/company/contact/">Contact Information</a></li>
+		<li><a href="/company/crew.php">Meet the Crew</a></li>
+		<li><a href="/company/sitemap.php">T.J. Cars Sitemap</a></li>
+	</ul>
+	</div>
+
+{/content}

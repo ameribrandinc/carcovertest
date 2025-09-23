@@ -1,0 +1,28 @@
+{>layout/}
+
+{<style}
+	<style>
+		.window-prices {
+			background: #F0F0F0;
+			margin-bottom:30px;
+		}
+		.window-prices td {
+			padding: 7px;
+		}
+	</style>
+{/style}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1 style="color:#006600;">Free Car Cover Window With Purchase of Car Cover!</h1>
+
+		<img src="/pics/window-rear-sm.jpg" alt="car cover window">
+		<br />
+		<h3 style="color:black">For a limited time, when you purchase one of our high quality car covers you will receive a free Car Cover Window with it!
+		<br /><br />
+		You can check out all the information on Car Cover Windows <a href="/window/">here</a>.</h3>
+	</div>
+
+
+{/content}

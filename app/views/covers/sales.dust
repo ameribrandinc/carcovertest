@@ -1,0 +1,77 @@
+{>layout/}
+
+{<content}
+
+{<style}
+	<style>
+a.greentxt {
+	color: #006600;
+	font-size: 16px;
+}
+a.greytxt {
+	color: #555;
+}
+	</style>
+
+{/style}
+<div class="col-xs-12">
+	<div style="display:inline"></div>
+		{@eq key="{showBackTo}" value="true"}
+			<button id="go-back" class="btn-success" style="float:left; margin-top:15px" onclick="location.href=document.referrer">Back to Shopping</button><br>
+		{/eq}
+		<h1 style="margin: 30px 0px; color: #666666;" class="green">Bonus Package &#10084;</h1>
+	</div>
+
+	<table class="automargins" style="width:100%; text-align: left;" cellpadding="10">
+		<tr style="outline: 8px ridge #5cb85c; border-radius: 2rem;">
+			<td style="width: 100px;"><a href="/window/"><img src="/pics/window-3.png" alt="Parking Sticker, Parking Permit and License Plate Window"></a></td>
+			<td><a href="/window/" class="greentxt"><span><b class="green md">Free Parking Permit or License Plate Window</b><br><span style="color: #006600;"> *with cover purchase.</span></span></a> 
+			<br />Designed and manufactured exclusively for T.J. Cars, this <a href="/covers/accessories.php" class="greytxt">car cover accessory</a> is a must for many parking garages, airports, and military bases. This promotion will only last for a limited time.</td>
+		</tr>
+		<tr>
+			<td class="left"><img src="/pics/ups-3.png" alt="UPS logos" /></td>
+			<td><b class="green md">Free Shipping</b>
+			<br />Free shipping via UPS ground to the Lower 48 States!</td>
+		</tr>
+		<tr>
+			<td class="left"><a href="/covers/acc-grommet.php"><img src="/pics/grommet-1-3.png" alt="Car cover antenna grommet"></a></td>
+			<td><a href="/covers/acc-grommet.php" class="greentxt"><b class="green md">Free Antenna Grommet</b><span style="color: #006600;"> *with cover purchase.</span></a> 
+			<br />Improve the fit of your <a href="/catalog/cfcc.php" class="greytxt">new car cover</a> on vehicles with non-retractable antennas.</td>
+		</tr>
+		<tr>
+			<td class="left"><img src="/pics/low-price-guarantee-3.png" alt="Low Price Guarantee" /></td>
+			<td><b class="green md">Low Price Guarantee!</b>
+			<br /><a href="/catalog/cfcc.php" class="greytxt">Lowest prices</a> available on custom-fit Covercraft Car Covers. If you find the same cover advertised elsewhere for a lower total price, including shipping, <b>Call us at <a href="tel:1-800-982-6966" class="greytxt">1-800-982-6966</a> &amp; we'll beat it by $5 </b>*must provide competitor info &amp; price location for verification.</td>
+		</tr>
+	</table>
+
+	<h2 style="color: #666666; margin: 30px 0px">Additional Reasons to Buy at T.J. Cars</h2>
+
+	<table class="automargins" style="width:100%; text-align: left;" cellpadding="10">
+		<tr>
+			<td style="width: 100px;"><img src="/pics/covercraft1965-3.png" alt="Car Covers since 1965, Covercraft Industries " style="margin: 5px auto 0pt;" ></td>
+			<td><b style="color: #666666;" class="md">Quality Covercraft Products</b>.
+			<br />One of the Oldest & Largest car cover manufactures in the world, Covercraft Industries is a name you can trust. They even aquired the popular brand Wolf Covers in 2009.</td>
+		</tr>
+		<tr>
+			<td class="left"><a href="/company/made-in-usa.php"><img src="/pics/made-in-the-usa-3.png" alt="Made in the USA" /></a></td>
+			<td><a href="/company/made-in-usa.php" style="color: #666666;" class="md"><b>Made in the USA</b></a>. 
+			<br /><span class="greytxt">Covercraft Custom-Fit car covers are producted in Oklahoma. In addition, T.J Cars has been in business since 1998 and we maintain our sales and support staff in California.</span></td>
+		</tr>
+		<tr>
+			<td><a href="/company/crew.php"><img src="/style/pics/crew-old-sm.jpg" alt="American Made Products" /></a></td>
+			<td><b class="md">The College Project...</b>
+			<br />This business was started by 3 young siblings to pay for college. <a href="/company/crew.php" class="greytxt">Learn more about the Crew and the progress they've made so far &#9654; </a></td>
+		</tr>
+	</table>
+
+
+
+	<div style="width: 75%; margin:0px auto 30px;">
+		<p class="left">*Within the continental Uniteded States. Rush shipping or shipping to other locations (e.g. Hawaii, Alaska, Canada, etc.) receive $12 towards shipping costs.</p>
+
+		<p class="left">With the lowest possible prices on the internet and free shipping, T.J. Cars is one of Covercrafts leading online retailers of custom-fit car covers. Find the perfect custom-fit car cover, truck cover, or SUV cover using our <a href="/catalog/cfcc.php">online catalog</a>. All of our custom-fit car covers are available in <a href="/covers/fabric/sunbrella.php">Sunbrella&reg;</a>, <a href="/covers/fabric/weathershield.php">Weathershield&reg;</a> fabrics. Remember, every cover comes with free shipping.</p>
+	</div>
+</div>
+
+{/content}

@@ -1,0 +1,33 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Car Cover Fabrics</h1>
+		<h2>Form-Fit Covers</h2>
+
+		<p class="justify">Specially designed for cars that are not daily drivers, Covercraft's Form-Fit covers provide a body-hugging fit AND a super soft inside to pamper fine paint finishes. Cover construction begins with an outer shell of woven polyester. The yarn's polyester base also contains added Lycra/Spandex for improved <em><b>STRETCH</b></em> and memory - the stretch provides the body-hugging fit and the memory assures the cover will retain its shape over an extended period of time, giving Form-Fit covers an impressive four (4) year limited warranty.</p>
+
+		<p class="justify">The inside fibers are 100% cotton terry loop which is sheared to a fleece-like finish. The end result is a 7.4 oz/yard&sup2; material that has a great &quot;hand&quot;, or feel. This cover will provide some ding &amp; dent protection for a garage parked vehicle and the fabric is highly breathable to prevent vapor and heat from becoming trapped under the cover. <b>Form-Fit covers are available in six (6) colors</b>.</p>
+
+		<p><b>Please Note:</b> These covers are for special  applications and their patterns are limited.
+		<br />Find out if a pattern exists for your vehicle -
+		<a href="/headers/db_frameset/frameset-formfit.htm">Checking for Form-Fit pattern availability</a>.</p>
+
+		<img src="/pics/formfit-mustang.jpg" alt="Black Form-Fit Car Cover - Mustang" width="300" height="145" />
+		<img src="/pics/formfit-bluecover.jpg" alt="Blue Form-Fit Car Cover - Porsche" width="300" height="159" />
+
+		<p class="red md bold">Since Form-Fit covers use special patterns, they are not found in our
+		<a href="/catalog/cfcc.php">normal catalog</a>.
+		<br />You must use the link below to purchase a Form-Fit cover.</p>
+
+		<a href="/headers/db_frameset/frameset-formfit.htm" style="display:block;width:320px;margin:10px auto 30px auto" class="btn-b">Prices for Form-Fit Car Covers</a>
+
+		<img src="/covers/fabric/FB.jpg" width="90" height="90" alt="Form-Fit Black Car Cover Fabric" />
+		<img src="/covers/fabric/FC.jpg" width="90" height="90" alt="Form-Fit Charcoal Gray Car Cover Fabric" />
+		<img src="/covers/fabric/FD.jpg" width="90" height="90" alt="Form-Fit Blue Car Cover Fabric" />
+		<img src="/covers/fabric/FG.jpg" width="90" height="90" alt="Form-Fit Silver Gray Car Cover Fabric" />
+		<img src="/covers/fabric/FN.jpg" width="90" height="90" alt="Form-Fit Hunter Green Car Cover Fabric" />
+		<img src="/covers/fabric/FR.jpg" width="90" height="90" alt="Form-Fit Red Car Cover Fabric" />
+	</div>
+
+{/content}

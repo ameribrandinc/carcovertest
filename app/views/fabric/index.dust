@@ -1,0 +1,27 @@
+{>layout/}
+{<content}
+
+<div class="col-xs-12">
+	<h1>Car Cover Fabrics</h1>
+
+	<p class="justify">Many other car cover dealers may offer different lines of ready-fit car covers or lower grade fabrics. Here at T.J. Cars, we offer only the best. If we wouldn't use it to cover our car, we won't sell it to you. We specialize in <b>custom-fit</b> car covers by Covercraft, the world's largest car cover manufacturer. Each cover we sell is made to fit and cover a specific vehicle. T.J. Cars covers, by Covercraft, are only offered in the highest quality fabrics fabrics, such as Sunbrella&reg;, WeatherShield&reg;. To learn more about why we only sell car covers in these high quality fabrics, <a href="/covers/fabric/ourfabrics.php">click here</a>.</p>
+
+	<h2>Learn More About Our Available Cover Fabrics:</h2>
+
+	<div style="width:95%x;" class="automargins">
+		<ul style="list-style:none; padding-left:0px" class="center md bold">
+			<li><a href="/covers/fabric/sunbrella.php">Sunbrella</a></li>
+			<li><a href="/covers/fabric/weathershield.php">WeatherShield HP</a></li>
+			<li><a href="/covers/fabric/weathershieldHD.php">WeatherShield HD</a></li>
+		</ul>
+	</div>
+	<!-- <div style="clear:both"></div> -->
+
+	<p class="bold lg"><a href="/catalog/cfcc.php">Search for a cover for your vehicle...</a></p>
+
+	<p class="justify">T.J. Cars specializes in custom-fit car covers by Covercraft. Why custom-fit covers? The answer is simple, custom covers are the best. A custom cover offers a great fit, stylish look, and premium quality. When you order a custom-fit Covercraft for T.J. Cars, rest easy knowing that you will soon have a custom cover specifically engineered for your vehicle. Offering over 45,000 different custom pattern, we are sure to have a cover to fit you car, truck, or SUV.</p>
+
+</div>
+
+
+{/content}

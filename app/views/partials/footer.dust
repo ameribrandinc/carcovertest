@@ -1,0 +1,21 @@
+<br>
+<div class="automargins clearfix">
+	<a href="/company/policy.php" class="col-xs-12 center">
+		<img src="/pics/paymentbar.png" alt="Carcovers.org payment methods">
+	</a>
+	<br>
+	<div class="col-xs-12 center" itemscope="itemscope" itemtype="http://schema.org/Organization">
+		<span class="md bold"><span itemprop="name">T.J. Cars</span> - Custom Covers</span>
+		<br />
+		<span itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+			<span itemprop="streetAddress">4619 Olive Hwy.</span> <span itemprop="addressLocality">Oroville</span>, <span itemprop="addressRegion">CA</span> <span itemprop="postalCode">95966</span>
+		</span>
+		<br />
+		<a href="tel:1-800-982-6966" itemprop="telephone">1-800-982-6966</a> (M-F 8-5 PST), <a href="/company/contact/">Contact Us</a>
+	</div>
+	<!-- style="width:413px;height:25px" -->
+	<div class="center clearfix col-xs-12">
+			Copyright &copy; 1998-{@currentYear /} <a href="/">CarCovers.org</a>
+	</div>
+</div>
+

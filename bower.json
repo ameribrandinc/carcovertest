@@ -1,0 +1,17 @@
+{
+  "name": "carcovers",
+  "description": "",
+  "main": "",
+  "authors": [
+    "pgray-go-ab <pgray@go-ab.com>"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/ameribrandinc/AB-Inc-TJCars",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,48 @@
+{>layout/}
+
+{<splitTestingCode}
+{^abButtonTest}
+ <!-- Google Analytics Content Experiment code --> <script>function utmx_section(){}function utmx(){}(function(){var k='19743040-1',d=document,l=d.location,c=d.cookie; if(l.search.indexOf('utm_expid='+k)>0)return; function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c. indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c. length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write( '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl': '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+ '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date(). valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+ '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})(); </script><script>utmx('url','A/B');</script> <!-- End of Google Analytics Content Experiment code -->
+
+{/abButtonTest}
+{/splitTestingCode}
+
+{<content}
+
+<div class="col-xs-12">
+	<h1>Custom Covercraft Car Covers</h1>
+
+	<fieldset style="width:95%; padding:4px" class="automargins">
+		<legend><strong>Available Car Cover Fabrics:</strong></legend>
+		<table border="0" width="95%" cellpadding="2" cellspacing="0" style="font-size:10px; font-weight:bold" align="center">
+			<tr>
+				<td><a href="/covers/fabric/weathershield.php"><img src="/pics/indexpics/weathershieldHD-hummer.jpg" width="157" height="95" alt="Weathershield Car Cover" /></a></td>
+				<td><a href="/covers/fabric/sunbrella.php"><img src="/pics/indexpics/sunbrella-truckcover.gif" width="143" height="94" alt="Sunbrella Car Cover" /></a></td>
+			</tr>
+			<tr>
+				<td><a href="/covers/fabric/weathershieldHD.php">Weathershield HD Covers</a><br /><a href="/covers/fabric/weathershield.php">and Weathershield Covers</a></td>
+				<td><a href="/covers/fabric/sunbrella.php">Sunbrella Covers</a></td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<div style="margin:5px 0 20px 0"> Which Cover Is Right For You? <a href="/covers/indoor_fabrics.php"><strong>Indoor Cover Fabrics</strong></a> vs. <a href="/covers/outdoor_fabrics.php"><strong>Outdoor Cover Fabrics</strong></a></div>
+
+	{?abButtonTest}
+		<p style="margin:30px"><a href="/catalog/cfcc.php" class="btn-b">Find a cover for your car!</a></p>
+	{/abButtonTest}
+
+	<div class="col-xs-12 col-sm-3 col-md-2 automargins">
+		<a href="/window/"><img src="/window/pics/window-sm.jpg" alt="Car Cover Window"></a>
+	</div>
+	<div class="col-xs-12 col-sm-9 col-md-10">
+		<p class="left"><b class="green">BRAND NEW!</b> The <a href="/window/"><strong>Car Cover Window</strong></a> is specially designed to be installed anywhere on a cover, creating a window for displaying license plates, parking stickers, and permits. This innovative <a href="/covers/accessories.php">car cover accessory</a> requires no adhesive and is designed for customer installation. Now, more than ever, many private and government run parking areas require the license plate the be shown when using a car cover. <b class="green"><em class="red">For a limited time,</em> Save $30 when you buy the window with a new car cover (in addition to <a href="/covers/sales.php">FREE SHIPPING</a>)!</b></p>
+	</div>
+
+	<p class="left">T.J. Cars specializes in custom-fit car covers to protect your car, truck, or SUV. Offering car covers made from only the best cover fabrics, we can take care of any vehicle. Each of our quality Covercraft car covers is available in <a href="/covers/fabric/sunbrella.php"><strong>Sunbrella&trade;</strong></a>, or <a href="/covers/fabric/weathershield.php"><strong>Weathershield&trade;</strong></a> fabrics. A car cover, truck cover, or SUV cover is a great way keep your vehicle clean and protect its finish from harmful UV rays and minor dings and scratches. Protect your investment with a Covercraft car cover from T.J. Cars.</p>
+
+	<p class="left">Our easy to navigate <a href="/catalog/cfcc.php">car cover catalog</a> helps you find a cover tailored exactly to your vehicle. Our searchable catalog helps you quickly search for a car cover, knowing you're making the right choice for your car. Once you find the right cover for your auto, here's <a href="/covers/how-to-order.php">how to order a car cover</a>. Through our many years of tailoring car covers for nearly every brand and style of car you can think of, we have accumulated one of the largest collections of specific car covers patterns in the United States. If we don't have the pattern for your cars covers, it probably doesn't exist! For limousine covers, try our <a href="/limo/">limousine cover search</a>.</p>
+</div>
+
+{/content}
+

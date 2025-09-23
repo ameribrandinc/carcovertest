@@ -1,0 +1,16 @@
+{>layout/}
+{<content}
+
+<div class="col-xs-12">
+	<h1>Shipping</h1>
+
+	<p align="justify">
+	<a href="/covers/sales.php">Current Sale:</a> For a limited time only, <b>receive free UPS ground shipping on all car covers and accessories shipped within the continental United States</b>. Discounts also available on FedEx overnight and FedEx 2-day when combined with car cover <a href="/covers/p1-covers.php">P1 rush manufacture</a>. Receive <b>$12 off rush shipping prices</b>, per item shipped. Shipping to Hawaii and Alaska is calculated on an individual basis.  <b class="red">If you have a unique shipping situation, please call for assistance: 1-800-982-6966</b>.
+	<p align="justify">Many car covers are in stock, but many covers must be custom-made according to <a href="/company/leadtimes.php">Covercraft lead times</a>.  Covers shipped via UPS ground  from our plant in Oklahoma typically take 4 to 6 working days for delivery across the continental United States. The shipping and handling charge is normally a standard $12.00 per cover. However, with the current sale shipping is free! No additional shipping is charged for <a href="/covers/accessories.php">car cover accessories</a> when they are ordered with a car cover.</p>
+
+	<img border="0" src="/pics/ups.gif" width="115" height="64" alt="We use UPS shipping for our car covers.">
+
+	<br><br>
+</div>
+
+{/content}

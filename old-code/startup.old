@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. ~/.nvm/nvm.sh
+nvm use v4.2.1
+
+NODE_ENV=production forever start -l ${HOME}/logs/logfile.log -o ${HOME}/logs/outfile.log -e ${HOME}/logs/errfile.log --append --killSignal=SIGTERM server.js

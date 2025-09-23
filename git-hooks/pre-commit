@@ -1,0 +1,58 @@
+#!/bin/sh
+files=$(git diff --cached --name-only --diff-filter=ACM | grep ".js$")
+if [ "$files" != "" ]; then
+    # check for existence of .jshintrc file
+    if [ -e ".jshintrc" ]; then
+
+        # check for eslint installed on machine
+        if ! hash jshint 2>/dev/null; then
+            echo "You need to have jshint installed globally in order to lint changed .js files pre-commit."
+            echo "Run 'npm install -g jshint' to install jshint."
+            exit 1
+        fi
+
+        pass=true
+
+        echo "Validating JavaScript:"
+
+        for file in ${files}; do
+            result=$(jshint ${file} | grep "error")
+            if [ "$result" == "" ]; then
+                echo "jshint passed: ${file}"
+            else
+                echo "jshint failed: ${file}"
+                pass=false
+            fi
+        done
+
+        if ! $pass; then
+            echo "Your commit contains files that should pass jshint but do not."
+            echo "Please fix the eslint errors and try again."
+            exit 1
+        fi
+    fi
+
+    # check for existence of .jshintrc file
+    if [ -e ".jsbeautifyrc" ]; then
+
+        # check for eslint installed on machine
+        if ! hash js-beautify 2>/dev/null; then
+            echo "You need to have js-beautify installed globally in order to beautify changed .js files pre-commit."
+            echo "Run 'npm -g install js-beautify' to install js-beautify."
+            exit 1
+        fi
+
+        echo "Beautifying JavaScript:"
+
+        for file in ${files}; do
+            result=$(js-beautify --replace ${file})
+            if [ "${result:(-9)}" != "unchanged" ]; then
+                echo "${file} beautified"
+                $(git add $file)
+            fi
+        done
+    fi
+
+fi
+
+exit 0

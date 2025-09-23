@@ -1,0 +1,73 @@
+{>layout/}
+
+{<style}
+<style>
+	.def
+	{
+	text-align:justify;
+	margin-left:15px;
+	}
+
+	.def dt
+	{
+	font-weight:bold;
+	}
+
+	.def dd
+	{
+	margin-left:15px;
+	margin-bottom:10px;
+	}
+
+</style>
+{/style}
+
+{<content}
+	<div class="col-xs-12">
+		<h1>Car Cover Related Definitions</h1>
+
+		<h2 class="left">Elements of Fabric Performance</h2>
+		<dl class="def">
+			<dt><a name="rain">RAIN</a></dt>
+			<dd>Condensed moisture that falls from the atmosphere. For car cover applications it is important to know how well a fabric resists the rain? The best fabrics will shed water, but in extended rain storms even the best fabrics will absorb varying amounts of moisture.</dd>
+			<dt><a name="snow">SNOW</a></dt>
+			<dd>How well does the fabric resist snow?  Snow on the surface of a cover will eventually melt.  On the best covers minimal amounts of moisture will seep  through the cover.</dd>
+			<dt><a name="acidrain">ACID RAIN</a></dt>
+			<dd>Will the cover hold out the contaminants suspended in acid rain?</dd>
+			<dt><a name="dirt-dust">DIRT / DUST</a></dt>
+			<dd>Will the cover prevent dirt and dust, which settles on a cover, to sift through over time?</dd>
+			<dt><a name="uv">UV (sun) DAMAGE</a></dt>
+			<dd>How good is the fabric at blocking UV rays from the vehicles surface and interior?  Best fabrics provide 100% UV protection.</dd>
+			<dt><a name="bird-droppings">BIRD DROPPINGS</a></dt>
+			<dd>Best fabrics will not allow bird droppings to permeate the material and get on the exterior of the vehicle.</dd>
+			<dt><a name="sap">TREE SAP</a></dt>
+			<dd>Tree sap is difficult to remove from exterior surfaces.  The best fabrics will prevent most types of tree sap from reaching the paint finish.</dd>
+			<dt><a name="breathability">BREATHABILITY</a></dt>
+			<dd>How easily can moisture, condensation and heat escape from under the cover?</dd>
+			<dt><a name="insulation">HEAT INSULATION</a></dt>
+			<dd>Is the fabric thick enough to offer any insulating properties to reduce the vehicle temperature on hot days?</dd>
+			<dt><a name="touch">SOFT TOUCH</a></dt>
+			<dd>How soft to the touch is the fabric?  Best fabrics provide a soft, silky finish against the paint surface.</dd>
+			<dt><a name="dings">DING PROTECTION</a></dt>
+			<dd>Based on the thickness of the fabric, will it provide some ding protection for the vehicle while parked?</dd>
+			<dt><a name="wind">EASE OF HANDLING IN THE WIND</a></dt>
+			<dd>How easy is the cover to install and remove in windy conditions?  Generally, fabrics with higher weight per square yard are easier to handle.</dd>
+			<dt><a name="storage">STORAGE SPACE REQUIRE</a></dt>
+			<dd>How much trunk space is required for a stored, folded cover?</dd>
+			<dt><a name="mildew">MILDEW / ROT RESISTANT</a></dt>
+			<dd>All Covercraft fabrics are treated with inhibitors to minimize mold and mildew.</dd>
+		</dl>
+
+		<h2 class="left">Car Cover Related Names</h2>
+		<dl class="def">
+			<dt><a name="covercraft">Covercraft Industries Inc.</a></dt>
+			<dd>The largest manufacture of car covers in the United States.</dd>
+			<dt><a name="sunbrella">Sunbrella&reg;</a></dt>
+			<dd>Woven acylic fabric by Glen Raven, Inc., available in 5 different colors: Pacific Blue, Sky Blue, Cadet Gray, Jet Black, and Toast. See additional <a href="https://carcovers.org/covers/fabric/sunbrella.php">Sunbrella</a> details.</dd>
+			<dt><a name="weathershield">WeatherShield&reg;</a></dt>
+			<dd></dd>
+		</dl>
+
+	</div>
+
+{/content}

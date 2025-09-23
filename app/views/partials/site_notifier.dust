@@ -1,0 +1,6 @@
+<div class="js-banner-notifier banner-notifier container">
+	<a href="/covers/sales.php" class="message">
+		Get <b>FREE</b> shipping on all our covers! <span class="link">Learn more.</span>
+	</a>
+	<span class="close js-site-notifier-close" role="button" title="Hide message">X</span>
+</div>

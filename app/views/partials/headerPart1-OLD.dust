@@ -1,0 +1,76 @@
+<!-- Old Code -->
+
+<!-- <div style="width:1170px; margin: 10px auto;">
+
+<div style="float: left; width:750px; margin: 10px auto;">
+  
+  <div style="float:left; margin-right: 10px;"><img src="/headers/pics/logoiconsm.png" style="margin-top: -26px; margin-left:18px;" /></div>
+
+ 
+  
+  <div style="float:left; margin-top: 10px;">
+    <div style="float:left;">
+      <div style="float:left; margin-top: -17px;"><img src="/headers/pics/tjcars.png" / ></div>
+      <div style="float:left; font-family: helvetica; font-weight: bold; color:#555; font-size: 14px; margin-left: 7px; margin-top: -26px; "><p>Custom Car Covers</p></div>
+    </div>
+    <div style="clear:left; float:left; font-size: 13px; font-weight: 500; font-family: helvetica; color: #555; margin-top: -15px;">"Shielding Cars from the Elements" -Online Sales Since 1998</div>
+  </div>
+
+</div>
+
+
+  <a href="/covers/sales.php" class="hidden-xs">
+	  <div style="float:left; margin-top: -5px;"><h2 style="text-align: right; font-size: 15px; color: #757576; font-weight: bold; margin-right: 7px; margin-top: 5px;">LIMITED TIME<br /><p style="font-size: 26px; color: #6dbe46; font-weight: 700; margin-top: -3px;">FREE</p><h2></div>
+	  <div style="float:left; margin-top: 4px; margin-right: 7px;"><img src="/headers/pics/stuffxl2.png" /></div>
+
+	<div style="float:left;">
+	  <div style="clear:left; margin-top: -12px;"><img src="/headers/pics/car_icon_header.png" /></div>
+	  <a href="" onclick="window.open('/covers/bonus_item', 'Bonus Item','scrollbar=yes,width=900,height=900'); return false;" ><div><p style="color: #898989; font-size:12px; margin-top: -5px;">Free Bonus Items</p></div></a>
+	</div>
+  </a>
+
+</div>
+-->
+
+<!-- New Code -->
+
+{<style}
+  <style>
+.stuff:hover {
+    opacity: .5;
+}
+  </style>
+
+{/style}
+
+<div style="width:1170px; margin: 10px auto;">
+
+<div style="float: left; width:750px; margin: 10px auto;">
+  
+  <div style="float:left; margin-right: 10px;"><img src="/headers/pics/logoiconsm.png" style="margin-top: -26px; margin-left:18px;" /></div>
+
+ 
+  
+  <div style="float:left; margin-top: 10px;">
+    <div style="float:left;">
+      <div style="float:left; margin-top: -17px;"><img src="/headers/pics/tjcars.png" / ></div>
+      <div style="float:left; font-family: helvetica; font-weight: bold; color:#555; font-size: 14px; margin-left: 7px; margin-top: -26px; "><p>Custom Car Covers</p></div>
+    </div>
+    <div style="clear:left; float:left; font-size: 13px; font-weight: 500; font-family: helvetica; color: #555; margin-top: -15px;">"Shielding Cars from the Elements" -Online Sales Since 1998</div>
+  </div>
+
+</div>
+
+
+  <a href="/covers/sales.php" class="hidden-xs">
+
+    <div style="float:left; margin-top: -5px;"><h2 style="text-align: right; font-size: 15px; color: #757576; font-weight: bold; margin-right: 7px; margin-top: 5px;">LIMITED TIME<br /><p style="font-size: 26px; color: #6dbe46; font-weight: 700; margin-top: -3px;">FREE</p><h2></div>
+    <div style="float:left; margin-top: 4px; margin-right: 7px;"><img src="/headers/pics/stuffxl2.png" alt="Stuff" class="stuff" /><div style="margin-left:-100px;">*includes permit or license plate window!</div></div>
+
+  <div style="float:left;">
+    <div style="clear:left; margin-top: -12px;"><img src="/headers/pics/car_icon_header.png" /></div>
+    <div><p style="color: #898989; font-size:12px; margin-top: -5px;">Free Bonus Items</p></div>
+  </div>
+  </a>
+
+</div>

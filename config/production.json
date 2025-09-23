@@ -1,0 +1,23 @@
+{
+	"name": "production",
+	"port": [80, 443],
+	"db": {
+		"host": "localhost",
+		"user": "CarCoversRead",
+		"password": "5d3aH1y$M57G4fpb",
+		"name": "tjcars_production"
+	},
+	"newrelic": {
+		"app_name": ["Car Covers (production)"],
+		"license_key": "f7e37e575feb495da4ac306240a9898003454ea8",
+		"capture_params": true,
+		"logging": {
+			"level": "info"
+		}
+	},
+	"covercraft": {
+		"rootUrl": "http://216.60.144.111/ccws/",
+		"username": "TJ56204",
+		"password": "4s3f22gjk3"
+	}
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		{+splitTestingCode}{/splitTestingCode}
+
+		{?meta.canonical}
+			<link rel="canonical" href="https://carcovers.org{meta.canonical|u}">
+			<meta property="og:url" content="https://carcovers.org{meta.canonical}">
+		{/meta.canonical}
+
+		{?meta.title}
+			<title>{meta.title}</title>
+			<meta property="og:title" content="{meta.title}">
+		{/meta.title}
+
+		{?meta.keywords}
+			<meta name="keywords" content="{meta.keywords}">
+		{/meta.keywords}
+
+		{?meta.description}
+			<meta name="description" content="{meta.description}">
+			<meta property="og:description" content="{meta.description}">
+		{/meta.description}
+
+		{?meta.robots}
+			<meta name="robots" content="{meta.robots}">
+		{/meta.robots}
+
+		<meta property="og:type" content="product">
+		<meta property="og:image" content="https://carcovers.org/pics/tjcars_logo.png">
+		<meta property="og:site_name" content="T.J. Cars - Custom Fit Car Covers">
+		<meta property="fb:admins" content="64301692">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+		<meta name="google-site-verification" content="88k6M51IiawBZVbrn-Xc2WONHD8NIXa169Tpt6S-2aY">
+		<meta name="google-site-verification" content="bxCsKJTSn70KYWtFvHysVf6VaoNHQxCox-H5xp0Ja2g">
+		<meta name="y_key" content="ea65fe90769c79fb">
+		<meta name="msvalidate.01" content="6998E384DE03A26462FBAEFF1562825A">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="{rootUrl}/style/tjcars.css">
+		{+style}{/style}
+		{! TODO: get rid of this once conversion is over. We should never need to add page specific scripts here in the <head> !}
+		{+headerScripts}{/headerScripts}
+	</head>
+	{! TODO: clean up bodyAttr as well !}
+	<body {+bodyAttr}{/bodyAttr} class="{@eq key="{siteNotifierStatus}" value="visible"}banner-notifier-offset{/eq}">
+		{> "partials/site_notifier" /}
+		<div id="containerAll" class="container">
+			<div id="containerMain">
+				<div id="containerHeader">
+					{> "partials/headerPart1" /}
+				</div>
+				<div id="leftNav">
+					{> "partials/leftNavPart1" /}
+				</div>
+				{+extraStrip}{/extraStrip}
+				{>"partials/navStrip" /}
+				{+infoStrip}{/infoStrip}
+				<div id="content" class="clearfix">
+					{+content}{/content}
+				</div>
+				{>"partials/footer" /}
+			</div>
+		</div>
+		{> "partials/headerTitle" /}
+		<script src="{rootUrl}/scripts/main.js"></script>
+		{+scripts}{/scripts}
+	</body>
+</html>

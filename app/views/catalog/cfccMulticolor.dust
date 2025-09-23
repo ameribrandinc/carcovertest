@@ -1,0 +1,66 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<infoStrip}
+	{!>"partials/infoStrip" /!}
+{/infoStrip}
+
+{<headerScripts}
+	<script src="/scripts/multicolor-select.js"></script>
+{/headerScripts}
+
+{<bodyAttr}onLoad="setDropDownLists()"{/bodyAttr}
+{<content}
+	<h1>Select WeatherShield HP Colors</h1>
+	<img src="pics/carcovers/multicolor-wsHP/CarCover_White_White.gif" style="margin:15px auto 25px auto" width="250" name="DuoTonePic" border="0">
+
+	<form name="DuoToneForm" action="{nextAction}" method="get">
+	<input type="hidden" name="{fabricValue}" value="PX">
+	{#options}
+	<input type="hidden" name="{key}" value="{value}">
+	{/options}
+	<input type="hidden" name="multicolor" value="1">
+<table border="0" class="center" align="center" style="margin-bottom:15px">
+	<tr class="bold">
+		<td>Center Color</td>
+		<td>Side Color</td>
+	</tr>
+		<tr>
+		<td>
+			<select size="1" name="TopColor" onChange="changeColors();">
+				<option value="White" label="Choose Color of the Top" selected>Choose Color of the Center</option>
+				<option value="Taupe" label="Taupe">Taupe</option>
+				<option value="Red" label="Red">Red</option>
+				<option value="Yellow" label="Yellow">Yellow</option>
+				<option value="Green" label="Green">Green</option>
+				<option value="BrightBlue" label="BrightBlue">Bright Blue</option>
+				<option value="SkyBlue" label="SkyBlue">Sky Blue</option>
+				<option value="Gray" label="Gray">Gray</option>
+				<option value="Black" label="Black">Black</option>
+			</select>
+		</td>
+		<td>
+			<select size="1" name="SideColor" onChange="changeColors();">
+				<option value="White" label="Choose Color of the Sides" selected>Choose Color of the Sides</option>
+				<option value="Taupe" label="Taupe">Taupe</option>
+				<option value="Red" label="Red">Red</option>
+				<option value="Yellow" label="Yellow">Yellow</option>
+				<option value="Green" label="Green">Green</option>
+				<option value="BrightBlue" label="BrightBlue">Bright Blue</option>
+				<option value="SkyBlue" label="SkyBlue">Sky Blue</option>
+				<option value="Gray" label="Gray">Gray</option>
+				<option value="Black" label="Black">Black</option>
+			</select>
+		</td>
+	</tr>
+</table>
+
+<input type=button value="&lt;&lt; BACK" onclick="self.history.back()" id=button1 name=button1>&nbsp;
+<input type="submit" value="NEXT &gt;&gt;" id="submit1" onclick="return(CheckColors());">
+</form>
+
+
+{/content}

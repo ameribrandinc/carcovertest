@@ -1,0 +1,16 @@
+{>layout/}
+{<content}
+
+<div class="col-xs-12">
+	<h1>Car Cover Accessories</h1>
+
+	<h2>Storage Bag</h2>
+
+	<img src="/pics/storage-bag.jpg" border="0" height="58" width="95" alt="Car Cover Storage Bag" style="padding:0 15px 10px 0;">
+
+	<p align="justify">Every cover comes in a cardboard box, but this box will quickly deteriorate if frequently used to store a cover. The storage bag is a quick, easy, and compact way to store your cover in the trunk or garage. It also protects your cover from premature wear during storage.</p>
+
+</div>
+
+{/content}
+

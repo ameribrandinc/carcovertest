@@ -1,0 +1,39 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>T.J. Cars Coversearch</h1>
+		<a href="/catalog/cfcc.php">
+			<img src="/covers/fabric/FF-combo.jpg" width="300" height="224" alt="Search for a truck, suv, or car cover" />
+		</a>
+
+		<h2 class="center">
+			<a href="/catalog/cfcc.php">Find A Car Cover!</a>
+		</h2>
+
+		<p class="justify">T.J. Cars Coversearch allows you to search the most up-to-date Covercraft database on the internet. Our site directly interfaces with Covercraft's current database, giving you access to the world's most current Covercraft database while maintaining the functionality of T.J. Cars' Coversearch. Offering over 45,000 different custom pattern, we are sure to have a cover to fit your car, truck, or SUV. The majority of these covers can be found in the Main Search below. However, if you cannot find a cover for your vehicle, not to worry... Covercraft covers can be <a href="/covers/carmodifications.php">made to fit any vehicle base on its dimensions</a>. T.J. Cars also offers an the entire line of Covercraft limousine covers which are not listed in their standard database. If you have exhausted all of these search options or are unable to find your vehicle, give us a call at <a href="tel:1-800-982-6966">1-800-982-6966</a> or <a href="/company/contact/"> contact us</a>, we'll help you find the right cover.</p>
+
+		<p class="justify">Why do we specialize in custom-fit car covers by Covercraft? The answer is simple; custom-fit covers are the best. A custom cover offers a great fit, stylish look, premium quality, and most importantly, excellent protection. When ordering a custom-fit Covercraft for T.J. Cars, you can rest easy knowing that you will soon have a custom cover specifically engineered for your vehicle.</p>
+
+		<h2>Available Cover Search</h2>
+		<table style="width:95%;" class="automargins">
+			<tr>
+				<td class="right" style="padding:7px; width:40%"><b>&bull; &nbsp;<a href="/catalog/cfcc.php">Main Cover Search</a></b></td>
+				<td class="left" style="padding:7px" >All covers, all makes, models, and years...</td>
+			</tr>
+			<tr>
+				<td class="right" style="padding:7px"><b>&bull; &nbsp;<a href="/limo/">Limo Cover Search</a></b></td>
+				<td class="left" style="padding:7px">Entire line of Covercraft limousine covers...</td>
+			</tr>
+			<tr>
+				<td class="right" style="padding:7px"><b>&bull; &nbsp;<a href="/covers/carmodifications.php">Spec Sheets</a></b></td>
+				<td class="left" style="padding:7px">Create a cover from custom dimensions. Often applicable for covering late model vehicles, camper shells, campers, trailers, RVs, tractors, golf carts, and modified vehicles (by measurement)...</td>
+			</tr>
+		</table>
+
+		<p class="justify">TJ Cars Covers proudly serves the area &amp; communities of Spokane, Des Moines, Grand Rapids, San Bernardino, Richmond, Irving, Huntington Beach, Reno, Mobile, Augusta-Richmond County, Winston-Salem, Boise, Arlington, Columbus, Little Rock, Newport News, Oxnard, Salt Lake, Jackson, Amarillo, Providence, Worcester, Knoxville, Irvine, Ontario, Oceanside, Garden Grove, Huntsville, Fort Lauderdale, Santa Clarita, Aurora, Dayton, Overland Park, Tempe, Moreno Valley, Brownsville, Chattanooga, Pomona, Tallahassee, Santa Rosa, Springfield, Fontana, Rockford, Vancouver, Rancho Cucamonga, Springfield, Paterson, and Pembroke Pines. T.J. Cars is your car cover supply.</p>
+	
+	</div>
+
+{/content}
+

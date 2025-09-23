@@ -1,0 +1,141 @@
+{>layout/}
+
+{<style}
+	<style>
+	.compareWS{
+	border-collapse:collapse;
+	width:95%;
+	margin:15px auto}
+	.compareWS tr.head td{
+	color:#fff;
+	background:#A90402}
+	.compareWS tr td{
+	border:1px solid #111;
+	padding:3px;
+	width:150px}
+	</style>
+{/style}
+
+{<content}
+
+	<div class="col-xs-12">
+
+		<h1>Car Cover Fabrics</h1>
+		<h2>WeatherShield&reg; HP Car Covers</h2>
+
+		<div class="col-xs-12">
+			<img src="/covers/fabric/weathershield-multicolor_green-yellow.jpg" width="300" height="152" alt="Weathershield multi-color cover, green and yellow car cover">
+			<img src="/covers/fabric/weathershieldHP-weather_blocking.jpg" width="218" height="162" alt="EPIC by Nextec&reg; encapsulation process, weather resistant and breathable">
+		</div>
+
+		<h3>Weathershield HP, &quot;Little brother&quot; of <a href="/covers/fabric/weathershieldHD.php">WeatherShield&reg; HD</a>...</h3>
+
+		<p class="justify">WeatherShield HP is the newest version of WeatherShield fabrics, which continues to utilize the patented <b>EPIC encapsulation process by Nextec&reg;</b>, originally developed for high performance outdoor sports-wear. Their proprietary technology uses precision and controlled placement of special polymers to make ordinary fabrics extraordinary! This encapsulation process places an ultra-thin film around the fabric fibers and precisely places a durable, breathable barrier within the woven polyester fabric, creating a silky smooth finish that glides over fine paint finishes. Unlike traditional coatings and laminations that just protect one side of the fabric, Nextec uses up to 40 computerized process controls to place protective polymers inside the fabric to shed water and block dust, bird droppings, tree sap and industrial pollutants. In addtion, the fabric breaths to allow moisture, condensation and heat to easily escape from under the cover.</p>
+		<p class="justify">Nextec engineers have now married solution-dyed fibers to the EPIC finish in an environmentally friendly process that features much lower CO2 emissions!  Also called &quot;dope-dyeing&quot; the high-performance polyamide fibers require no dyeing after weaving, saving water and energy consumption and slashing wastewater, a byproduct of traditional surface dye processing.  Using solution-dyed fibers can save as much as 1,000 gallons of water for every 1,000 yards of fabric produced!Color permanency is the key to our new WeatherShield&reg;HP - the color is extruded INSIDE the fibers for maximum fade resistance, NOT a surface dye coating.  The result is a cover that's provides all-weather protection, machine washable, fade resistant AND environmentally friendly!</p>
+		<p class="justify">The result is a environmentally-friendly fabric that provides maximum protection, but isn't bulky and hard to store. Using Nextec encapsulation technology we've created the ultimate car     cover...and we named it WeatherShield because no other fabric has every shielded your car or truck from the elements like this one!</p>
+		<div>
+			<img src="/covers/fabric/weathershield-washing.jpg" width="100" height="100" alt="Weathershield car cover can be cleaned in washing machine" style="padding:7px" />
+			<img src="/covers/fabric/weathershield-fibers.jpg" width="282" height="100" alt="Encapsulated fibers of Weathershield cover fabric" />
+			<img src="/covers/fabric/weathershield-size_comparison.jpg" width="100" height="100" alt="Packs small, a 1/4 to 1/2 the size of standard woven car covers" style="padding:7px" />
+		</div>
+
+		<p class="justify">These magnified photo gives you an idea how the encapsulation coats the fibers and fills the voids between the threads with a breathable barrier to assure moisture, dust and pollutants are kept away from the vehicles finish. The base, high-strength, polyester fabric is naturally UV resistant, but we've added UV inhibitors to the polymers to help slow-down the degradation that occurs naturally on anything exposed to sun for an  extended period of time. See the <a href="/covers/cover_care/care-weathershield.pdf">WeatherShield Care Instructions</a> to learn more about maintaining a new Weathershield car cover.</p>
+
+		<div style="width:95%" class="automargins">
+			<img src="/covers/fabric/weathershield-covered_car.jpg" alt="Tan Weathershield Car Cover" width="298" height="100" />
+			<img src="/covers/fabric/weathershield-multicolor_red-grey.jpg" alt="Multi-color Weathershield Car Cover, Red and Grey" width="280" height="103"/>
+			<div class="clear"></div>
+		</div>
+
+		<h3>WeatherShield HP Features</h3>
+
+		<ul class="justify listspace">
+				<li><b>Weatherproof</b> - Fabric sheds water as soon as it hits the cover.</li>
+				<li><b>Superior Dry Time</b> - Because the fabric sheds moisture it has an absorption factor of only 2%, compared with up to 40% for standard woven and non-woven fabrics. That means, if the cover has been sitting out in the rain you only need to shake it and the residue moisture will easily dry, in the trunk or on the car.</li>
+				<li><b>Breathable</b> - Allows any heat or condensation under the cover to easily escape.</li>
+				<li><b>UV Resistant</b> - Special additives prevent UV degradation and protect the vehicles finish and interior.</li>
+				<li><b>Dust-proof</b> - Patented fiber encapsulation process prevents dust from filtering through the fabric.</li>
+				<li><b>Scratch-less</b> - Polymers provide a silky smooth finish to the fabric and provide superior paint protection. Nextec fabric has been tested at 1,000 cycles on abrasion wheels without scratching (surface must be clean and waxed).</li>
+				<li><b>Durable</b> - The encapsulation process is not affected by heat or cold and the process won't degrade over the life of the fabric.</li>
+				<li><b>Easy Care</b> - Unlike non-woven fabrics you can clean most car-size WeatherShield covers in your HOME washer and dryer.</li>
+				<li><b>Packs Small &amp; Light</b> - All this protection in a lightweight package that packs into 1/4 to 1/2 the volume of multi-layer, non-woven fabrics. That's a cover for a Honda Accord he's holding - minimal storage space, but high-performance protection.</li>
+		</ul>
+
+		<p class="bold lg" style="margin: 25px"><a href="/catalog/cfcc.php?intrst=wsHP" style="width:420px" class="btn-b">Prices for WeatherShield HP Car Covers...</a></p>
+
+		<p class="bold md">Standard colors:</p>
+		<img src="/covers/fabric/weathershield-color-gray.jpg" alt="Gray Weathershield fabric swatch " width="60" height="60" />
+		<img src="/covers/fabric/weathershield-color-taupe.jpg" alt="Taupe Weathershield fabric swatch " width="60" height="60" />
+
+		<p class="bold md">Additional WeatherShield HP Colors Available*:</p>
+		<img src="/covers/fabric/weathershield-color-yellow.jpg" alt="Yellow Weathershield fabric swatch " width="60" height="60" />
+		<img src="/covers/fabric/weathershield-color-skyblue.jpg" alt="Sky blue Weathershield fabric swatch " width="60" height="60" />
+		<img src="/covers/fabric/weathershield-color-red.jpg" alt="Red Weathershield fabric swatch " width="60" height="60" />
+		<img src="/covers/fabric/weathershield-color-green.jpg" alt="Green Weathershield fabric swatch " width="60" height="60" />
+		<img src="/covers/fabric/weathershield-color-brightblue.jpg" alt="Blue Weathershield fabric swatch " width="60" height="60" />
+		<img src="/covers/fabric/weathershield-color-black.jpg" alt="Black Weathershield fabric swatch " width="60" height="60" />
+
+		<br />&nbsp;
+
+		<img src="/covers/fabric/weathershield_multicolor.gif" alt="Multi-color Weathershield Car Cover, Red and Grey" width="250" height="192" style="float:left;margin:0 20px 0 0" />
+				<h3 class="automargins"><a name="multicolor_weathershield">WeatherShield HP Multicolor</a></h3>
+			<p class="justify">WeatherShield Multicolor covers offer  the same great indoor/outdoor protection, but with the <b>option of  choosing two different colors</b>. Now you can pick your favorite color for the &quot;deck&quot; (hood, roof, trunk) and another  color for the sides to customize your custom cover.&nbsp; With 56  possible multi-color combinations to choose from, your custom-fit car  cover becomes that much more personalized.</p>
+		<div class="clear"></div>
+
+		<a href="/catalog/cfcc.php?intrst=wsMC" style="width:95%;margin:15px auto 0 auto" class="btn-b">Prices for Multi-Color Weathershield HP Car Covers</a>
+
+		<h3>WeatherShield&reg; HP &nbsp;vs.&nbsp; WeatherShield&reg; HD:</h3>
+
+		<table class="compareWS">
+			<tr class="head">
+			<td><b>Comparison</b></td>
+			<td><b>WeatherShield&reg; HP <br>(little bro)</b></td>
+			<td><b>WeatherShield&reg; HD <br>(big bro)</b></td>
+			</tr>
+			<tr>
+			<td><b>Volume</b></td>
+			<td>compact</td>
+			<td>less compact</td>
+			</tr>
+			<tr>
+			<td><b>Weight</b></td>
+			<td>standard</td>
+			<td>40% heavier</td>
+			</tr>
+			<tr>
+			<td><b>Fibers</b></td>
+			<td>silky-smooth</td>
+			<td>slightly larger</td>
+			</tr>
+			<tr>
+			<td><b>Tear Strength</b></td>
+			<td>standard</td>
+			<td>2x times stronger</td>
+			</tr>
+			<tr>
+			<td><b>Wash / Dry</b></td>
+			<td>At Home</td>
+			<td>Professional</td>
+			</tr>
+			<tr>
+			<td><b>Warranty</b></td>
+			<td>4 years</td>
+			<td>5 years</td>
+			</tr>
+			<tr>
+			<td><b>Color(s)</b></td>
+			<td>8 colors</td>
+			<td>1 color - (Grey)</td>
+			</tr>
+			<tr>
+			<td><p><b>Performance Against<br>the Elements</b></td>
+			<td>Great</td>
+			<td>Best</td>
+			</tr>
+		</table>
+			&nbsp;
+
+		<h3>NOTICE REGARDING DARK &amp; BRIGHT COLORS OF WEATHERSHIELD&reg; HP FABRIC</h3>
+		<p class="justify"><b>*We do not recommend the use of bright color WeatherShield fabric on light color surfaces, as this can result in &quot;crocking&quot;.</b> &quot;Crocking&quot; is a fabric industry term for color transfer of dyes from a fabric to another surface. Each dye-lot of WeatherShield fabric is tested for both wet and dry crocking and certified to AATCC Test Standard ratings of 4 or higher (out of 5) for resistance to crocking. But even with continuous testing there is still a possibility that bright colors (red, green, blue, black &amp; yellow) can transfer color dye when rubbed against light color surfaces.</p>
+	</div>
+{/content}

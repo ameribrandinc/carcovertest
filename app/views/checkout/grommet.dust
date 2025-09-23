@@ -1,0 +1,57 @@
+{>layout/}
+
+{<content}
+
+<div class="col-xs-12">
+	<div align="center" style="background: #fff">
+		<table valign="top" border="0" width="85%" cellspacing="0" cellpadding="0" style="font-family: Geneva, Arial, Helvetica, sans-serif; border-collapse: collapse" bordercolor="#111111">
+		<tr>
+			<td width="100%">
+				<p align="center"><strong>
+				<font size="+2" face="Geneva, Arial, Helvetica, sans-serif">Cover Options:</font></strong>
+				<font face="Geneva, Arial, Helvetica, sans-serif">
+				<br>&nbsp;</font>
+			</td>
+			</tr>
+			<tr>
+				<td width="100%">
+					<p align="justify"><font face="Geneva, Arial, Helvetica, sans-serif" size="2">One thing that can hamper a perfect fit is your car's antenna. If your vehicle has a retractable antenna, this should not be a problem. There are also a select few covers come with an antenna pocket built into the design, but many do not have this feature. If your cover does not say &quot;w/ Antenna Pocket&quot; in the model, then you are also already covered. For those of you who do not have a retractable antenna or antenna pocket built in, the antenna grommet is the perfect solution. This easy-to-mount, scratch-free, plastic grommet can be placed at the exact location of your antenna, relieving stress on the antenna and allowing your cover to sit better on the vehicle.</font><br> </p>
+					<table border="0" width="450" height="117" align="center" style="font-size: 10pt; font-family: Geneva, Arial, Helvetica, sans-serif; font-weight: bold; border-collapse: collapse" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="158" height="32" align="center">
+								<img src="/pics/grommet-1.jpg" width="100" height="100">
+							</td>
+							<td width="158" height="32" align="center">
+								<img src="/pics/grommet-2.jpg" width="100" height="100">
+							</td>
+							<td width="157" height="32" align="center">
+								<img src="/pics/grommet-3.jpg" width="100" height="100">
+							</td>
+							</tr>
+							<tr>
+								<td width="461" height="49" align="center" colspan="3">
+									<form action="https://a4032.americommerce.com/store/shopcart.aspx" method="POST">
+										<input type="hidden" name="info1clear" value="1">
+										<input type="hidden" name="nvadd.x" value="1">
+										<input type="hidden" name="gobackto" value="{forwardURL}">
+										<input type="hidden" name="item" value="a-4032^=SF=Ant-Grom^Antenna Grommet^0^1^0">
+										<input name="itemshipsfree" type="hidden" value="1" />
+										<p>
+											<input type="submit" class="btn btn-success" value="Add antenna grommet to cart &gt;&gt;">
+										</p>
+									</form>
+									<form>
+										<p>
+											<input type="button" class="btn" value="No thanks &gt;&gt;" ONCLICK="window.location.href='{forwardURL}'">
+										</p>
+									</form>
+								</td>
+							</tr>
+						</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+{/content}

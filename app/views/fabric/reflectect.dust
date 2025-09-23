@@ -1,0 +1,23 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Car Cover Fabrics</h1>
+		<h2>Reflectect Covers</h2>
+
+		<img src="/covers/fabric/reflectect-logo.jpg" alt="Reflectect Logo">
+
+		<h2>Lightweight Sun Protection</h2>
+		<ul class="justify">
+				<li>Woven fabric has a UV-reflective silver-colored finish that helps keep the vehicle cooler</li>
+				<li>Fabric is water resistant and also repels dust and dirt to help keep the vehicle clean</li>
+				<li>Compact for easy trunk storage</li>
+				<li>3 Year Warranty</li>
+				<li>Easy to handle for installation and removal, this lightweight cover provides good all season protection.</li>
+		</ul>
+
+		<p><img src="/covers/fabric/reflectect-car.jpg" alt="Gray Reflectect Car Cover - Dodge Charger" width="500" height="225" /><br>Available Color: Gray</p>
+
+		<a href="/catalog/cfcc.php?intrst=rs" style="width:400px" class="btn-b">Prices for Reflectect Car Covers</a>
+	</div>
+{/content}

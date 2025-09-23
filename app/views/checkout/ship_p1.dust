@@ -1,0 +1,62 @@
+{>layout/}
+
+{<content}
+
+&nbsp;
+<table align="center" valign="top" border="0" width="85%" cellspacing="0" cellpadding="0" style="font-family: Geneva, Arial, Helvetica, sans-serif; border-collapse: collapse" bordercolor="#111111">
+	<tr>
+		<td width="100%" align="center">
+
+<table border="0" cellpadding="0" cellspacing="0" width="474">
+	<tr>
+		<td width="86">
+		<img src="/covers/pics/P1-wbg-sm.jpg" align="right" border="0" width="80" height="80"></td>
+
+		<td valign="middle" width="302">
+		<p align="center">
+		<strong><font size="+2">
+<a target="_blank" href="/covers/p1-covers.php"> P1 - Rush Manufacture:</a>
+</font></strong>
+
+						</td>
+		<td width="86">
+		<img src="/covers/pics/P1-wbg-sm.jpg" align="right" border="0" width="80" height="80"></td>
+	</tr>
+</table>
+&nbsp;
+
+		<form action="https://a4032.americommerce.com/store/shopcart.aspx" method=POST require='item1'>
+			<input type="hidden" value='a-4032^=SF=Free-Ship^Free Ground UPS Shipping in 48 Contiguous States^0^1^0' name="item1">
+			<input type="hidden" name='gobackto' value='https://carcovers.org'>
+			<input name="itemshipsfree" type="hidden" value="1" />
+			<input type="hidden" name=info1clear value=1>
+			<input type="hidden" name=nvadd.x value=1>
+			<input type="submit" value="No thanks... Continue on to the Shopping Cart &gt;&gt;">
+		</form>
+
+		<br>
+
+		<form action="https://a4032.americommerce.com/store/shopcart.aspx" method="POST" require="item1">
+			<input type="hidden" name='gobackto' value='https://carcovers.org'>
+			<input type="hidden" value='a-4032^=SF==TF=P1^Rush Manufacture^{price}^1^0' name="item1">
+			<input type="hidden" name=info1clear value=1>
+			<input type="hidden" name=nvadd.x value=1>
+			<input name="itemshipsfree" type="hidden" value="1" />
+			<input type="submit" value="Add 2-3 Day Rush Manufacture Service* for ${price} &gt;&gt;">
+		</form>
+
+			<br>
+
+			<form>
+			<input type='button' value='&lt;&lt; Visit Previous Page' onclick='self.history.back();'>
+						<p>&nbsp;</p>
+						<p>*Sorry, P1 Rush service is not available for <a target="_blank" href="/covers/fabric/weathershield.php#multicolor_weathershield">
+						Weathershield Multicolor</a> Covers. <br>
+&nbsp;</p>
+						</form>
+
+					</td>
+					</tr>
+					</table>
+
+{/content}

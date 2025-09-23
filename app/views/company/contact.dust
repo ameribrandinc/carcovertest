@@ -1,0 +1,39 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Contact Us</h1>
+
+		<p>Need help finding a cover for your vehicle or selecting a fabric?
+		<br />Want to find out if your cover is in-stock? Ask us anything!</p>
+
+		<table border="0" cellpadding="8" cellspacing="0" align="center" style="margin-bottom:20px">
+<!-- 		<tr>
+				<td align="left" valign="top"><b class="md">&#9642; Online:</b></td>
+				<td align="left" valign="top" class="bold">
+					<a href="/company/contact/contactform/contactform.php">Contact Form</a>
+				</td>
+			</tr>
+-->			
+			<tr>
+				<td align="left" valign="top"><b class="md">&#9642; Telephone:</b></td>
+				<td align="left" valign="top">1-800-982-6966<br />1-530-589-2887</td>
+			</tr>
+
+      <tr>
+        <td align="left" valign="top"><b class="md">&#9642; Email:</b></td>
+        <td align="left" valign="top"><a href="https://www.websweeper.com/contactAB-2023.html" target="_blank"><b>CONTACT US HERE</b></a></td>
+      </tr>
+
+			<tr>
+				<td align="left" valign="top"><b class="md">&#9642; Address:</b></td>
+				<td align="left" valign="top">T.J. Cars<br />4619 Olive Hwy.<br />Oroville, CA&nbsp; 95966</td>
+			</tr>
+		
+		</table>
+
+		<iframe width="95%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=4619+Olive+Hwy.+95966&amp;sll=39.51596,-121.489563&amp;sspn=0.07363,0.139904&amp;ie=UTF8&amp;ll=39.528937,-121.479263&amp;spn=0.07362,0.139904&amp;z=13&amp;output=embed&amp;s=AARTsJq2aX6Yr167Hg-5zcKG_Pnf1Dknlg"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=4619+Olive+Hwy.+95966&amp;sll=39.51596,-121.489563&amp;sspn=0.07363,0.139904&amp;ie=UTF8&amp;ll=39.528937,-121.479263&amp;spn=0.07362,0.139904&amp;z=13&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	
+	</div>
+
+{/content}

@@ -1,0 +1,60 @@
+{>layout/}
+
+{<style}
+<style>
+#content > div > div{
+float:left;
+width:250px}
+
+#content div h2{
+text-align:left}
+
+#content div ul{
+text-align:left}
+
+</style>
+{/style}
+
+{<content}
+
+	<div class="col-xs-12 clearfix">
+		<h1>Car Cover Sitemap</h1>
+		<div>
+			<h2>Car Covers</h2>
+			<ul>
+				<li><a href="/covers/">Car Covers Main Page</a></li>
+				<li><a href="/covers/coversearch.php">Car Cover Search</a></li>
+				<li><a href="/covers/fabric/">Car Cover Fabric</a></li>
+				<li><a href="/covers/sales.php">Car Cover Sale</a></li>
+				<li><a href="/covers/p1_covers.php">Rush Cover Manufacture</a></li>
+				<li><a href="/covers/cover_care/">Cover Care</a></li>
+				<li><a href="/covers/carmodifications.php">Car Modifications (Measuring Forms)</a></li>
+				<li><a href="/covers/warranty.php">Car Cover Warranty</a></li>
+				<li><a href="/covers/faq.php">Cover FAQ</a></li>
+				<li><a href="/covers/specialprojects.php">Special Car Cover Projects</a></li>
+				<li><a href="/covers/accessories.php">Car Cover Accessories</a></li>
+			</ul>
+		</div>
+		<div>
+			<h2>Cover Fabrics</h2>
+			<ul>
+				<li><a href="/covers/fabric/weathershieldhd.php">WeatherShield HD</a></li>
+				<li><a href="/covers/fabric/weathershield.php">WeatherShield HP</a></li>
+				<li><a href="/covers/fabric/sunbrella.php">Sunbrella</a></li>
+				<li><a href="/covers/fabric/ultratect.php">Ultratect</a></li>
+				<li><a href="/covers/fabric/reflectect.php">Reflectect</a></li>
+			</ul>
+		</div>
+		<div>
+			<h2>Cover Accessories</h2>
+			<ul>
+				<li><a href="/covers/acc-grommet.php">Car Cover Antenna Grommet</a></li>
+				<li><a href="/covers/acc-bag.php">Car Cover Bag</a></li>
+				<li><a href="/covers/acc-lockandcable.php">Car Cover Lock &amp; Cable</a></li>
+				<li><a href="/window/">Car Cover Window</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+{/content}

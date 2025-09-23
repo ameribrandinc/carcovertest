@@ -1,0 +1,9 @@
+bower_components
+node_modules
+public
+
+assets/scripts
+assets/style
+app/client/libs
+assets/resources/js/modules
+sitemap-generator

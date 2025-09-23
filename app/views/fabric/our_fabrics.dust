@@ -1,0 +1,34 @@
+{>layout/}
+
+{<content}
+
+<div class="col-xs-12">
+	<h1>Why These Fabrics?</h1>
+
+	<p class="justify">T.J. Cars offers only the <b>best quality cover fabrics</b> for our custom-fit car covers. We will not sell a cover with a fabric warranty of less than <b>4 years</b>, even though Covercraft uses several cheaper fabrics with 3 year, 2 year, or 90 day limited warranties.</p>
+
+	<table class="bold left automargins">
+		<tr class="red md">
+			<td style="width:268px">Fabric:</td>
+			<td style="width:91px">Warranty:</td>
+		</tr>
+		<tr>
+			<td><a href="/covers/fabric/weathershieldHD.php">Weathershield&reg; HD</a></td>
+			<td>5 years</td>
+		</tr>
+		<tr>
+			<td><a href="/covers/fabric/weathershield.php">Weathershield&reg; HP</a></td>
+			<td>4 years</td>
+		</tr>
+		<tr>
+			<td><a href="/covers/fabric/sunbrella.php">Sunbrella&reg;</a></td>
+			<td>5 years</td>
+		</tr>
+	</table>
+
+	<p class="justify">In addition to having great warranties, these cover fabrics give the best performance and protection for you car, truck, or SUV.&nbsp; <b>Weathershield&reg; HD</b>, <b>Weathershield&reg; HP</b>, <b>Sunbrella&reg;</b>, <b>Noah&reg;</b>, and <b>Evolution&reg;</b> all offer superior outdoor/indoor protection from dirt, dust, tree sap, bird droppings, UV damage, minor dings and scratches, and the elements. <b>Dustop&trade;</b> provides the best indoor protection from dust and UV damage.&nbsp; At T.J. Cars, it is our goal to offer the highest quality products on the market, while also maintaining the best prices and customer service around.&nbsp; <b>Covercraft</b> also backs the craftsmanship of their covers for the length of the warranty.&nbsp; That means whenever you purchase a cover from <b>T.J. Cars Custom-Fit Covers</b>, you know your cover should last for a <b>minimum of 4 years</b>.&nbsp; If you experience warranty related issues, you can get your car cover fixed by <a href="/covers/warranty.php">dealing directly&nbsp; with Covercraft</a>.</p>
+
+</div>
+
+
+{/content}

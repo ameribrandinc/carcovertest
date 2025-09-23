@@ -1,0 +1,9 @@
+{>layout/}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Production Lead Times</h1>
+
+		<p class="justify">Current cover production schedule for covers with existing patterns is <strong>{leadtime}</strong>, with many car covers in-stock and shipping out in 2 business days.</p>
+	</div>
+{/content}

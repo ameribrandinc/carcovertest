@@ -1,0 +1,16 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Made in the USA</h1>
+
+		<p align="justify">Unlike many retailers, the T.J. Cars' products are made in the USA by Covercraft Industries Inc. We are proud to offer the fines American-Made products from Covercraft, the world's largest vehical cover manufacturer. In addition to selling US goods, we also provide American jobs by maintaining our entire sales and support staff in California. No jobs at T.J. Cars are farmed out over seas.</p>
+		<p><img src="/images/made-in-the-usa.gif" alt="Made in the USA" /></p>
+		<p>We also want to thank you, the consumer, for buying our American made products and supporting our economy. Thank you for your business. We truly appreciate your Support.</p>
+	</div>
+{/content}

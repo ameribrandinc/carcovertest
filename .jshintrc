@@ -1,0 +1,31 @@
+{
+	"boss": true,
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"eqnull": true,
+	"esnext": true,
+	"globals": {
+		"after": false,
+		"afterEach": false,
+		"before": false,
+		"beforeEach": false,
+		"describe": false,
+		"it": false
+	},
+	"immed": true,
+	"indent": 2,
+	"jquery": true,
+	"latedef": true,
+	"maxcomplexity": 9,
+	"maxparams": 4,
+	"maxdepth": 4,
+	"maxstatements": 80,
+	"newcap": true,
+	"newcap": true,
+	"noarg": true,
+	"node": true,
+	"sub": true,
+	"undef": true,
+	"unused": true
+}

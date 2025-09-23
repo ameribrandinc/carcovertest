@@ -1,0 +1,58 @@
+{>layout/}
+{<style}
+<style type="text/css">
+ul.fabricColors{
+list-style:none;
+width:300px;
+margin:5px auto;
+padding:0}
+ul.fabricColors li{
+float:left;
+width:100px;
+height: 100px}
+</style>
+{/style}
+
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Car Cover Fabrics</h1>
+		<h2>Acrylic Sunbrella&reg;</h2>
+
+		<p class="justify">Thanks to it's unique construction process, <a href="http://www.sunbrella.com/en_us">Sunbrella fabric</a> by <a href="http://www.glenraven.com/">Glen Raven</a> provides superior, long lasting protection in intense sun areas, like Arizona and other areas of the sun-belt, where UV rays will rapidly degrade the paint and interior. Because of the use of acrylic fibers, which are naturally UV resistant, Sunbrella has long been the recognized leader in long-wearing marine fabrics for bimini tops, sail covers and deck enclosures. Besides marine uses, Sunbrella is also used for commercial awnings due to it's ability in providing UV blockage with a rich, woven finish. The acrylic fibers are solution dyed, before the fabric is woven, to assure the color goes all the way through the fabric. Using a special finish process, the material is then softened for use as a car cover fabric. The fabric is exceptionally strong and coupled with it's UV resistance it also makes an excellent cover for RV's and trailers that spend extended time stored outside. See the <a href="/covers/cover_care/care-sunbrella.pdf">Sunbrella Care Instructions</a> to learn more about maintaining a new Sunbrella car cover.</p>
+
+		<img src="/pics/sunbrella-carsS.jpg" width="190" height="157" alt="Sunbrella Car Covers" />
+		<img src="/pics/sunbrella-logo.gif" width="155" height="74" alt="Sunbrella - Glen Raven Mills, Inc." style="margin:41px 4px 41px 6px" />
+		<img src="/pics/sunbrella-truckS.jpg" width="190" height="124" alt="Sunbrella Truck Covers" style="padding:16px 0 16px 0" />
+
+		<ul class="justify listspace">
+			<li><strong>Long Lasting Strength</strong> - Acrylic fibers suffer minimal loss of strength from exposure to heat, moisture, and UV.</li>
+			<li><strong>Fade Resistant</strong> - Colors are a result of pigments which are actually built into the fibers (solution dyed), instead of just dying the finished fabric.</li>
+			<li><strong>Water Resistant</strong> - Treated for moisture resistance (but remember, this material is primarily for UV protection).</li>
+			<li><strong>Rot and Mildew Resistant</strong> - Acrylic fibers resist growth that occurs in moist environments.</li>
+		</ul>
+
+		<a href="/catalog/cfcc.php?intrst=sun" style="width:330px; margin:25px auto" class="btn-b">Prices for Sunbrella Car Covers</a>
+
+		<p><strong>Available colors for Sunbrella Fabric:</strong></p>
+
+		<ul class="fabricColors">
+			<li>
+				<img src="D1pacblue.jpg" width="52" height="52" alt="Sunbrella Pacific Blue Car Cover Fabric" />
+				<br />
+				Pacific Blue
+			</li>
+			<li>
+				<img src="D4cadetgray.jpg" width="51" height="51" alt="Sunbrella Cadet Gray Car Cover Fabric" />
+				<br />
+				Cadet Gray
+			</li>
+			<li>
+				<img src="D6toast.jpg" width="51" height="51" alt="Sunbrella Toast Car Cover Fabric" />
+				<br />
+				Toast
+			</li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+{/content}

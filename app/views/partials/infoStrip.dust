@@ -1,0 +1,38 @@
+<style>
+#infoStrip {
+position:relative; border-top:1px solid #000; padding:0; margin:0;
+}
+
+#infoStripSm {
+height:3px; overflow:hidden;
+}
+
+#infoStripSm img {
+vertical-align:top
+}
+
+#vehicleInfo {
+background:#666666; color:#FFFFFF;
+}
+
+#vehicleInfo span {
+display:block; padding:0 0 3px 5px
+}
+
+#vehicleInfo b {
+color:#CCCCCC;
+}
+
+#vehicleInfoTab img{
+position:absolute; left:20px; top:0px; border:0
+}
+</style>
+
+{! TODO: find a better way to reference this script !}
+<script src="/scripts/infoStrip.js"></script>
+
+<div id="infoStrip">
+<div id="infoStripSm"><img src="https://carcovers.org/pics/headers/infostrip-sm.gif" width="100%" height="4" alt="Strip with shadow" /></div>
+<div id="vehicleInfo"></div>
+<div style="position:relative; padding:0; margin:0; border:0; height:0"><a href="" onclick="showhide(); return false;"><span id="vehicleInfoTab"><img src="https://carcovers.org/pics/headers/infotab-show.gif" alt="Show Vehicle Info tab" /></span></a></div>
+</div>

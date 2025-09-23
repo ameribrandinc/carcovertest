@@ -1,0 +1,107 @@
+{>layout/}
+{<style}
+	<style>
+	.compareWS{
+	border-collapse:collapse;
+	width:95%;
+	margin:15px auto}
+	.compareWS tr.head td{
+	color:#fff;
+	background:#A90402}
+	.compareWS tr td{
+	border:1px solid #111;
+	padding:3px;
+	width:150px}
+	</style>
+{/style}
+{<content}
+
+	<div class="col-xs-12">
+		<h1>Weathershield&reg; HD Car Cover Fabric</h1>
+		<h3>Big Brother of <a href="/covers/fabric/weathershield.php">WeatherShield&reg; HP</a></h3>
+
+		<p class="justify">Developed primarily for intense sun environments and long-term storage, WeatherShield HD not only provides UV opacity, it repels water, blocks dust, tree sap and bird droppings, and is still breathable to allow moisture and heat to escape from under the cover.</p>
+
+		<p class="justify">Who needs WeatherShield HD? People who live in intense sun climates and along the coast will benefit most from this new fabric, plus RV owners looking for the best cover for long-term storage. It's not as compact as regular WeatherShield, and the heavier denier fibers aren't as silky-smooth, but for maximum performance in the harshest environments you can't beat WeatherShield HD.</p>
+
+		<div class="clearfix">
+			<div class="col-xs-12 col-md-4">
+				<img src="/pics/hummer2.jpg" alt="Hummer H2 - Gray WeathershieldHD Car Cover" width="280" height="186">
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+					<div style="text-align:left;padding-left:70px;background:transparent url(/pics/weathershield-carrot.jpg) no-repeat 0 13px">
+						<p><b>Solution-Dyed Process:</b> Pigment is added during fiber production. These fibers are spun into yarn resulting in permeated color throughout the fabric creating consistent, lasting color.</p>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div style="text-align:left;padding-left:70px;background:transparent url(/pics/weathershield-radish.jpg) no-repeat 0 13px">
+					<p><b>Conventional Dyeing Process:</b> Pigment is applied after the fabric is made. Color is not an integral part of the fabric, making the fabric more prone to fading as well as more difficult to clean.</p>
+				</div>
+			</div>
+		</div>
+
+		<p class="justify">The base material for WeatherShield HD is woven by Glen Raven Mills (makers of Sunbrella&reg;), using solution dyed UV resistant polyester fibers (see insert below to learn why solution dyed fabrics are better - courtesy of Glen Raven Mills).&nbsp; Not only is the fabric solution dyed, the 300 denier construction is 40% heavier than regular WeatherShield and the heavier denier thread provides double the tear and tensile strength.</p>
+
+		<p class="justify">This superior base fabric is then finished with the patented EPIC by Nextec&reg; encapsulation process...the same high performance finish used on our popular WeatherShield fabric. Using up to 40 computer controlled proprietary processes, Nextec forces specially formulated polymers <i><b>inside</b></i> the fabric to bond to each individual thread and fill the valleys between the woven fibers. These special polymers have amazing elasticity to block moisture and dirt, while still maintaining the breathability of the fabric. You can see why Nextec's slogan is <b>&quot;Outsmart the Outdoors&quot;.</b> See the <a href="/covers/cover_care/care-weathershieldHD.pdf">Weathershield HD Care Instructions</a>
+	 to learn more about maintaining a new Weathershield HD car cover.</p>
+
+		<div class="automargins bold" style="width:95%">
+			<b>Available Color:</b><br><br>
+			<img src="/covers/fabric/weathershield-color-gray.jpg" alt="Gray Weathershield HD fabric swatch" width="60" height="60" /><br><br>
+			<a href="/catalog/cfcc.php?intrst=wsHD" style="margin-top:23px;width:50%;" class="btn-b">Prices for Weathershield HD Car Covers</a>
+		</div>
+		<div style="clear:both"></div>
+		<br />
+
+		<h3>WeatherShield&reg; HP &nbsp;vs.&nbsp; WeatherShield&reg; HD:</h3>
+
+		<table class="automargins compareWS">
+			<tr class="head">
+					<td><b>Comparison</b></td>
+					<td><b>WeatherShield&reg; HP<br />(little bro)</b></td>
+					<td><b>WeatherShield&reg; HD<br />(big bro)</b></td>
+				</tr>
+			<tr>
+				<td><b>Volume</b></td>
+					<td>compact</td>
+					<td>less compact</td>
+				</tr>
+				<tr>
+					<td><b>Weight</b></td>
+					<td>standard</td>
+					<td>40% heavier</td>
+				</tr>
+				<tr>
+					<td><b>Fibers</b></td>
+					<td>silky-smooth</td>
+					<td>slightly larger</td>
+				</tr>
+				<tr>
+					<td><b>Tear Strength</b></td>
+					<td>standard</td>
+					<td>2x times stronger</td>
+				</tr>
+				<tr>
+					<td><b>Wash / Dry</b></td>
+					<td>At Home</td>
+					<td>Professional</td>
+				</tr>
+				<tr>
+					<td><b>Warranty</b></td>
+					<td>4 years</td>
+					<td>5 years</td>
+				</tr>
+				<tr>
+					<td><b>Color(s)</b></td>
+					<td>8 colors</td>
+					<td>1 color - (Grey)</td>
+				</tr>
+				<tr>
+					<td><p><b>Performance Against<br>the Elements</b></td>
+					<td>Great</td>
+					<td>Best</td>
+				</tr>
+		</table>
+	</div>
+
+{/content}

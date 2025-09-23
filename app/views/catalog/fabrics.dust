@@ -1,0 +1,95 @@
+{>layout/}
+
+{<extraStrip}
+	{>"partials/extraStrip" /}
+{/extraStrip}
+
+{<style}
+<style>
+	#columns div {
+		width: 175px;
+		float: left;
+		text-align:center;
+	}
+
+	#columns div ul {
+		margin-top:0
+	}
+
+	.fabheader {
+		color: #FFFFFF;
+	}
+
+	.cover-image {
+		width: 150px;
+	}
+</style>
+{/style}
+
+{<content}
+
+	<h1>Available {page.vehicleType} Cover Fabrics</h1>
+	<h2>Select a cover fabric below</h2>
+
+	{#fabrics}
+
+	<div style="width:95%; margin:25px auto 25px auto; border:solid 1px #000000" id="row-{abrv}">
+		<div style="background:#999; border-bottom:solid 1px #000000; padding:7px; color:#fff; margin-bottom:10px">
+			<h3 style="padding:0;margin:0;" class="fabheader">{name} {page.vehicleType} Covers</h3>
+		</div>
+		<table>
+			<tr>
+				<td class="cover-image">
+					<img src="/catalog/pics/logo-{abrv}-sm.jpg"><br>
+					<img src="/catalog/pics/thumb-{abrv}-sm.jpg">
+				</td>
+				<td>
+					<table align="center" style="padding:0 7px 0 7px">
+						<tr>
+							<td colspan="2" class="justify">{description}</td>
+						</tr>
+						<tr>
+							<td align="left" style='font-size:14px' width="95%">
+								{?lowestPrice}
+									Priced from <strong class='green'>${lowestPrice}</strong>
+								{:else}
+									Priced at <strong class="green">${jobber}</span>
+								{/lowestPrice}
+								{~s}w/ <a href='/covers/sales.php' target='_blank'>FREE SHIPPING</a>
+							<td width="59">
+								<a href="{nextAction}" class="js-next-action btn btn-success">Select &#10095;</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								Available Colors:{~s}
+								{#colors}
+									{.}{@sep}, {/sep}
+								{/colors}
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+
+	</div>
+	{!
+	
+										<form action="{next_action}" method="post" class="nospace">
+											<input type="hidden" name="make" value="{make}">
+											<input type="hidden" name="year" value="{year}">
+											<input type="hidden" name="model" value="{model}">
+											<input type="hidden" name="length" value="{length}">
+											<input type="hidden" name="antenna" value="{antenna}">
+											<input type="hidden" name="size" value="{size}">
+											<input type="hidden" name="part" value="{part}">
+											<input type="hidden" name="abrv" value="{abrv}">
+											<input type="image" src="/catalog/pics/select.gif" style="padding: 5px 0 5px 0">
+										</form>
+
+!}
+	{/fabrics}
+
+{/content}
