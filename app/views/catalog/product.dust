@@ -176,17 +176,39 @@
 						<p style="color: #dc0d1f; margin-top:0; font-weight: bold; margin-block-end: 0em">List Price: <span style="text-decoration:line-through;" itemprop="price">${model.retail}</span></p>
 						{@eq key="{model.ext}" value="RS"}<p id='starting-at' class='green'>Starting at:</p>{/eq}
 						<p class="green bold" style="font-size:27px; margin:.25em 0px .25em">${model.price}</p>
-						
-						<a style="text-decoration: none;" href="/covers/sales.php">
+					
+						<a style="text-decoration: none;" href="https://carcovers.org/window/" target="_blank">
 							<button style="border-radius:25px; padding:15px" type="button" class="btn btn-primary btn-block hidden-lg hidden-md">
-								<p class="blink_me" style="float:left; color: #F6DE16; font-size:85%; font-weight:bold">EXCLUSIVE<br>OFFER</p>
-								<p class="blink_me" style="float:right; color: #F6DE16; font-size:85%; font-weight:bold">EXCLUSIVE<br>OFFER</p>
-								<img src="/pics/bonus-pack-logo.png" width="200rem" style="display:block; margin:auto">
-								<p style="color: #F6DE16; font-size:85%; font-weight:bold">
-									INCLUDES FREE LICENCE<br>PLATE VIEWING WINDOW!!!
-									<br>
-									**CLICK/TAP HERE**
-								</p>
+                <div style="text-align: center;">
+                  <p class="blink_me" style="float: left; color: #F6DE16; font-size: 85%; font-weight: bold;">
+                    EXCLUSIVE<br>OFFER
+                  </p>
+
+                  <p style="
+                    display: inline-block;
+                    background-color: #F6DE16;
+                    color: #000;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    font-weight: bold;
+                    font-size: 90%;
+                    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+                    cursor: pointer;">
+                    CLICK/TAP HERE
+                  </p>
+
+                  <p class="blink_me" style="float: right; color: #F6DE16; font-size: 85%; font-weight: bold;">
+                    EXCLUSIVE<br>OFFER
+                  </p>
+
+                  <div style="clear: both;"></div>
+
+                  <img src="/pics/bonus-pack-logo.png" width="200rem" alt="Bonus Pack Logo">
+
+                  <p style="color: #F6DE16; font-size: 85%; font-weight: bold;">
+                    INCLUDES FREE LICENCE<br>PLATE VIEWING WINDOW!!!
+                  </p>
+                </div>
 							</button>
 						</a>
 						<form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST" style="padding:20px">
@@ -248,16 +270,46 @@
 			</div>
 		</div>
 	</div>
-	<a style="text-decoration: none;" href="/covers/sales.php">
-		<button style="border-radius:25px; padding:15px; width:50%; margin:auto" type="button" class="btn btn-primary btn-block hidden-xs hidden-sm">
-			<p class="blink_me" style="float:left; color: #F6DE16; font-size:85%; font-weight:bold">EXCLUSIVE<br>OFFER</p>
-			<p class="blink_me" style="float: right; color: #F6DE16; font-size:85%; font-weight:bold">EXCLUSIVE<br>OFFER</p>
-			<img src="/pics/bonus-pack-logo.png" width="200rem">
-			<p style="color: #F6DE16; font-size:85%; font-weight:bold">
-				INCLUDES FREE LICENCE<br>PLATE VIEWING WINDOW!!!
-				<br><br>
-				**CLICK/TAP HERE**
-			</p>
-		</button>
-	</a>
+  <div style="text-align:center; margin:20px 0;" class="hidden-xs hidden-sm">
+    <div id="bonus-card"
+        role="button" tabindex="0"
+        style="
+          background:#2f80c7;
+          color:#fff;
+          border-radius:25px;
+          width: 550px;
+          padding: 24px;
+          display:inline-block;
+          text-align:center;
+          box-shadow:0 0 10px rgba(0,0,0,.2);
+          cursor:pointer;
+          position:relative;
+          z-index:2147483647;
+          pointer-events:auto;
+        "
+        onclick="try{window.open('https://carcovers.org/window/','popupWindow','width=900,height=600,scrollbars=yes,resizable=yes');}catch(e){} return false;"
+        onkeydown="if(event.key==='Enter'||event.key===' '){this.click(); event.preventDefault();}">
+
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:10px;">
+        <p class="blink_me" style="color:#F6DE16; font-size:85%; font-weight:bold; margin:0;">EXCLUSIVE<br>OFFER</p>
+        <p style="margin:0; background:#F6DE16; color:#000; padding:6px 12px; border-radius:6px; font-weight:bold; font-size:90%; box-shadow:0 0 8px rgba(0,0,0,.3);">CLICK/TAP HERE</p>
+        <p class="blink_me" style="color:#F6DE16; font-size:85%; font-weight:bold; margin:0;">EXCLUSIVE<br>OFFER</p>
+      </div>
+
+      <img src="/pics/bonus-pack-logo.png" width="200" alt="Bonus Pack Logo" style="display:block; margin:10px auto;" />
+
+      <p style="color:#F6DE16; font-size:85%; font-weight:bold; margin-top:10px;">
+        INCLUDES FREE LICENCE<br>PLATE VIEWING WINDOW!!!
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
 {/content}
