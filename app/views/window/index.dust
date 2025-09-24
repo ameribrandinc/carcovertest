@@ -88,20 +88,6 @@
       </table>
     </center>
 
-    <script>
-      const form = document.getElementById('freeWindowForm');
-      const popup = document.getElementById('popupOverlay');
-      const okBtn = document.getElementById('popupOk');
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        popup.style.display = 'flex';
-      });
-      okBtn.addEventListener('click', function() {
-        popup.style.display = 'none';
-        form.submit();
-      });
-    </script>
-
     <h2 class="tops">
       <a href="https://www.viraport.com/install.php" target="_blank">Car Cover Window Installation</a>
     </h2>
@@ -299,3 +285,31 @@
     </div>
   </div>
   {/content}
+
+  <script>
+    const form = document.getElementById('freeWindowForm');
+    const popup = document.getElementById('popupOverlay');
+    const okBtn = document.getElementById('popupOk');
+    
+    function lockScroll() { 
+      document.body.style.overflow = 'hidden';
+      }
+
+    function unlockScroll() { 
+      document.body.style.overflow = ''; 
+      } 
+
+    form.addEventListener('submit', function(e) { 
+      e.preventDefault(); 
+      lockScroll(); 
+      window.scrollTo(0, 0); 
+      popup.style.display = 'flex';
+    }); 
+
+    okBtn.addEventListener('click', function() { 
+      popup.style.display = 'none'; 
+      unlockScroll(); 
+      form.submit();
+    }); 
+
+  </script>
