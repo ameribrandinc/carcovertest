@@ -4,23 +4,6 @@
 
 
 {<content} 
-<div id="cartSuccessAlert" style="
-  display: none;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #28a745;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  z-index: 999999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-">
-  ✅ Item was added to your cart!
-</div>
-
 
 <div class="col-xs-12">
   <div class="wrapper">
@@ -314,6 +297,28 @@
   {/content}
 
 <script>
+/**
+ * Handles the Free Viewing Window cart add flow for both bonus and non-bonus users.
+ *
+ * Features:
+ * - Opens overlay UI during cart add process.
+ * - Submits a hidden form into a popup window to add item to cart.
+ * - Detects if the flow was triggered via a bonus offer (?bonus=1 in URL).
+ * - Bonus flow:
+ *   - Returns user to previous page or closes popup after successful add.
+ *   - Displays appropriate confirmation message.
+ * - Non-bonus flow:
+ *   - Always redirects to https://carcovers.org/ after item is added.
+ *   - Provides fallback messaging and behavior if popup fails.
+ * - Handles blocked popups, scroll locking, overlay cleanup, and cart window management.
+ * - Listens for "cart:added" message or popup-close fallback to complete flow.
+ *
+ * Assumptions:
+ * - A form with ID "freeWindowForm" exists and submits the item to cart.
+ * - The script is embedded on the same page as the bonus offer or injected dynamically.
+ * - The cart add window uses `window.name = 'cartAdder'` for messaging back.
+ * - The calling button or link includes ?bonus=1 if user came from the bonus promotion.
+ */
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('freeWindowForm');
   const overlay = document.getElementById('popupOverlay');
@@ -322,30 +327,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let cartWin = null;
   let killerId = null;
+  let fallbackId = null;
 
   function lockScroll(){ document.body.style.overflow = 'hidden'; }
   function unlockScroll(){ document.body.style.overflow = ''; }
-  function openOverlay(){ lockScroll(); window.scrollTo(0,0); if (overlay) overlay.style.display = 'flex'; }
+  function openOverlay(){ lockScroll(); window.scrollTo(0,0); if (overlay) { overlay.style.display = 'flex'; overlay.style.zIndex = '99999'; } }
   function closeOverlay(){ if (overlay) overlay.style.display = 'none'; unlockScroll(); }
 
-  function getStatusTarget() {
-    return document.getElementById('popupContent') || document.getElementById('popupBox');
+  function getStatusTarget(){
+    let t = document.getElementById('popupContent') || document.getElementById('popupBox');
+    if (!t && overlay) {
+      const b = document.createElement('div');
+      b.id = 'popupBox';
+      b.style.background = '#fff';
+      b.style.padding = '16px 20px';
+      b.style.borderRadius = '10px';
+      b.style.maxWidth = '480px';
+      b.style.width = '92%';
+      b.style.boxShadow = '0 10px 30px rgba(0,0,0,.2)';
+      overlay.appendChild(b);
+      t = b;
+    }
+    return t;
   }
 
-  function showStatus(html) {
-    const target = getStatusTarget();
-    if (!target) return;
-    if (overlay && overlay.style.display === 'none') openOverlay();
-    target.innerHTML = html;
+  function showStatus(html){
+    const t = getStatusTarget();
+    if (!t) return;
+    if (overlay && (overlay.style.display === '' || overlay.style.display === 'none')) openOverlay();
+    t.innerHTML = html;
   }
 
-  function tryCloseCartWin() {
-    try { if (cartWin && !cartWin.closed) cartWin.close(); } catch(_) {}
+  function tryCloseCartWin(){
+    try{ if(cartWin && !cartWin.closed) cartWin.close(); }catch(_){}
   }
 
-  function stopKiller() {
-    if (killerId) { clearInterval(killerId); killerId = null; }
+  function stopKiller(){
+    if(killerId){ clearInterval(killerId); killerId=null; }
   }
+
+  function ensureCartWinClosedThen(fn, timeoutMs){
+    let elapsed = 0;
+    const step = 200;
+    const timer = setInterval(() => {
+      tryCloseCartWin();
+      elapsed += step;
+      if (!cartWin || cartWin.closed || elapsed >= timeoutMs) {
+        clearInterval(timer);
+        fn();
+      }
+    }, step);
+  }
+
+  function backOrHome(){
+    if (history.length > 1) { history.back(); return; }
+    if (document.referrer) { window.location.href = document.referrer; return; }
+    window.location.replace('https://carcovers.org/');
+  }
+
+  function closeOrBack(){
+    let attempted = false;
+    try { window.close(); attempted = true; } catch(e){}
+    setTimeout(() => {
+      try {
+        if (!window.closed) { window.open('','_self'); window.close(); }
+      } catch(e){}
+      setTimeout(() => { if (!window.closed) { backOrHome(); } }, 150);
+    }, attempted ? 150 : 0);
+  }
+
+  const usp = new URLSearchParams(location.search);
+  const isBonusFlow = usp.get('bonus') === '1';
 
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -355,16 +407,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (cancelBtn) {
-    cancelBtn.addEventListener('click', () => {
-      closeOverlay();
-    });
+    cancelBtn.addEventListener('click', () => { closeOverlay(); });
   }
 
   window.onCartAdded = function() {
-    showStatus('<h2>Item was added to your cart</h2><p>Redirecting to the home page…</p>');
-    tryCloseCartWin();
-    stopKiller();
-    setTimeout(() => { window.location.href = 'https://carcovers.org/'; }, 2500);
+    if (fallbackId) { clearTimeout(fallbackId); fallbackId = null; }
+    if (isBonusFlow) {
+      showStatus('<h2>Item was added to your cart</h2><p>Returning to the item you were viewing…</p>');
+      tryCloseCartWin();
+      stopKiller();
+      setTimeout(() => {
+        if (window.opener) { closeOrBack(); } else { backOrHome(); }
+      }, 3000);
+    } else {
+      showStatus('<h2>Item was added to your cart</h2><p>Redirecting to the home page…</p>');
+      stopKiller();
+      ensureCartWinClosedThen(() => {
+        setTimeout(() => { window.location.replace('https://carcovers.org/'); }, 3000);
+      }, 0);
+    }
   };
 
   window.addEventListener('message', (ev) => {
@@ -374,55 +435,53 @@ document.addEventListener('DOMContentLoaded', () => {
   if (addBtn) {
     addBtn.addEventListener('click', () => {
       openOverlay();
-      showStatus('<h2>Adding Free Viewing Window to your cart…</h2><p>Please search for your vehicle to find a suitable car cover.</p>');
-
-      const goback = form ? form.querySelector('[name="gobackto"]') : null;
-      if (goback) goback.value = location.origin + '/?closeCartPopup=1';
-
-      cartWin = window.open('', 'cartAdder', 'width=420,height=420');
-      if (!cartWin) {
-        showStatus('<h2>Popups blocked</h2><p>Please allow popups or reload and try again.</p>');
-        return;
-      }
-
-      const temp = form ? form.cloneNode(true) : null;
-      if (temp) {
-        temp.style.display = 'none';
-        temp.target = 'cartAdder';
-        document.body.appendChild(temp);
-        temp.submit();
-        temp.remove();
-      }
-
-      let attempts = 0;
-      killerId = setInterval(() => {
-        attempts += 1;
-        tryCloseCartWin();
-        if (!cartWin || cartWin.closed || attempts >= 15) {
-          stopKiller();
+      showStatus('<h2>Adding item to your cart…</h2><p>Please wait a moment.</p>');
+      setTimeout(() => {
+        const goback = form ? form.querySelector('[name="gobackto"]') : null;
+        if (goback) { goback.value = location.origin + '/?closeCartPopup=1'; }
+        cartWin = window.open('', 'cartAdder', 'width=420,height=420');
+        if (!cartWin) { showStatus('<h2>Popups blocked</h2><p>Please allow popups or reload and try again.</p>'); return; }
+        const temp = form ? form.cloneNode(true) : null;
+        if (temp) {
+          temp.style.display = 'none';
+          temp.target = 'cartAdder';
+          document.body.appendChild(temp);
+          temp.submit();
+          temp.remove();
         }
-      }, 700);
+        let attempts = 0;
+        killerId = setInterval(() => {
+          attempts += 1;
+          tryCloseCartWin();
+          if (!cartWin || cartWin.closed || attempts >= 15) { stopKiller(); }
+        }, 700);
 
-      const originalHandler = window.onCartAdded;
-      let fallback = setTimeout(() => {
-        tryCloseCartWin();
-        stopKiller();
-        window.location.href = 'https://carcovers.org/';
-      }, 3000);
-      window.onCartAdded = function() {
-        clearTimeout(fallback);
-        originalHandler();
-      };
+        fallbackId = setTimeout(() => {
+          tryCloseCartWin();
+          stopKiller();
+          if (isBonusFlow) {
+            showStatus('<h2>Free Viewing Window added to Cart!</h2><p>Returning to previous page…</p>');
+            setTimeout(() => {
+              if (window.opener) { closeOrBack(); } else { backOrHome(); }
+            }, 3000);
+          } else {
+            showStatus('<h2>Free Viewing Window added to Cart!</h2><p>Returning home to select vehicle type</p>');
+            setTimeout(() => {
+              window.location.replace('https://carcovers.org/');
+            }, 3000);
+          }
+        }, 3000);
+      }, 1000);
     });
   }
 
-  const isCartAdder = (window.name === 'cartAdder') || (new URLSearchParams(location.search).has('closeCartPopup'));
+  const isCartAdder = (window.name === 'cartAdder') || (usp.has('closeCartPopup'));
   if (isCartAdder) {
     try {
       if (window.opener && typeof window.opener.onCartAdded === 'function') {
         window.opener.onCartAdded();
-      } else {
-        if (window.opener) window.opener.postMessage('cart:added','*');
+      } else if (window.opener) {
+        window.opener.postMessage('cart:added','*');
       }
     } catch(e) {}
     setTimeout(() => { window.close(); }, 0);
@@ -431,7 +490,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
-
-
-
-
