@@ -287,7 +287,17 @@
           z-index:2147483647;
           pointer-events:auto;
         "
-        onclick="try{window.open('https://carcovers.org/window/','popupWindow','width=900,height=600,scrollbars=yes,resizable=yes');}catch(e){} return false;"
+onclick="
+  var u='https://carcovers.org/window/?bonus=1';
+  var m=/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  if(m){ location.assign(u); }
+  else{
+    var w=null;
+    try{ w=window.open(u,'bonusView','width=900,height=600,scrollbars=yes,resizable=yes'); }catch(e){}
+    if(!w){ location.assign(u); }
+  }
+  return false;
+"
         onkeydown="if(event.key==='Enter'||event.key===' '){this.click(); event.preventDefault();}">
 
       <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:10px;">
