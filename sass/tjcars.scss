@@ -202,7 +202,8 @@ div.fbLike {
 
 div.tweet{
 float:right;
-margin-right:5px}
+margin-right:5px
+}
 
 #leftNav {
 	background-color: $light-red;
@@ -338,7 +339,7 @@ margin-right:5px}
 	left: -9999em;
 	top: 37px;
 	margin-left: -1px;
-	z-index: 100;
+	z-index: 100001;
 }
 
 #nav li ul ul {
@@ -355,9 +356,11 @@ margin-right:5px}
 	text-decoration : none;
 	padding : 7px 20px;
 }
+
 #nav ul a:hover, #nav ul a:focus,	#nav ul .sfhover>a	{
 	color: #000;
 	background: #fff;
+
 }
 
 ul#nav li#get-prices {
