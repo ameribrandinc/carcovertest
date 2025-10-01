@@ -54,48 +54,138 @@
     background-color: #0056b3;
   }
   @keyframes fadeIn {
-    from { 
-      transform: translateY(-20px); 
-      opacity: 0; 
-    }
-    to { 
-      transform: translateY(0); 
-      opacity: 1; 
-    }
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
+
+  /* compact in-flow status bar (sits under the header) */
+  #statusBar {
+    display: none;
+    background: #1e7e34;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 16px auto;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 14px;
+    max-width: 480px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+
+  td.green, #row-free-offer, #row-retail { overflow: visible; }
+
+
+  .offer-pill{
+    display:inline-flex; 
+    align-items:center; 
+    gap:10px;
+    padding:6px 14px; 
+    border:1px solid #7ac142; 
+    background:#fff;
+    border-radius:9999px; 
+    line-height:1.2; 
+    isolation:isolate;
+    z-index: 1000;
+    position: relative; 
+  }
+
+  /* Base size is bigger already */
+  .offer-icon-wrap{
+    width:40px; 
+    height:40px; 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center;
+    position:relative; 
+    overflow:visible; /* allow the zoom to extend outside */
+    cursor: zoom-in;
+  }
+
+  .offer-icon-img{
+    width:100%; 
+    height:100%; 
+    object-fit:contain;
+    transition: transform .18s ease-out, filter .18s ease-out;
+    transform-origin:center; 
+    will-change: transform;
+  }
+
+  /* Hover/focus zoom without layout shift */
+  .offer-icon-wrap:hover .offer-icon-img,
+  .offer-icon-wrap:focus-visible .offer-icon-img{
+    transform: scale(10);
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+    position: relative;  
+    z-index: 10001;
+  }
+
+  /* Motion-safe */
+  @media (prefers-reduced-motion: reduce){
+    .offer-icon-img{ transition: none; }
+  }
+
+  /* Mobile: smaller base, disable hover zoom (no hover) */
+  @media (max-width:640px){
+    .offer-icon-wrap{ width:28px; height:28px; }
+  }
+
+  .hover-note {
+    font-size: 10px;
+    color: #555;
+    margin-top: 2px;
+    font-style: italic;
+}
 </style>
 
 {<content}
+<div id="statusBar"></div>
 
-  <div id="popupOverlay">
-    <div id="popupBox">
-      <div class="icon">&#9888;&#65039;</div>
-
-      <h2>Please Note</h2>
-
-      <p>The FREE ViraPort&reg; Viewing Window offer is valid<br>
-      <strong>ONLY</strong> with the purchase of a New Car Cover.</p>
-
-      <button id="popupOk">OK, Continue</button>
-    </div>
+<!-- popup for the FREE window explanation -->
+<div id="popupOverlay">
+  <div id="popupBox">
+    <div class="icon">&#9888;&#65039;</div>
+    <h2>Please Note</h2>
+    <p>The FREE ViraPort&reg; Viewing Window offer is valid<br>
+    <strong>ONLY</strong> with the purchase of a New Car Cover.</p>
+    <button id="popupOk">OK, Continue</button>
   </div>
+</div>
 
-  <div class="container">
+<div class="container">
   <div class="row justify-content-center">
     <table class="cfccWindow" style="padding:0px; margin: 0 auto;">
-      <tr>
-        <td class="bold">No thank you, I don't need a license plate viewing window with my purchase.</td>
+
+      <!-- Row 1: "No thank you... Continue To Cart" (hidden when FREE window is already in cart) -->
+      <tr id="row-free">
+        <td class="bold" id="continueText">No thank you, I don't need a license plate viewing window with my purchase.</td>
         <td></td>
-        <td>
-          <form action="https://a4032.americommerce.com/store/shopcart.aspx" method="GET">
+        <td id="continueCell">
+          <form id="continueForm" action="https://a4032.americommerce.com/store/shopcart.aspx" method="GET">
             <input name="gobackto" value="https://carcovers.org" type="hidden">
             <input name="itemshipsfree" value="1" type="hidden" />
             <input type="submit" value="Continue To Cart" class="btn btn-success">
           </form>
         </td>
       </tr>
-      <tr>
-        <td class="green bold">Order With a <a href="/catalog/cfcc.php">New Cover</a> &amp; Save More!</td>
+
+      <!-- Row 2: "Order With a New Cover & Save More!" (hide when a CAR COVER is already in the cart) -->
+      <tr id="row-free-offer">
+        <td class="green bold" style="text-align:center;">
+          <div class="offer-pill">
+            <span class="offer-icon-wrap" tabindex="0">
+              <img src="/images/Full-LP-Window.png" alt="" class="offer-icon-img">
+            </span>
+
+            <span>Free Permit and License Plate Viewing Window With Purchase of Car Cover! </span>
+
+            <span class="offer-icon-wrap" tabindex="0">
+              <img src="/images/Parking-Permit-window.jpeg" alt="" class="offer-icon-img">
+            </span>
+          </div>
+          <div class="hover-note">* Hover over image to enlarge</div>
+        </td>
+
         <td class="lg bold">$FREE</td>
         <td>
           <form id="freeWindowForm" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
@@ -110,38 +200,307 @@
           </form>
         </td>
       </tr>
-      <tr>
-        <td class="bold">Order Separately at Retail Price.</td>
+
+
+
+      <!-- Row 3: Paid window -->
+      <tr id="row-retail">
+        <td id="retailText" class="bold">Order Viewing Windows Separately at Retail Price.</td>
         <td class="lg bold">+$49.95</td>
         <td>
-          <form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+          <form id="retailForm" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
             <input name="itemname" type="hidden" value="Cover-Win" />
             <input name="desc" type="hidden" value="Cover-Win" />
             <input name="itemnr" type="hidden" value="Licence Plate Cover Window (separate)" />
             <input name="qty" type="hidden" value="1" />
             <input name="price" type="hidden" value="49.95" />
             <input name="itemshipsfree" type="hidden" value="1" />
-            <input name="gobackto" value="https://carcovers.org" type="hidden" />
+            <!-- go directly to cart after add -->
+            <input name="gobackto" type="hidden" value="https://a4032.americommerce.com/store/shopcart.aspx" />
             <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
           </form>
         </td>
       </tr>
     </table>
   </div>
-  </div>
+</div>
 
-  <script>
-    const form = document.getElementById('freeWindowForm');
-    const popup = document.getElementById('popupOverlay');
-    const okBtn = document.getElementById('popupOk');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      popup.style.display = 'flex';
+<!-- Hidden form to post a previously selected cover (if present in sessionStorage) -->
+<form id="selectedCoverForm" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST" style="display:none;"></form>
+<!-- Hidden background target for the selected cover add -->
+<iframe id="bgframe" name="bgframe" style="display:none;"></iframe>
+
+<script>
+(function(){
+  function show(el, on){ if(el) el.style.display = on ? '' : 'none'; }
+  function norm(v){ return (v||'').toString().trim().toLowerCase(); }
+  function setStatus(msg){
+    var s=document.getElementById('statusBar'); if(!s) return;
+    s.textContent=msg; s.style.display='block';
+    clearTimeout(s._t); s._t=setTimeout(function(){ s.style.display='none'; },2500);
+  }
+
+  var FREE_DESC = 'car cover window (free with purchase of cover)';
+  var PAID_DESC_1 = 'licence plate cover window (separate)';
+  var PAID_DESC_2 = 'license plate cover window (separate)';
+
+  var COVER_SKU_RE = /^C\d{3,6}[A-Z]{2,3}$/i;
+  function cleanSkuLike(v){ return (v||'').toString().toUpperCase().replace(/[^A-Z0-9]/g,''); }
+  function looksLikeCoverSku(v){ return COVER_SKU_RE.test(cleanSkuLike(v)); }
+
+  function isFreeWindowItem(i){
+    var desc = norm(i.desc || i.description || i.itemnr || i.itemname || i.name || '');
+    return desc.includes(FREE_DESC);
+  }
+  function isPaidWindowItem(i){
+    var desc = norm(i.desc || i.description || i.itemnr || i.itemname || i.name || '');
+    return desc.includes(PAID_DESC_1) || desc.includes(PAID_DESC_2);
+  }
+  function isCarCoverItem(i){
+    if (isFreeWindowItem(i) || isPaidWindowItem(i)) return false;
+    var fields = [i.sku, i.itemnr, i.code, i.itemname, i.name, i.desc, i.description];
+    if (fields.some(looksLikeCoverSku)) return true;
+
+    var txt = norm(fields.filter(Boolean).join(' '));
+    if (txt.includes('window')) return false;
+    if (txt.includes('cover cover')) return true;
+    if (txt.includes('custom fit car cover')) return true;
+    if (txt.includes('car cover')) return true;
+    if (txt.includes('vehicle cover')) return true;
+    if (txt.includes('cfcc')) return true;
+    return false;
+  }
+
+  function normalizeHtmlToText(html){
+    try{
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      var text = (doc.body ? doc.body.textContent : html) || '';
+      text = text.replace(/\u00A0/g, ' ').replace(/\s+/g, ' ').trim();
+      return text;
+    }catch(e){
+      return (html||'').toString().replace(/\u00A0/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+  }
+  var FREE_RE_HTML = /car\s*cover\s*window\s*\(\s*free\s+with\s+purchase\s+of\s+cover\s*\)/i;
+
+  function detectFromJson(cart){
+    var items = cart.items || cart.CartItems || cart.cartItems || [];
+    var dbg = items.map(function(i){
+      return {
+        sku: i.sku || i.code || i.itemnr || i.itemname || i.name || '',
+        desc: i.desc || i.description || '',
+        price: i.price ?? i.Price ?? i.unitprice ?? i.UnitPrice ?? i.amount ?? i.Amount ?? i.total ?? i.Total ?? ''
+      };
     });
-    okBtn.addEventListener('click', function() {
-      popup.style.display = 'none';
-      form.submit();
+    console.groupCollapsed('🛒 Cart (JSON) items');
+    console.table(dbg);
+    console.groupEnd();
+
+    var hasFreeWindow = items.some(isFreeWindowItem);
+    var hasPaidWindow = items.some(isPaidWindowItem);
+    var hasCarCover  = items.some(isCarCoverItem);
+
+    console.log('🔎 Flags (JSON):', {hasFreeWindow, hasPaidWindow, hasCarCover});
+    return { hasFreeWindow, hasPaidWindow, hasCarCover };
+  }
+
+  function detectFromHtml(html){
+    var text = normalizeHtmlToText(html);
+    var lower = text.toLowerCase();
+
+    console.groupCollapsed('🛒 Cart (HTML) text preview');
+    console.log(text.slice(0, 1000) + (text.length>1000 ? '…' : ''));
+    console.groupEnd();
+
+    var hasFreeWindow = FREE_RE_HTML.test(text) || lower.includes(FREE_DESC);
+    var hasPaidWindow = lower.includes(PAID_DESC_1) || lower.includes(PAID_DESC_2);
+
+    var upper = text.toUpperCase();
+    var tokens = upper.match(/[A-Z0-9\-]{5,14}/g) || [];
+    var hasCarCoverBySku = tokens.some(function(tok){ return COVER_SKU_RE.test(tok.replace(/[^A-Z0-9]/g,'')); });
+
+    var hasCarCoverHeur = (lower.includes('cover cover') || (lower.includes('car cover') && !lower.includes('car cover window')));
+    var hasCarCover = hasCarCoverBySku || hasCarCoverHeur;
+
+    console.log('🔎 Flags (HTML):', {hasFreeWindow, hasPaidWindow, hasCarCover});
+    return { hasFreeWindow, hasPaidWindow, hasCarCover };
+  }
+
+  async function getCartFlags(){
+    try{
+      var res = await fetch('https://a4032.americommerce.com/store/shopcart.aspx?format=json&_ts=' + Date.now(), {
+        credentials:'include',
+        cache:'no-store'
+      });
+      if(!res.ok){
+        console.warn('❌ Cart fetch not OK:', res.status, res.statusText);
+        return { hasFreeWindow:false, hasPaidWindow:false, hasCarCover:false };
+      }
+      var raw = await res.text();
+      var trimmed = raw.trim();
+
+      console.groupCollapsed('🧾 Raw cart response');
+      console.log(trimmed.slice(0, 2000) + (trimmed.length>2000 ? '…' : ''));
+      console.groupEnd();
+
+      if (trimmed.startsWith('{') || trimmed.startsWith('[')){
+        try { return detectFromJson(JSON.parse(trimmed)); }
+        catch(e){ console.warn('❌ Failed to parse cart JSON:', e); }
+      }
+      return detectFromHtml(raw);
+    }catch(e){
+      console.error('❌ Error fetching cart:', e);
+      return { hasFreeWindow:false, hasPaidWindow:false, hasCarCover:false };
+    }
+  }
+
+  function buildFormFromSession(){
+    try{
+      var raw = sessionStorage.getItem('selectedCoverPost');
+      if(!raw) return false;
+      var form = document.getElementById('selectedCoverForm');
+      if(!form) return false;
+      form.innerHTML = '';
+      var params = new URLSearchParams(raw);
+      for (var pair of params.entries()){
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = pair[0];
+        input.value = pair[1];
+        form.appendChild(input);
+      }
+      return !!form.querySelector('input[name]');
+    }catch(e){ return false; }
+  }
+
+  function addSelectedCoverThenGoCart(hasCarCover){
+    if (hasCarCover){
+      window.location.href='https://a4032.americommerce.com/store/shopcart.aspx';
+      return;
+    }
+    var form = document.getElementById('selectedCoverForm');
+    var ready = form && (form.querySelector('input[name]') || buildFormFromSession());
+    if (!ready){
+      setStatus('Select a car cover first.');
+      return;
+    }
+    form.setAttribute('target','bgframe');
+    form.submit();
+    setTimeout(function(){ window.location.href='https://a4032.americommerce.com/store/shopcart.aspx'; },1200);
+  }
+
+  async function init(){
+  var flags = await getCartFlags();
+  try { if (sessionStorage.getItem('hasCarCover') === '1') flags.hasCarCover = true; } catch(e){}
+
+  /* Element references */
+  var rFree        = document.getElementById('row-free');
+  var rFreeOffer   = document.getElementById('row-free-offer');
+  var rRetail      = document.getElementById('row-retail');
+  var continueText = document.getElementById('continueText');
+  var continueCell = document.getElementById('continueCell');
+  var retailText   = document.getElementById('retailText');
+
+  /* Helpers */
+  var DEFAULT_CONTINUE_COPY = (continueText ? continueText.textContent.trim() : 'No thank you, I don\'t need a license plate viewing window with my purchase.');
+  function setContinueButton(mode){
+    if (!continueCell) return;
+    if (mode === 'cart'){
+      /* Continue to cart */
+      continueCell.innerHTML =
+        '<form action="https://a4032.americommerce.com/store/shopcart.aspx" method="GET">' +
+        '  <input name="itemshipsfree" value="1" type="hidden" />' +
+        '  <input type="submit" value="Continue To Cart" class="btn btn-success">' +
+        '</form>';
+    } else {
+      /* Continue shopping */
+      continueCell.innerHTML = '<a href="https://carcovers.org" class="btn btn-success">Continue Shopping</a>';
+    }
+  }
+  function safeShow(el, on){ if (el) el.style.display = on ? '' : 'none'; }
+
+  /* Flags */
+  var hasFree  = !!flags.hasFreeWindow;
+  var hasCover = !!flags.hasCarCover;
+  var hasPaid  = !!flags.hasPaidWindow;
+
+  /* Default visibility before applying cases */
+  safeShow(rFree, true);
+  safeShow(rFreeOffer, true);
+  safeShow(rRetail, true);
+
+  /* Retail row label depends on whether free item is already in cart */
+  if (retailText) {
+    retailText.textContent = hasFree
+      ? 'Add additional Plate Covers at Retail Price.'
+      : 'Order Viewing Windows Separately at Retail Price.';
+  }
+
+  /* Cases:
+     1) !hasFree && !hasCover                      => all 3 buttons
+     2)  hasFree && !hasCover                      => top row + paid row (Continue Shopping + Add paid)
+     3)  hasFree &&  hasCover && !hasPaid          => top row + paid row (Continue To Cart + Add paid)
+     4)  hasFree &&  hasCover &&  hasPaid          => top row only (Continue To Cart)
+  */
+  if (!hasFree && !hasCover) {
+    /* Case 1 */
+    if (continueText) continueText.textContent = DEFAULT_CONTINUE_COPY;
+    setContinueButton('cart');
+    safeShow(rFreeOffer, true);
+    safeShow(rRetail, true);
+  } else if (hasFree && !hasCover) {
+    /* Case 2 */
+    if (continueText) continueText.textContent = 'Free Plate Cover already in cart. Requires purchase of car cover.';
+    setContinueButton('shop');
+    safeShow(rFreeOffer, false);
+    safeShow(rRetail, true);
+  } else if (hasFree && hasCover && !hasPaid) {
+    /* Case 3 */
+    if (continueText) continueText.textContent = 'Car Cover and Free Plate Cover already in cart.';
+    setContinueButton('cart');
+    safeShow(rFreeOffer, false);
+    safeShow(rRetail, true);
+  } else if (hasFree && hasCover && hasPaid) {
+    /* Case 4 */
+    if (continueText) continueText.textContent = 'Car Cover and Free Plate Cover already in cart.';
+    setContinueButton('cart');
+    safeShow(rFreeOffer, false);
+    safeShow(rRetail, false);
+  }
+    /* Hides Retail Plate Cover is in cart*/
+  if (rRetail) {
+    rRetail.style.display = hasPaid ? 'none' : '';
+  }
+
+  /* Wire popup for FREE add only when free-offer row is visible */
+  if (rFreeOffer && rFreeOffer.style.display !== 'none') {
+    var form = document.getElementById('freeWindowForm');
+    var popup = document.getElementById('popupOverlay');
+    var okBtn = document.getElementById('popupOk');
+    if (form && popup && okBtn && !form._wired){
+      form._wired = true;
+      form.addEventListener('submit', function(e){ e.preventDefault(); popup.style.display='flex'; });
+      okBtn.addEventListener('click', function(){ popup.style.display='none'; form.submit(); });
+    }
+  }
+
+  /* Ensure the paid add goes directly to cart */
+  var retailForm = document.getElementById('retailForm') || document.querySelector('#row-retail form');
+  if (retailForm){
+    retailForm.addEventListener('submit', function(){
+      try{
+        var gb = retailForm.querySelector('input[name="gobackto"]');
+        if (gb && !gb.value) gb.value = 'https://a4032.americommerce.com/store/shopcart.aspx';
+        retailForm.removeAttribute('target');
+      }catch(e){}
     });
-  </script>
+  }
+}
+
+
+  document.addEventListener('DOMContentLoaded', init);
+  window.addEventListener('pageshow', init);
+})();
+</script>
 
 {/content}
