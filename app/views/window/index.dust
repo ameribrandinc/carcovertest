@@ -2,51 +2,77 @@
 <link rel="stylesheet" href="/css/window/index.css" type="text/css" />
 
 <style>
-  .add-to-cart {
-    white-space: normal;
-    word-break: break-word;
-    text-align: center;
-    margin: 10px auto;
-    width: 100%;
-    padding: 10px 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    border: 1px solid #3e8e41; 
-    font-weight: 500;    
-    transition: all 0.2s ease; 
-  }
+/* Button styling for "Add to Cart" */
+.add-to-cart { 
+  white-space: normal; /* allow text to wrap to the next line */
+  word-break: break-word; /* break long words if needed */
+  text-align: center; /* center the button label */
+  margin: 10px auto; /* vertical spacing and center horizontally */
+  width: 100%; /* make button stretch full width of its container */
+  padding: 10px 16px; /* inner spacing for better click/tap area */
+  border-radius: 8px; /* rounded corners for beveled look */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* soft shadow for depth */
+  border: 1px solid #3e8e41; /* subtle border to define edge */
+  font-weight: 500; /* medium-bold text for emphasis */
+  transition: all 0.2s ease; /* smooth hover effect */
+}
 
-  .add-to-cart:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* deeper shadow on hover */
-    transform: translateY(-1px);          /* slight lift on hover */
-  }
+/* Button hover effect */
+.add-to-cart:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* deeper shadow on hover */
+  transform: translateY(-1px); /* lift effect on hover */
+}
 
-  .size-options-list {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-    padding: 0;
-  }
+/* Container for both size-option boxes */
+.size-options-list {
+  display: flex; /* place boxes side-by-side */
+  justify-content: center; /* center all items horizontally */
+  gap: 40px; /* spacing between boxes */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  margin: 20px 0; /* spacing above and below the group */
+  padding: 0; /* remove default inner spacing */
+}
 
-  .size-option-item {
-    width: 320px;
-    text-align: center;
-  }
+/* Each size-option box */
+.size-option-item {
+  width: 320px; /* fixed width for consistency */
+  text-align: center; /* center-align content inside */
+}
 
-  .shared-window-note {
-    text-align: center;
-    font-size: 13px;
-    font-style: italic;
-    color: #555;
-    margin-top: 10px;
-  }
+/* Shared note shown below both boxes */
+.shared-window-note {
+  text-align: center; /* center the note text */
+  font-size: 13px; /* slightly smaller text */
+  font-style: italic; /* visual emphasis */
+  color: #555; /* soft gray for subtle appearance */
+  margin-top: 10px; /* spacing above the note */
+}
+
+/* Overlay background for popup */
+#popupOverlay {
+  display: none; /* hidden by default */
+  position: fixed; /* stays fixed on screen */
+  inset: 0; /* stretch to cover entire viewport */
+  background: rgba(0, 0, 0, 0.55); /* semi-transparent dark background */
+  align-items: center; /* vertically center content */
+  justify-content: center; /* horizontally center content */
+  z-index: 99999; /* ensure it's above all other elements */
+}
+
+/* Main popup container box */
+#popupBox {
+  background: #fff; /* white background for content */
+  padding: 16px 20px; /* inner spacing */
+  border-radius: 10px; /* rounded corners */
+  max-width: 480px; /* limit max width */
+  width: 92%; /* responsive width on smaller screens */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* soft outer shadow for depth */
+}
 </style>
 
 {<content}
-<div id="popupOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.55); align-items:center; justify-content:center; z-index:99999;">
-  <div id="popupBox" style="background:#fff; padding:16px 20px; border-radius:10px; max-width:480px; width:92%; box-shadow:0 10px 30px rgba(0,0,0,.2);">
+<div id="popupOverlay">
+  <div id="popupBox">
     <div id="popupContent">
       <div class="icon" style="font-size:28px; margin-bottom:6px;">&#9888;&#65039;</div>
       <h2>Please Note</h2>
