@@ -1,340 +1,378 @@
 {>layout/}
 <link rel="stylesheet" href="/css/window/index.css" type="text/css" />
 
+<style>
+/* Button styling for "Add to Cart" */
+.add-to-cart { 
+  white-space: normal; /* allow text to wrap to the next line */
+  word-break: break-word; /* break long words if needed */
+  text-align: center; /* center the button label */
+  margin: 10px auto; /* vertical spacing and center horizontally */
+  width: 100%; /* make button stretch full width of its container */
+  padding: 10px 16px; /* inner spacing for better click/tap area */
+  border-radius: 8px; /* rounded corners for beveled look */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* soft shadow for depth */
+  border: 1px solid #3e8e41; /* subtle border to define edge */
+  font-weight: 500; /* medium-bold text for emphasis */
+  transition: all 0.2s ease; /* smooth hover effect */
+}
 
+/* Button hover effect */
+.add-to-cart:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* deeper shadow on hover */
+  transform: translateY(-1px); /* lift effect on hover */
+}
 
-{<content} 
+/* Container for both size-option boxes */
+.size-options-list {
+  display: flex; /* place boxes side-by-side */
+  justify-content: center; /* center all items horizontally */
+  gap: 40px; /* spacing between boxes */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  margin: 20px 0; /* spacing above and below the group */
+  padding: 0; /* remove default inner spacing */
+}
 
-<div class="col-xs-12">
-  <div class="wrapper">
-    <center>
-      <h1 class="green bold">**TJCARS EXCLUSIVE!**</h1>
+/* Each size-option box */
+.size-option-item {
+  width: 320px; /* fixed width for consistency */
+  text-align: center; /* center-align content inside */
+}
 
-      <h1 id="option1" class="lowermargin0 tops">
-        Free 
-        <a href="https://viraport.com" target="_blank">
-          <img src="https://viraport.com/images/V-port-main-logo.jpg" width="150px">
-        </a> 
-        Car Cover Viewing Window
-      </h1>
-      <h2 class="subheadtxt red">1st one FREE with purchase of a Car Cover</h2>
-      <h3 class="subhead_grey">($49.95 per additional window)</h3>
+/* Shared note shown below both boxes */
+.shared-window-note {
+  text-align: center; /* center the note text */
+  font-size: 13px; /* slightly smaller text */
+  font-style: italic; /* visual emphasis */
+  color: #555; /* soft gray for subtle appearance */
+  margin-top: 10px; /* spacing above the note */
+}
 
-      <h2>NOW available in 2 convenient sizes:</h2>
-      <ul class="size-options-list">
-        <li class="size-option-item">
-          <span class="size-option-label">Standard License Plate Size</span>
-          <span class="size-option-size">(12" x 6")</span>
-          <a href="/catalog/pics/standard-viewing-window.jpg" target="_blank">
-            <img src="/catalog/pics/standard-viewing-window-256.jpg" alt="Standard License Plate Viewing Window">
-          </a>
-        </li>
-        <li class="size-option-item">
-          <span class="size-option-label">Parking Permit Size</span>
-          <span class="size-option-size">(6" x 5")</span>
-          <a href="/catalog/pics/small-viewing-window.jpg" target="_blank">
-            <img src="/catalog/pics/small-viewing-window-256.jpg" alt="Parking Permit Viewing Window">
-          </a>
-        </li>
-      </ul>
+/* Overlay background for popup */
+#popupOverlay {
+  display: none; /* hidden by default */
+  position: fixed; /* stays fixed on screen */
+  inset: 0; /* stretch to cover entire viewport */
+  background: rgba(0, 0, 0, 0.55); /* semi-transparent dark background */
+  align-items: center; /* vertically center content */
+  justify-content: center; /* horizontally center content */
+  z-index: 99999; /* ensure it's above all other elements */
+}
 
-      <!-- <h2>Add to Your Order and Save!</h2> -->
+/* Main popup container box */
+#popupBox {
+  background: #fff; /* white background for content */
+  padding: 16px 20px; /* inner spacing */
+  border-radius: 10px; /* rounded corners */
+  max-width: 480px; /* limit max width */
+  width: 92%; /* responsive width on smaller screens */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* soft outer shadow for depth */
+}
+</style>
 
-<div id="popupOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.55); align-items:center; justify-content:center; z-index:99999;">
-  <div id="popupBox" style="background:#fff; padding:16px 20px; border-radius:10px; max-width:480px; width:92%; box-shadow:0 10px 30px rgba(0,0,0,.2);">
+{<content}
+<div id="popupOverlay">
+  <div id="popupBox">
     <div id="popupContent">
-    
-    <div class="icon" style="font-size:28px; margin-bottom:6px;">&#9888;&#65039;</div>
-    <h2>Please Note</h2>
-    <p>The FREE ViraPort&reg; Viewing Window offer is valid 
-      <strong>ONLY</strong> with the purchase of a New Car Cover.</p>
+      <div class="icon" style="font-size:28px; margin-bottom:6px;">&#9888;&#65039;</div>
+      <h2>Please Note</h2>
+      <p>
+        The FREE ViraPort&reg; Viewing Window offer is valid 
+        <strong>ONLY</strong> with the purchase of a New Car Cover.
+      </p>
 
-    <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 10px;">
-      <button id="cancelBtn" type="button">No Thanks</button>
-      <button id="addBtn" type="button">Add To Cart And Continue Shopping</button>
+      <div style="margin-top:12px; display:flex; justify-content:flex-end; gap:10px;">
+        <button id="cancelBtn" type="button">No Thanks</button>
+        <button id="addBtn" type="button">Add To Cart And Continue Shopping</button>
+      </div>
     </div>
   </div>
 </div>
-</div>
 
-      <table class="window-prices automargins md round">
-        <tr>
-          <td class="green bold">
-            Order With a <a href="/catalog/cfcc.php">New Cover</a> &amp; Save 
-            More!
-          </td>
-          <td class="lg bold">$FREE</td>
-          <td>
-            <form id="freeWindowForm" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
-              <input name="itemname" type="hidden" value="Cover-Win" />
-              <input name="desc" type="hidden" value="Cover-Win" />
-              <input name="itemnr" type="hidden" value="Car Cover Window (FREE with purchase of Cover)" />
-              <input name="qty" type="hidden" value="1" />
-              <input name="price" type="hidden" value="0" />
-              <input name="itemshipsfree" type="hidden" value="1" />
-              <input name="gobackto" value="https://carcovers.org" type="hidden" />
-              <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td class="bold">Order Separately at Retail Price.</td>
-          <td class="lg bold">+$49.95</td>
-          <td>
-            <form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST" >
-              <input name="itemname" type="hidden" value="Cover-Win" />
-              <input name="desc" type="hidden" value="Cover-Win" />
-              <input name="itemnr" type="hidden" value="Licence Plate Cover Window (separate)" />
-              <input name="qty" type="hidden" value="1" />
-              <input name="price" type="hidden" value="49.95" />
-              <input name="itemshipsfree" type="hidden" value="1" />
-              <input name="gobackto" value="https://carcovers.org" type="hidden" />
-              <input type="submit" value="Add to Cart" class="add-to-cart btn btn-success" />
-            </form>
-          </td>
-        </tr>
-      </table>
-    </center>
+<div class="col-xs-12">
+  <div class="wrapper">
+    <h1 class="green bold">**TJCARS EXCLUSIVE!**</h1>
 
+    <h1 id="option1" class="lowermargin0 tops">
+      Free
+      <a href="https://viraport.com" target="_blank">
+        <img src="https://viraport.com/images/V-port-main-logo.jpg" width="150" alt="ViraPort logo">
+      </a>
+      Car Cover Viewing Window
+    </h1>
 
+    <h2 class="subheadtxt red">1st one FREE with purchase of a Car Cover</h2>
+    <h3 class="subhead_grey">($49.95 per additional window)</h3>
+
+    <h2>NOW available in 2 convenient sizes:</h2>
+
+    <div class="size-options-list">
+      <!-- Standard License Plate Size -->
+      <div class="size-option-item">
+        <span class="size-option-label">Standard License Plate Size</span>
+        <span class="size-option-size">(12&quot; x 6&quot;)</span>
+        <a href="/catalog/pics/standard-viewing-window.jpg" target="_blank">
+          <img src="/catalog/pics/standard-viewing-window-256.jpg" alt="Standard License Plate Viewing Window">
+        </a>
+
+        <!-- Free License Form -->
+        <form class="free-window-form" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+          <input name="itemname" type="hidden" value="Free License Plate Viewing Window" />
+          <input name="desc" type="hidden" value="Free 12&quot; x 6&quot; License Plate Viewing Window" />
+          <input name="itemnr" type="hidden" value="FR126LP" />
+          <input name="qty" type="hidden" value="1" />
+          <input name="price" type="hidden" value="0" />
+          <input name="itemshipsfree" type="hidden" value="1" />
+          <input name="gobackto" type="hidden" value="https://carcovers.org" />
+          <button type="submit" class="add-to-cart btn btn-success">
+            Add <span style="color:#ffd700; font-weight:bold;">FREE*</span> License Plate Viewing Window to Cart
+          </button>
+        </form>
+
+        <!-- Paid License Form -->
+        <form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+          <input name="itemname" type="hidden" value="License Plate Viewing Window" />
+          <input name="desc" type="hidden" value="12&quot; x 6&quot; License Plate Viewing Window" />
+          <input name="itemnr" type="hidden" value="PD126LP" />
+          <input name="qty" type="hidden" value="1" />
+          <input name="price" type="hidden" value="49.95" />
+          <input name="itemshipsfree" type="hidden" value="1" />
+          <input name="gobackto" type="hidden" value="https://carcovers.org" />
+          <button type="submit" class="add-to-cart btn btn-success">
+            Add Paid License Plate Viewing Window to Cart for $49.95
+          </button>
+        </form>
+      </div>
+
+      <!-- Parking Permit Size -->
+      <div class="size-option-item">
+        <span class="size-option-label">Parking Permit Size</span>
+        <span class="size-option-size">(6&quot; x 5&quot;)</span>
+        <a href="/catalog/pics/small-viewing-window.jpg" target="_blank">
+          <img src="/catalog/pics/small-viewing-window-256.jpg" alt="Parking Permit Viewing Window">
+        </a>
+
+        <!-- Free Permit Form -->
+        <form class="free-window-form" action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+          <input name="itemname" type="hidden" value="Free Permit Viewing Window" />
+          <input name="desc" type="hidden" value="Free 6&quot;x 5&quot; Parking Permit or Hanging Tag Viewing Window" />
+          <input name="itemnr" type="hidden" value="FR65PER" />
+          <input name="qty" type="hidden" value="1" />
+          <input name="price" type="hidden" value="0" />
+          <input name="itemshipsfree" type="hidden" value="1" />
+          <input name="gobackto" type="hidden" value="https://carcovers.org" />
+          <button type="submit" class="add-to-cart btn btn-success">
+            Add <span style="color:#ffd700; font-weight:bold;">FREE*</span> Permit or Hanging Tag Viewing Window to Cart
+          </button>
+        </form>
+
+        <!-- Paid Permit Form -->
+        <form action="https://a4032.americommerce.com/store/addtocart.aspx" method="POST">
+          <input name="itemname" type="hidden" value="Permit Viewing Window" />
+          <input name="desc" type="hidden" value="6&quot;x 5&quot; Parking Permit or Hanging Tag Viewing Window" />
+          <input name="itemnr" type="hidden" value="PD65PER" />
+          <input name="qty" type="hidden" value="1" />
+          <input name="price" type="hidden" value="49.95" />
+          <input name="itemshipsfree" type="hidden" value="1" />
+          <input name="gobackto" type="hidden" value="https://carcovers.org" />
+          <button type="submit" class="add-to-cart btn btn-success">
+            Add Paid Permit or Hanging Tag Viewing Window to Cart for $49.95
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="shared-window-note">*FREE with purchase of car cover</div>
 
     <h2 class="tops">
       <a href="https://www.viraport.com/install.php" target="_blank">Car Cover Window Installation</a>
     </h2>
 
     <img src="pics/window-rear-sm.jpg" alt="car cover window" />
+
     <p class="paragraph justify">
       <b class="green">BRAND NEW!</b> The car cover window from T.J. Cars is
-      <em class="red"> THE SOLUTION </em> for an age-old problem. Since the 
-      creation of <a href="/covers/">car covers</a>, people have struggled with 
-      a way to display license plates or parking stickers. This problem has only 
-      grown in a modern climate of increasing security standards. For security, 
-      many parking garages, schools & universities, military bases, and other 
-      government agencies now require parking stickers (and sometimes license 
-      plates) to be displayed while parking on their property. After numerous 
-      customer inquires and years of unsuccessful searches for an existing 
+      <em class="red"> THE SOLUTION </em> for an age-old problem. Since the
+      creation of <a href="/covers/">car covers</a>, people have struggled with
+      a way to display license plates or parking stickers. This problem has only
+      grown in a modern climate of increasing security standards. For security,
+      many parking garages, schools &amp; universities, military bases, and other
+      government agencies now require parking stickers (and sometimes license
+      plates) to be displayed while parking on their property. After numerous
+      customer inquires and years of unsuccessful searches for an existing
       product, T.J. Cars teamed up with Ameri-Brand Products Inc. to create a
-      <b> uniquely-designed, flexible, vinyl window</b> (patent pending) that 
-      can be used in covers of all shapes and sizes. No other product exists 
-      that allows you to quickly and accurately insert a viewing window into a 
+      <b>uniquely-designed, flexible, vinyl window</b> (patent pending) that
+      can be used in covers of all shapes and sizes. No other product exists
+      that allows you to quickly and accurately insert a viewing window into a
       cover.
     </p>
 
     <h2 class="tops">How Can I Use My Viewing Window / Port?</h2>
-    <!-- <img class="background_img" src="pics/window-rear-sm.jpg"> -->
-    <div class="wrapper2 center" style="margin: auto">
-      <div class="inner1" style="display: inline-block; vertical-align: middle">
+
+    <div class="wrapper2 center" style="margin:auto">
+      <div class="inner1" style="display:inline-block; vertical-align:middle">
         <div class="inner1-a">
           <h3 class="lowermargin1 red">I'd like to display my...</h3>
         </div>
+
         <div class="wrap3">
-          <div class="float_left number_container1">
-            <div class="circle"></div>
-          </div>
-          <div class="float_left text_container1">
-            <p class="paragraph"><b>License Plate(s)</b></p>
-          </div>
+          <div class="float_left number_container1"><div class="circle"></div></div>
+          <div class="float_left text_container1"><p class="paragraph"><b>License Plate(s)</b></p></div>
           <div class="clear_floats"></div>
         </div>
 
         <div class="wrap3">
-          <div class="float_left number_container1">
-            <div class="circle"></div>
-          </div>
-          <div class="float_left text_container1">
-            <p class="paragraph"><b>Parking Stickers or Tags</b></p>
-          </div>
+          <div class="float_left number_container1"><div class="circle"></div></div>
+          <div class="float_left text_container1"><p class="paragraph"><b>Parking Stickers or Tags</b></p></div>
           <div class="clear_floats"></div>
         </div>
+
         <div class="wrap3">
-          <div class="float_left number_container1">
-            <div class="circle"></div>
-          </div>
-          <div class="float_left text_container1">
-            <p class="paragraph"><b>Handicap Tags or Decals</b></p>
-          </div>
+          <div class="float_left number_container1"><div class="circle"></div></div>
+          <div class="float_left text_container1"><p class="paragraph"><b>Handicap Tags or Decals</b></p></div>
           <div class="clear_floats"></div>
         </div>
+
         <div class="wrap3">
-          <div class="float_left number_container1">
-            <div class="circle"></div>
-          </div>
-          <div class="float_left text_container1">
-            <p class="paragraph"><b>Other Items</b></p>
-          </div>
+          <div class="float_left number_container1"><div class="circle"></div></div>
+          <div class="float_left text_container1"><p class="paragraph"><b>Other Items</b></p></div>
           <div class="clear_floats"></div>
         </div>
       </div>
 
-      <img src="pics/window_rear2.png" />
-      <!-- <div class="clear_floats"></div> -->
+      <img src="pics/window_rear2.png" alt="Rear window example" />
     </div>
 
     <div class="center">
       <p class="paragraph please_note">
-        There is a growing list of reasons that many entities are requiring that 
-        a covered vehicle must display some sort of "proof" that the vehicle is 
-        approved to be parked at a specific location. The many reasons and 
+        There is a growing list of reasons that many entities are requiring that
+        a covered vehicle must display some sort of "proof" that the vehicle is
+        approved to be parked at a specific location. The many reasons and
         facilities include:
       </p>
-      <ul style="display: inline-block">
+
+      <ul style="display:inline-block">
         <li class="olandlistitems">Security Issues (various)</li>
-
         <li class="olandlistitems">Airports</li>
-
         <li class="olandlistitems">Reserved Parking Areas</li>
-
         <li class="olandlistitems">Educational Facilities</li>
-
         <li class="olandlistitems">Limitations by Regulations or Ordinances</li>
-
         <li class="olandlistitems">Military Bases or Installations</li>
-
         <li class="olandlistitems">Law Enforcement Agencies</li>
-
         <li class="olandlistitems">Government Agencies</li>
-
         <li class="olandlistitems">Special Events</li>
-
         <li class="olandlistitems">Hotels</li>
-
         <li class="olandlistitems">Campgrounds</li>
-
-        <li class="olandlistitems" class="red top8">
-          The list is continuing to grow...
-        </li>
+        <li class="olandlistitems red top8">The list is continuing to grow...</li>
       </ul>
-      <center>
-        <h2>Your Solution</h2>
-      </center>
+
+      <center><h2>Your Solution</h2></center>
+
       <p class="paragraph please_note">
-        We make it EASY! We offer an EASY TO INSTALL Viewing window with the 
-        purchase of your new car cover. Your 1st window is totally <b>FREE</b>. 
+        We make it EASY! We offer an EASY TO INSTALL Viewing window with the
+        purchase of your new car cover. Your 1st window is totally <b>FREE</b>.
         If needed, additional viewing windows are only $49.95 each.
       </p>
     </div>
 
     <div>
-      <!-- style="display:inline-block; margin:auto; width:75%" -->
-      <div>
-        <div class="please_note">
-          <center>
-            <h2>Q &amp; A</h2>
+      <div class="please_note">
+        <center>
+          <h2>Q &amp; A</h2>
 
-            <!-- Lightbox -->
+          <!-- Lightbox -->
+          <a href="#myModal" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor links">
+            <p class="paragraph">1) Where am I allowed to put my window?</p>
+          </a>
 
-            <a href="#myModal" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor links">
-              <p class="paragraph">1) Where am I allowed to put my window?</p>
-            </a>
+          <a href="#myModal" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor links">
+            <p class="paragraph">2) Are there any limits on size?</p>
+          </a>
 
-            <a href="#myModal" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor links">
-              <p class="paragraph">2) Are there any limits on size?</p>
-            </a>
+          <div id="myModal" class="modal" onclick="closeModal()">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <div class="mySlides">
+                <p class="paragraph">
+                  You are allowed to place your new license plate window,
+                  placard window, parking permit viewing window, anywhere you
+                  select. Most permits or tags are usually placed inside the
+                  front or back window, on the bumper of the car, or hung on
+                  the rear view mirror. Please check with permit issuing
+                  authorities prior to location selection.
+                </p>
+              </div>
 
-            <div id="myModal" class="modal" onclick="closeModal()">
-              <span class="close cursor" onclick="closeModal()">&times;</span>
-              <div class="modal-content">
-                <div class="mySlides">
-                  <p class="paragraph">
-                    You are allowed to place your new license plate window, 
-                    placard window, parking permit viewing window, anywhere you 
-                    select. Most permits or tags are usually placed inside the 
-                    front or back window, on the bumper of the car, or hung on 
-                    the rear view mirror. Please check with permit issuing 
-                    authorities prior to location selection.
-                  </p>
-                </div>
+              <div class="mySlides">
+                <p class="paragraph">
+                  The size limits of your new viewing window depend on the
+                  type of window you select. The maximum width and length for
+                  a permit or special item is 6&quot; x 6&quot;. License plates are a
+                  standard size of 12&quot; x 6&quot; and are trimmed with black.
+                </p>
+              </div>
 
-                <div class="mySlides">
-                  <p class="paragraph">
-                    The size limits of your new viewing window depend on the 
-                    type of window you select. The maximum width and length for 
-                    a permit or special item is 6" x 6". License plates are a 
-                    standard size of 12" x 6" and are trimmed with black.
-                  </p>
-                </div>
+              <div class="mySlides">
+                <img src="pics/ups_transit_times.png" alt="UPS transit times" />
+              </div>
 
-                <div class="mySlides">
-                  <img src="pics/ups_transit_times.png" />
-                </div>
-
-                <div style="clear: both"></div>
-                <div class="caption-container">
-                  <p class="paragraph" id="caption"></p>
-                </div>
+              <div style="clear:both"></div>
+              <div class="caption-container">
+                <p class="paragraph" id="caption"></p>
               </div>
             </div>
-          </center>
-        </div>
+          </div>
+          <!-- end lightbox -->
+        </center>
       </div>
-      <!-- end lightbox -->
 
       <div>
         <center>
           <h3 class="lowermargin0">More questions?</h3>
-          <p class="paragraph" class="call_us lowermargin1">
-            Feel free to give us a call
-          </p>
-          <p class="paragraph" class="phone_number">800-982-6966</p>
+          <p class="paragraph call_us lowermargin1">Feel free to give us a call</p>
+          <p class="paragraph phone_number">800-982-6966</p>
         </center>
       </div>
     </div>
 
     <div class="please_note tops bottom">
       <p class="paragraph">
-        We provide quality boat and car covers for the areas &amp; communities 
-        of New York, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San 
-        Diego, San Antonio, Dallas, San Jose, Detroit, Indianapolis, 
-        Jacksonville, San Francisco, Columbus, Austin, Memphis, Baltimore, Fort 
-        Worth, Charlotte, El Paso, Milwaukee, Seattle, Boston, Denver, 
-        Louisville, Washington DC, Nashville, Las Vegas, Portland, Oklahoma 
-        City, Tucson, Albuquerque, Long Beach, New Orleans, Cleveland, Fresno, 
-        Sacramento, Kansas City, Virginia Beach, Mesa, Atlanta, Omaha, Oakland, 
-        Tulsa, Miami, Honolulu, Minneapolis, Colorado Springs and Arlington. 
+        We provide quality boat and car covers for the areas &amp; communities
+        of New York, Los Angeles, Chicago, Houston, Philadelphia, Phoenix, San
+        Diego, San Antonio, Dallas, San Jose, Detroit, Indianapolis,
+        Jacksonville, San Francisco, Columbus, Austin, Memphis, Baltimore, Fort
+        Worth, Charlotte, El Paso, Milwaukee, Seattle, Boston, Denver,
+        Louisville, Washington DC, Nashville, Las Vegas, Portland, Oklahoma
+        City, Tucson, Albuquerque, Long Beach, New Orleans, Cleveland, Fresno,
+        Sacramento, Kansas City, Virginia Beach, Mesa, Atlanta, Omaha, Oakland,
+        Tulsa, Miami, Honolulu, Minneapolis, Colorado Springs and Arlington.
       </p>
     </div>
   </div>
-  {/content}
+{/content}
 
 <script>
-/**
- * Handles the Free Viewing Window cart add flow for both bonus and non-bonus users.
- *
- * Features:
- * - Opens overlay UI during cart add process.
- * - Submits a hidden form into a popup window to add item to cart.
- * - Detects if the flow was triggered via a bonus offer (?bonus=1 in URL).
- * - Bonus flow:
- *   - Returns user to previous page or closes popup after successful add.
- *   - Displays appropriate confirmation message.
- * - Non-bonus flow:
- *   - Always redirects to https://carcovers.org/ after item is added.
- *   - Provides fallback messaging and behavior if popup fails.
- * - Handles blocked popups, scroll locking, overlay cleanup, and cart window management.
- * - Listens for "cart:added" message or popup-close fallback to complete flow.
- *
- * Assumptions:
- * - A form with ID "freeWindowForm" exists and submits the item to cart.
- * - The script is embedded on the same page as the bonus offer or injected dynamically.
- * - The cart add window uses `window.name = 'cartAdder'` for messaging back.
- * - The calling button or link includes ?bonus=1 if user came from the bonus promotion.
- */
+/* Handles the Free Viewing Window cart add flow for both bonus and non-bonus users. */
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('freeWindowForm');
-  const overlay = document.getElementById('popupOverlay');
-  const addBtn = document.getElementById('addBtn');
-  const cancelBtn = document.getElementById('cancelBtn');
+  /* ---------- Cached DOM ---------- */
+  const overlay    = document.getElementById('popupOverlay');
+  const addBtn     = document.getElementById('addBtn');
+  const cancelBtn  = document.getElementById('cancelBtn');
 
-  let cartWin = null;
-  let killerId = null;
-  let fallbackId = null;
+  /* ---------- State ---------- */
+  let pendingForm = null;   /* the form the user clicked, to be submitted after confirm */
+  let cartWin     = null;
+  let killerId    = null;
+  let fallbackId  = null;
 
+  /* ---------- Helpers ---------- */
   function lockScroll(){ document.body.style.overflow = 'hidden'; }
   function unlockScroll(){ document.body.style.overflow = ''; }
   function openOverlay(){ lockScroll(); window.scrollTo(0,0); if (overlay) { overlay.style.display = 'flex'; overlay.style.zIndex = '99999'; } }
   function closeOverlay(){ if (overlay) overlay.style.display = 'none'; unlockScroll(); }
 
   function getStatusTarget(){
+    /* Prefer #popupContent if present, fallback to #popupBox */
     let t = document.getElementById('popupContent') || document.getElementById('popupBox');
     if (!t && overlay) {
       const b = document.createElement('div');
@@ -352,6 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showStatus(html){
+    /* This replaces the overlay content with a status message */
     const t = getStatusTarget();
     if (!t) return;
     if (overlay && (overlay.style.display === '' || overlay.style.display === 'none')) openOverlay();
@@ -359,24 +398,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function tryCloseCartWin(){
-    try{ if(cartWin && !cartWin.closed) cartWin.close(); }catch(_){}
+    try { if (cartWin && !cartWin.closed) cartWin.close(); } catch(_){}
   }
 
   function stopKiller(){
-    if(killerId){ clearInterval(killerId); killerId=null; }
-  }
-
-  function ensureCartWinClosedThen(fn, timeoutMs){
-    let elapsed = 0;
-    const step = 200;
-    const timer = setInterval(() => {
-      tryCloseCartWin();
-      elapsed += step;
-      if (!cartWin || cartWin.closed || elapsed >= timeoutMs) {
-        clearInterval(timer);
-        fn();
-      }
-    }, step);
+    if (killerId){ clearInterval(killerId); killerId = null; }
   }
 
   function backOrHome(){
@@ -399,17 +425,89 @@ document.addEventListener('DOMContentLoaded', () => {
   const usp = new URLSearchParams(location.search);
   const isBonusFlow = usp.get('bonus') === '1';
 
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      openOverlay();
+  /* ---------- Overlay confirm wiring ---------- */
+  if (cancelBtn) {
+    cancelBtn.addEventListener('click', () => {
+      /* User canceled; clear pending form and close overlay */
+      pendingForm = null;
+      closeOverlay();
     });
   }
 
-  if (cancelBtn) {
-    cancelBtn.addEventListener('click', () => { closeOverlay(); });
+  if (addBtn) {
+    addBtn.addEventListener('click', () => {
+      /* User confirmed; submit the pending form in popup */
+      if (!pendingForm) { closeOverlay(); return; }
+
+      showStatus('<h2>Adding item to your cart…</h2><p>Please wait a moment.</p>');
+
+      /* Open popup immediately to keep user gesture */
+      cartWin = window.open('', 'cartAdder', 'width=420,height=420');
+
+      if (!cartWin) {
+        showStatus('<h2>Popups blocked</h2><p>Please allow popups or reload and try again.</p>');
+        return;
+      }
+
+      /* Clone and submit the pending form into the popup */
+      const temp = pendingForm.cloneNode(true);
+      temp.style.display = 'none';
+      temp.target = 'cartAdder';
+
+      const goback = temp.querySelector('[name="gobackto"]');
+      if (goback) goback.value = location.origin + '/?closeCartPopup=1';
+
+      document.body.appendChild(temp);
+      temp.submit();
+      temp.remove();
+
+      /* Attempt to close the popup quickly */
+      let attempts = 0;
+      killerId = setInterval(() => {
+        attempts += 1;
+        tryCloseCartWin();
+        if (!cartWin || cartWin.closed || attempts >= 15) clearInterval(killerId);
+      }, 700);
+
+      /* Fallback completion */
+      fallbackId = setTimeout(() => {
+        tryCloseCartWin();
+        clearInterval(killerId);
+
+        showStatus('<h2>Viewing Window added to Cart!</h2><p>Returning to the site…</p>');
+        setTimeout(() => { window.location.replace('https://carcovers.org/'); }, 3000);
+      }, 3000);
+    });
   }
 
+  /* ---------- Intercept free form submits to show confirm overlay ---------- */
+  document.querySelectorAll('.free-window-form').forEach(f => {
+    f.addEventListener('submit', (e) => {
+      /* Prevent native submit and show confirm overlay instead */
+      e.preventDefault();
+      pendingForm = f;
+      openOverlay();
+    });
+  });
+
+  /* ---------- Also catch clicks on .add-to-cart inside free forms ---------- */
+  document.addEventListener('click', (e) => {
+    const btn  = e.target.closest('.add-to-cart');
+    if (!btn) return;
+
+    const f = btn.closest('form');
+    if (!f || !f.classList.contains('free-window-form')) return;
+
+    /* Prevent immediate submit; show confirm first */
+    e.preventDefault();
+    e.stopPropagation();
+
+    pendingForm = f;
+    openOverlay();
+    /* Do NOT call showStatus here; we want the confirm UI to remain visible */
+  });
+
+  /* ---------- Cart added messaging from popup ---------- */
   window.onCartAdded = function() {
     if (fallbackId) { clearTimeout(fallbackId); fallbackId = null; }
     if (isBonusFlow) {
@@ -422,9 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       showStatus('<h2>Item was added to your cart</h2><p>Redirecting to the home page…</p>');
       stopKiller();
-      ensureCartWinClosedThen(() => {
-        setTimeout(() => { window.location.replace('https://carcovers.org/'); }, 3000);
-      }, 0);
+      setTimeout(() => { window.location.replace('https://carcovers.org/'); }, 3000);
     }
   };
 
@@ -432,60 +528,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ev && ev.data === 'cart:added') window.onCartAdded();
   });
 
-  if (addBtn) {
-    addBtn.addEventListener('click', () => {
-      openOverlay();
-      showStatus('<h2>Adding item to your cart…</h2><p>Please wait a moment.</p>');
-      setTimeout(() => {
-        const goback = form ? form.querySelector('[name="gobackto"]') : null;
-        if (goback) { goback.value = location.origin + '/?closeCartPopup=1'; }
-        cartWin = window.open('', 'cartAdder', 'width=420,height=420');
-        if (!cartWin) { showStatus('<h2>Popups blocked</h2><p>Please allow popups or reload and try again.</p>'); return; }
-        const temp = form ? form.cloneNode(true) : null;
-        if (temp) {
-          temp.style.display = 'none';
-          temp.target = 'cartAdder';
-          document.body.appendChild(temp);
-          temp.submit();
-          temp.remove();
-        }
-        let attempts = 0;
-        killerId = setInterval(() => {
-          attempts += 1;
-          tryCloseCartWin();
-          if (!cartWin || cartWin.closed || attempts >= 15) { stopKiller(); }
-        }, 700);
-
-        fallbackId = setTimeout(() => {
-          tryCloseCartWin();
-          stopKiller();
-          if (isBonusFlow) {
-            showStatus('<h2>Free Viewing Window added to Cart!</h2><p>Returning to previous page…</p>');
-            setTimeout(() => {
-              if (window.opener) { closeOrBack(); } else { backOrHome(); }
-            }, 3000);
-          } else {
-            showStatus('<h2>Free Viewing Window added to Cart!</h2><p>Returning home to select vehicle type</p>');
-            setTimeout(() => {
-              window.location.replace('https://carcovers.org/');
-            }, 3000);
-          }
-        }, 3000);
-      }, 1000);
-    });
-  }
-
-  const isCartAdder = (window.name === 'cartAdder') || (usp.has('closeCartPopup'));
+  /* ---------- If this window is the popup, notify opener and close ---------- */
+  const isCartAdder = (window.name === 'cartAdder') || usp.has('closeCartPopup');
   if (isCartAdder) {
     try {
       if (window.opener && typeof window.opener.onCartAdded === 'function') {
         window.opener.onCartAdded();
       } else if (window.opener) {
-        window.opener.postMessage('cart:added','*');
+        window.opener.postMessage('cart:added', '*');
       }
-    } catch(e) {}
+    } catch (e) {}
     setTimeout(() => { window.close(); }, 0);
-    setTimeout(() => { try { window.open('','_self'); window.close(); } catch(e){} }, 400);
+    setTimeout(() => { try { window.open('', '_self'); window.close(); } catch (e){} }, 400);
     document.documentElement.style.opacity = '0';
   }
 });
